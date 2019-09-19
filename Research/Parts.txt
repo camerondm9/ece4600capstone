@@ -1,0 +1,6 @@
+https://www.arrow.com/en/products/bme280/bosch
+	- Temperature/humidity/pressure sensor
+	- For precise estimates of speed of sound
+https://www.digikey.ca/product-detail/en/stmicroelectronics/LSM6DS3TR/497-15383-1-ND/5180534
+	- Accelerometer/gyroscope
+	- For detecting motion, to ensure calibration is not disturbed

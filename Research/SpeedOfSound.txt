@@ -1,0 +1,3 @@
+https://en.wikipedia.org/wiki/Speed_of_sound
+https://pages.mtu.edu/~suits/SpeedofSound.html
+(See "Handbook of the Speed of Sound in Real Gases - Volume 3")
