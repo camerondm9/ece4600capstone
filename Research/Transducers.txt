@@ -23,3 +23,13 @@ http://www.ti.com/lit/ug/tidudb2/tidudb2.pdf
 
 https://www.ceramtec.com/files/ec_ultrasonic_sensors.pdf
 	- Diagram shows aluminum blocks reflecting ultrasonic wave!
+
+
+
+https://www.nde-ed.org/EducationResources/CommunityCollege/Ultrasonics/EquipmentTrans/characteristicspt.htm
+	- Characteristics of Transducers
+
+
+https://www.researchgate.net/publication/15445439_The_effect_of_transducer_bandwidth_on_ultrasonic_image_characteristics
+	- Transducer bandwidth
+
