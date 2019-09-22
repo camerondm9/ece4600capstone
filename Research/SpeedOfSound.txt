@@ -1,3 +1,14 @@
 https://en.wikipedia.org/wiki/Speed_of_sound
 https://pages.mtu.edu/~suits/SpeedofSound.html
 (See "Handbook of the Speed of Sound in Real Gases - Volume 3")
+
+
+
+
+Formed speed of sound equation using equations from:
+http://www.kyu.edu.tw/93/epaperv7/048.pdf					page 549
+http://www.hygrometers.com/wp-content/uploads/CR-1A-users-manual-2009-12.pdf	page 21
+	Linked from https://en.wikipedia.org/wiki/Vapour_pressure_of_water	(Buck equation)
+
+My equation seems to be a little off: (figure out how this website works)
+http://www.sengpielaudio.com/calculator-airpressure.htm
