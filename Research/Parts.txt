@@ -4,3 +4,17 @@ https://www.arrow.com/en/products/bme280/bosch
 https://www.digikey.ca/product-detail/en/stmicroelectronics/LSM6DS3TR/497-15383-1-ND/5180534
 	- Accelerometer/gyroscope
 	- For detecting motion, to ensure calibration is not disturbed
+
+
+https://www.microchip.com/wwwproducts/en/ATZBX02563#datasheet-toggle
+	- uC (ATxmega) with 2.4 GHz radio
+
+https://www.st.com/content/st_com/en/products/microcontrollers-microprocessors/stm32-32-bit-arm-cortex-mcus/stm32-wireless-mcus/stm32wb-series/stm32wbx5/stm32wb55cg.html
+	- uC (ARM32) with 2.4 GHz radio
+	- Also has fast (4.26 Msps) 12-bit ADC
+	- Devboard: https://www.digikey.ca/product-detail/en/stmicroelectronics/P-NUCLEO-WB55/497-18384-ND/9857029
+
+https://www.digikey.ca/product-detail/en/u-blox-america-inc/R41Z-TA-R-00/672-R41Z-TA-R-00CT-ND/6572996
+	- uC (ARM32) module with 2.4 GHz radio and antenna
+
+Might need a TCXO or even an OCXO to ensure timing accuracy...

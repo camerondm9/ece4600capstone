@@ -1,0 +1,5 @@
+https://prod-ng.sandia.gov/techlib-noauth/access-control.cgi/2006/065856.pdf
+	- Non-linear chirp signals for reduced sidelobes (increasing precision)
+
+http://www.math.u-szeged.hu/tagok/mmaroti/okt/2010t/ftsp.pdf
+	- Example of high-precision timing using radio communications
