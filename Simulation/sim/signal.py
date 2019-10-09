@@ -30,10 +30,6 @@ def peak_index(signal, threshold, sample_rate = 1):
 	"Computes the weighted average location of the peak amplitude in the signal"
 	mask = signal * (signal > threshold)
 	total = np.sum(mask)
-	return (np.sum(np.arange(0, len(signal)) * mask) / (total * sample_rate), np.count_nonzero(mask), total, np.max(mask))
-
-#signal = generate_chirp(1_000_000, 10_000, 5_000, 1)
-#print(np.nonzero(np.diff(np.sign(signal))))
-
-
-#print(peak_index(np.asarray([0, -1, -0.2, 0.5, 0.9, 1, 1, 0.9, 0.5, -0.2, -1, 0]), 0.8))
+	count = np.count_nonzero(mask)
+	#Returns (peak_index, peak_sample_count, peak_value_average, peak_value_max)
+	return (np.sum(np.arange(0, len(signal)) * mask) / (total * sample_rate), count, total / count, np.max(mask))

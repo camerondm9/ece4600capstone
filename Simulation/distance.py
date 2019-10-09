@@ -2,6 +2,8 @@ import numpy as np
 import matplotlib
 matplotlib.use('svg') #Make pyplot happy
 import matplotlib.pyplot as plt
+import os
+import shutil
 import sim
 
 #SI prefixes
@@ -13,7 +15,7 @@ u	= 0.000_001
 n	= 0.000_000_001
 
 #Simulation parameters
-sample_rate		= 4*M
+sample_rate		= [2*M, 4*M]
 sample_bits		= 8
 center_freq		= 400*K
 chirp_freq		= 40*K
@@ -25,7 +27,8 @@ corr_threshold	= 180
 
 speed_of_sound	= 343
 
-simulate_runs	= 1
+simulate_runs	= 10
+save_plots		= True
 
 #Make everything into iterables
 sample_rate_s = sim.util.ensure_iterable(sample_rate)
@@ -37,6 +40,11 @@ delay_time_s = sim.util.ensure_iterable(delay_time)
 signal_to_noise_s = sim.util.ensure_iterable(signal_to_noise)
 corr_threshold_s = sim.util.ensure_iterable(corr_threshold)
 speed_of_sound_s = sim.util.ensure_iterable(speed_of_sound)
+
+#Erase previous results
+if os.path.isdir('./out'):
+	shutil.rmtree('./out')
+os.mkdir('./out')
 
 #Store results
 result = dict()
@@ -58,24 +66,13 @@ for sample_rate in sample_rate_s:
 						delayed_signal = np.concatenate((sim.signal.make_silence(delay_samples), reference_signal, sim.signal.make_silence(pulse_time, sample_rate)))
 						for speed_of_sound in speed_of_sound_s:
 							for signal_to_noise in signal_to_noise_s:
-								for _ in range(simulate_runs):
+								for run_number in range(simulate_runs):
 									#Add simulated noise from environment
 									noisy_signal = sim.signal.quantize(sim.signal.add_noise(delayed_signal, signal_to_noise), sample_bits)
 									for corr_threshold in corr_threshold_s:
 										correlation = sim.signal.correlate(noisy_signal, reference_signal)
 										peak, peak_samples, peak_avg, peak_max = sim.signal.peak_index(correlation, corr_threshold, sample_rate)
-										fig = plt.figure(figsize=(64, 48))
-										plt.margins(0.002)
-										plt.plot(correlation, 'm', linewidth=0.3)
-										plt.plot(noisy_signal, 'y', linewidth=0.3)
-										plt.plot(reference_signal_quantized, 'b', linewidth=0.3)
-										plt.axvline(pulse_samples, color='b', linewidth=0.3)
-										plt.axvline(delay_samples, color='y', linewidth=0.3)
-										plt.axvline(delay_samples + pulse_samples, color='y', linewidth=0.3)
-										plt.axvline(peak * sample_rate, color='m', linewidth=0.3)
-										plt.axhline(corr_threshold, color='m', linewidth=0.3)
-										plt.savefig('test.svg', dpi=500, bbox_inches='tight')
-										plt.close(fig)
+										#Package information
 										params = (
 											sample_rate,
 											sample_bits,
@@ -86,16 +83,39 @@ for sample_rate in sample_rate_s:
 											signal_to_noise,
 											corr_threshold,
 											speed_of_sound,
-											simulate_runs,
 										)
+										name = f"{sample_rate}Hz_{sample_bits}b_{center_freq}Hz_{chirp_freq}Hz_{pulse_time}s_{delay_time}s_{signal_to_noise}SNR_{corr_threshold}_{speed_of_sound}m+s_{run_number}"
 										r = (
 											peak,
 											peak_samples,
 											peak_avg,
 											peak_max,
+											name,
 										)
+										#Save plots (if needed)
+										if save_plots:
+											fig = plt.figure(figsize=(64, 48))
+											plt.margins(0.002)
+											plt.plot(correlation, 'm', linewidth=0.3)
+											plt.plot(noisy_signal, 'y', linewidth=0.3)
+											plt.plot(reference_signal_quantized, 'b', linewidth=0.3)
+											plt.axvline(pulse_samples, color='b', linewidth=0.3)
+											plt.axvline(delay_samples, color='y', linewidth=0.3)
+											plt.axvline(delay_samples + pulse_samples, color='y', linewidth=0.3)
+											plt.axvline(peak * sample_rate, color='m', linewidth=0.3)
+											plt.axhline(corr_threshold, color='m', linewidth=0.3)
+											plt.savefig('./out/' + name + '.svg', dpi=500, bbox_inches='tight')
+											plt.close(fig)
+										#Add to results for generating statistics
 										if params in result:
 											result[params].append(r)
 										else:
 											result[params] = [r]
-print(result)
+#print(result)
+print("Stats: (params) = [peak, peak_samples, peak_value_average, peak_value_max]")
+for params, r_s in result.items():
+	if len(r_s) < 2:
+		stats = list(r_s[0][0:4])
+	else:
+		stats = [sim.util.stats([r[i] for r in r_s]) for i in range(4)]
+	print(params, '=', stats)

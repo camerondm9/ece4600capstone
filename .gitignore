@@ -56,3 +56,6 @@ __pycache__
 
 #VS Code
 .vscode/
+
+#Simulation outputs
+Simulation/out/
