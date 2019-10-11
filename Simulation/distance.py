@@ -15,20 +15,20 @@ u	= 0.000_001
 n	= 0.000_000_001
 
 #Simulation parameters
-sample_rate		= [2*M, 4*M]
+sample_rate		= 10
 sample_bits		= 8
-center_freq		= 400*K
-chirp_freq		= 40*K
+center_freq		= [40*K, 100*K, 200*K, 300*K, 400*K]
+chirp_freq		= 0.1
 pulse_time		= 300*u
 
-delay_time		= 40*m
+delay_time		= 4*m
 signal_to_noise	= 1
-corr_threshold	= 180
+corr_threshold	= 0.5
 
 speed_of_sound	= 343
 
-simulate_runs	= 10
-save_plots		= True
+simulate_runs	= 100
+save_plots		= (simulate_runs < 5)
 
 #Make everything into iterables
 sample_rate_s = sim.util.ensure_iterable(sample_rate)
@@ -50,13 +50,20 @@ os.mkdir('./out')
 result = dict()
 
 #Run simulations
-for sample_rate in sample_rate_s:
-	for center_freq in center_freq_s:
+for center_freq in center_freq_s:
+	for sample_rate in sample_rate_s:
+		#Support for sample rate depending on center frequency
+		if sample_rate <= 100:
+			sample_rate *= center_freq
 		for chirp_freq in chirp_freq_s:
+			#Support for chirp depending on center frequency
+			if chirp_freq <= 2:
+				chirp_freq *= center_freq
 			for pulse_time in pulse_time_s:
 				#Generate reference signal (for transmission)
 				pulse_samples = round(pulse_time * sample_rate)
 				reference_signal = sim.signal.make_chirp(center_freq, chirp_freq, pulse_time, sample_rate)
+				max_peak = sim.signal.correlate(reference_signal, reference_signal)[0]
 				for sample_bits in sample_bits_s:
 					#Quantize reference signal (for correlation)
 					reference_signal_quantized = sim.signal.quantize(reference_signal, sample_bits)
@@ -70,8 +77,13 @@ for sample_rate in sample_rate_s:
 									#Add simulated noise from environment
 									noisy_signal = sim.signal.quantize(sim.signal.add_noise(delayed_signal, signal_to_noise), sample_bits)
 									for corr_threshold in corr_threshold_s:
+										#Support for threshold depending on maximum
+										if corr_threshold <= 1:
+											corr_threshold *= max_peak
 										correlation = sim.signal.correlate(noisy_signal, reference_signal)
 										peak, peak_samples, peak_avg, peak_max = sim.signal.peak_index(correlation, corr_threshold, sample_rate)
+										error_time = delay_time - peak
+										error_position = abs(error_time * speed_of_sound)
 										#Package information
 										params = (
 											sample_rate,
@@ -90,6 +102,8 @@ for sample_rate in sample_rate_s:
 											peak_samples,
 											peak_avg,
 											peak_max,
+											error_time,
+											error_position,
 											name,
 										)
 										#Save plots (if needed)
@@ -112,10 +126,13 @@ for sample_rate in sample_rate_s:
 										else:
 											result[params] = [r]
 #print(result)
-print("Stats: (params) = [peak, peak_samples, peak_value_average, peak_value_max]")
+print("Stats: (params) = [peak, peak_samples, peak_value_average, peak_value_max, error_time]")
 for params, r_s in result.items():
 	if len(r_s) < 2:
-		stats = list(r_s[0][0:4])
+		stats = list(r_s[0][0:6])
 	else:
-		stats = [sim.util.stats([r[i] for r in r_s]) for i in range(4)]
+		stats = [sim.util.stats([r[i] for r in r_s]) for i in range(6)]
 	print(params, '=', stats)
+
+#TODO: Use si_units() to print numbers in more readable form
+#TODO: Maybe add CSV file export so we can pull the data into Excel? (will be difficult once it's been prettified with units...)
