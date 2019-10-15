@@ -3,7 +3,8 @@ import matplotlib
 matplotlib.use('svg') #Make pyplot happy
 import matplotlib.pyplot as plt
 import os
-import shutil
+import csv
+import math
 import sim
 
 #SI prefixes
@@ -15,20 +16,22 @@ u	= 0.000_001
 n	= 0.000_000_001
 
 #Simulation parameters
-sample_rate		= 10
+sample_rate		= [5, 10]
 sample_bits		= 8
 center_freq		= [40*K, 100*K, 200*K, 300*K, 400*K]
 chirp_freq		= 0.1
 pulse_time		= 300*u
 
-delay_time		= 4*m
-signal_to_noise	= 1
-corr_threshold	= 0.5
+delay_time		= 2*m
+signal_to_noise	= [0.1, 0.2, 0.3, 0.5, 1, 2, 3, 5, 10]
+corr_threshold	= [0.4, 0.5, 0.6, 0.7, 0.8]
 
 speed_of_sound	= 343
 
-simulate_runs	= 100
+simulate_runs	= 1000
 save_plots		= (simulate_runs < 5)
+save_csv		= True
+max_error_time	= 2*u
 
 #Make everything into iterables
 sample_rate_s = sim.util.ensure_iterable(sample_rate)
@@ -43,13 +46,27 @@ speed_of_sound_s = sim.util.ensure_iterable(speed_of_sound)
 
 #Erase previous results
 if os.path.isdir('./out'):
-	shutil.rmtree('./out')
-os.mkdir('./out')
+	for root, dirs, files in os.walk('./out', topdown=False):
+		for name in files:
+			os.remove(os.path.join(root, name))
+		for name in dirs:
+			os.rmdir(os.path.join(root, name))
+else:
+	os.mkdir('./out')
+
+#Print what we're doing
+print('Running each simulation', simulate_runs, 'times.', save_plots and 'Saving plots.' or 'No plots.', save_csv and 'Saving CSV.' or 'No CSV.')
 
 #Store results
 result = dict()
 
 #Run simulations
+total_runs = len(sample_rate_s) * len(sample_bits_s) * len(center_freq_s) * len(chirp_freq_s) * len(pulse_time_s) * len(delay_time_s) * len(signal_to_noise_s) * len(corr_threshold_s) * len(speed_of_sound_s) * simulate_runs
+done_runs = 0
+progress_step = max(math.floor(total_runs / 1000), 1)
+if save_plots:
+	progress_step = 1
+print(f"\r{done_runs} / {total_runs} ", end='')
 for center_freq in center_freq_s:
 	for sample_rate in sample_rate_s:
 		#Support for sample rate depending on center frequency
@@ -125,14 +142,44 @@ for center_freq in center_freq_s:
 											result[params].append(r)
 										else:
 											result[params] = [r]
-#print(result)
-print("Stats: (params) = [peak, peak_samples, peak_value_average, peak_value_max, error_time]")
+										#Show progress
+										done_runs += 1
+										if done_runs % progress_step == 0:
+											print(f"\r{done_runs} / {total_runs} ", end='')
+print('\rComplete' + (' ' * 20))
+#Headers for saving
+csv_header1 = ['sample_rate', 'sample_bits', 'center_freq', 'chirp_freq', 'pulse_time', 'delay_time', 'signal_to_noise', 'corr_threshold', 'speed_of_sound']
+csv_header2 = ['peak', 'peak_samples', 'peak_value_average', 'peak_value_max', 'error_time', 'error_position']
+csv_stats_suffixes = ['_avg', '_stdev', '_min', '_max']
+if save_csv:
+	#Save raw CSV
+	with open('./out/raw.csv', 'w', newline='') as csv_file:
+		csv_writer = csv.writer(csv_file)
+		csv_writer.writerow(csv_header1 + csv_header2)
+		for params, r_s in result.items():
+			for r in r_s:
+				csv_writer.writerow(params + r)
+	#Save stats CSV
+	with open('./out/stats.csv', 'w', newline='') as csv_file:
+		csv_writer = csv.writer(csv_file)
+		csv_writer.writerow(csv_header1 + [h + s for h in csv_header2 for s in csv_stats_suffixes])
+		for params, r_s in result.items():
+			#Filter out rows that have an unacceptable error
+			if max_error_time < np.inf:
+				error_time_avg = sim.util.stats([r[4] for r in r_s])[0]
+				if not (abs(error_time_avg) <= max_error_time):
+					continue
+			#Write row
+			csv_writer.writerow(list(params) + [item for i in range(6) for item in sim.util.stats([r[i] for r in r_s])])
+#Print important stats
+print('Stats:', '(' + ', '.join(csv_header1) + ')', '=', '[' + ', '.join(csv_header2) + ']')
 for params, r_s in result.items():
-	if len(r_s) < 2:
-		stats = list(r_s[0][0:6])
-	else:
-		stats = [sim.util.stats([r[i] for r in r_s]) for i in range(6)]
+	#Filter out rows that have an unacceptable error
+	if max_error_time < np.inf:
+		error_time_avg = sim.util.stats([r[4] for r in r_s])[0]
+		if not (abs(error_time_avg) <= max_error_time):
+			continue
+	#Display row
+	stats = [sim.util.si_units(item, i == 4 and 's' or 'm') for i in range(4, 6) for item in sim.util.stats([r[i] for r in r_s])]
 	print(params, '=', stats)
-
-#TODO: Use si_units() to print numbers in more readable form
-#TODO: Maybe add CSV file export so we can pull the data into Excel? (will be difficult once it's been prettified with units...)
+print('Done')

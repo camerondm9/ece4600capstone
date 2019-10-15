@@ -7,8 +7,12 @@ def make_silence(duration, sample_rate = 1):
 
 def make_chirp(center_freq, chirp_freq, duration, sample_rate):
 	"Generates a chirp signal around a center frequency"
+	flip = duration < 0
+	duration = abs(duration)
 	min_freq = center_freq - chirp_freq
 	time = np.linspace(0, duration, round(duration * sample_rate), False)
+	if flip:
+		time = np.flip(time)
 	return np.sin(2 * math.pi * (min_freq + chirp_freq / duration * time) * time)
 
 def quantize(signal, bits):
