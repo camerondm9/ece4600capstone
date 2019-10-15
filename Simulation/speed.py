@@ -14,6 +14,10 @@ air_pressure = sim.util.ensure_iterable(air_pressure)
 def speed_of_sound(temperature, humidity, pressure):
 	return temperature
 
+#TODO: Tables in PDF are of *THEORETICAL* speed of sound, not measured. They were computed from equation at top of page 32, as indicated on page 53.
+# Therefore, we should use the equation from page 32, and check its' validity against measured data (from other sources).
+# If it's good, we can use it...
+
 #Run simulations
 for i in air_temperature:
 	for j in air_humidity:
