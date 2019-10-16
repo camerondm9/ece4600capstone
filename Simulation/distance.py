@@ -100,7 +100,7 @@ for center_freq in center_freq_s:
 										correlation = sim.signal.correlate(noisy_signal, reference_signal)
 										peak, peak_samples, peak_avg, peak_max = sim.signal.peak_index(correlation, corr_threshold, sample_rate)
 										error_time = delay_time - peak
-										error_position = abs(error_time * speed_of_sound)
+										error_position = error_time * speed_of_sound
 										#Package information
 										params = (
 											sample_rate,
@@ -166,20 +166,20 @@ if save_csv:
 		for params, r_s in result.items():
 			#Filter out rows that have an unacceptable error
 			if max_error_time < np.inf:
-				error_time_avg = sim.util.stats([r[4] for r in r_s])[0]
-				if not (abs(error_time_avg) <= max_error_time):
+				error_time_avg = sim.util.stats([abs(r[4]) for r in r_s])[0]
+				if not (error_time_avg <= max_error_time):
 					continue
 			#Write row
-			csv_writer.writerow(list(params) + [item for i in range(6) for item in sim.util.stats([r[i] for r in r_s])])
+			csv_writer.writerow(list(params) + [item for i in range(6) for item in sim.util.stats([abs(r[i]) for r in r_s])])
 #Print important stats
 print('Stats:', '(' + ', '.join(csv_header1) + ')', '=', '[' + ', '.join(csv_header2) + ']')
 for params, r_s in result.items():
 	#Filter out rows that have an unacceptable error
 	if max_error_time < np.inf:
-		error_time_avg = sim.util.stats([r[4] for r in r_s])[0]
-		if not (abs(error_time_avg) <= max_error_time):
+		error_time_avg = sim.util.stats([abs(r[4]) for r in r_s])[0]
+		if not (error_time_avg <= max_error_time):
 			continue
 	#Display row
-	stats = [sim.util.si_units(item, i == 4 and 's' or 'm') for i in range(4, 6) for item in sim.util.stats([r[i] for r in r_s])]
+	stats = [sim.util.si_units(item, i == 4 and 's' or 'm') for i in range(4, 6) for item in sim.util.stats([abs(r[i]) for r in r_s])]
 	print(params, '=', stats)
 print('Done')
