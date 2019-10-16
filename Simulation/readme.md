@@ -5,5 +5,6 @@ Primary files for running simulations are in this folder. Utility/library files 
 - Python 3
 - Numpy
 - Matplotlib
+- Pathos multiprocessing library
 
-First install Python 3, then run the command `pip install numpy matplotlib` to install the other libraries.
+First install Python 3, then run the command `pip install numpy matplotlib pathos` to install the other libraries.
