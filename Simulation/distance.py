@@ -90,6 +90,18 @@ for center_freq in center_freq_s:
 						delayed_signal = np.concatenate((sim.signal.make_silence(delay_samples), reference_signal, sim.signal.make_silence(pulse_time, sample_rate)))
 						for speed_of_sound in speed_of_sound_s:
 							for signal_to_noise in signal_to_noise_s:
+								#Package parameters
+								params = (
+									sample_rate,
+									sample_bits,
+									center_freq,
+									chirp_freq,
+									pulse_time,
+									delay_time,
+									signal_to_noise,
+									corr_threshold,
+									speed_of_sound,
+								)
 								for run_number in range(simulate_runs):
 									#Add simulated noise from environment
 									noisy_signal = sim.signal.quantize(sim.signal.add_noise(delayed_signal, signal_to_noise), sample_bits)
@@ -101,18 +113,7 @@ for center_freq in center_freq_s:
 										peak, peak_samples, peak_avg, peak_max = sim.signal.peak_index(correlation, corr_threshold, sample_rate)
 										error_time = delay_time - peak
 										error_position = error_time * speed_of_sound
-										#Package information
-										params = (
-											sample_rate,
-											sample_bits,
-											center_freq,
-											chirp_freq,
-											pulse_time,
-											delay_time,
-											signal_to_noise,
-											corr_threshold,
-											speed_of_sound,
-										)
+										#Package results
 										name = f"{sample_rate}Hz_{sample_bits}b_{center_freq}Hz_{chirp_freq}Hz_{pulse_time}s_{delay_time}s_{signal_to_noise}SNR_{corr_threshold}_{speed_of_sound}m+s_{run_number}"
 										r = (
 											peak,
