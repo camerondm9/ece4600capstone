@@ -25,9 +25,9 @@ chirp_freq		= 0.1
 pulse_time		= 300*u
 
 delay_time		= 2*m
-gain			= [0.8, 1]
+gain			= [0.5, 0.8, 1]
 signal_to_noise	= [0.2, 0.4, 1, 2.5, 5]
-corr_threshold	= [0.5, 0.6, 0.7, 0.8]
+corr_threshold	= [0.4, 0.5, 0.6, 0.7, 0.8]
 
 speed_of_sound	= 343
 
