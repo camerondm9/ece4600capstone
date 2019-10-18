@@ -21,9 +21,9 @@ def quantize(signal, bits):
 	multiplier = 2 ** (bits - 1) - 1
 	return np.round(signal * multiplier) / multiplier
 
-def add_noise(signal, signal_to_noise_ratio):
-	"Returns signal with noise, assumes signal level is -1 to 1"
-	noise = np.random.normal(size=len(signal)) / signal_to_noise_ratio
+def add_noise(signal, signal_to_noise_ratio, signal_level=1):
+	"Returns signal with noise"
+	noise = np.random.normal(size=len(signal)) * signal_level / signal_to_noise_ratio
 	return signal + noise
 
 def correlate(signal_a, signal_b):
