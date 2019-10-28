@@ -1,0 +1,10 @@
+Transducer:
+	Unictron A300A
+	https://www.digikey.ca/product-detail/en/unictron-technologies-corporation/H2KA300KA1CD00/2047-H2KA300KA1CD00-ND/9921568
+
+OpAmps:
+	Maxim MAX412
+	https://www.digikey.ca/product-detail/en/maxim-integrated/MAX412BCPA/MAX412BCPA-ND/1701712
+
+	TI OPA604
+	https://www.digikey.ca/product-detail/en/texas-instruments/OPA604AP/OPA604AP-ND/251162

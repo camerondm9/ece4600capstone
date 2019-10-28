@@ -18,10 +18,10 @@ u	= 0.000_001
 n	= 0.000_000_001
 
 #Simulation parameter variations
-sample_rate		= 4*M
+sample_rate		= 3*M
 sample_bits		= 8
-center_freq		= [40*K, 100*K, 200*K, 300*K, 400*K]
-chirp_freq		= 0.1
+center_freq		= 300*K
+chirp_freq		= 0.07
 pulse_time		= 300*u
 
 delay_time		= 2*m
