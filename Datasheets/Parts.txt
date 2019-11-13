@@ -8,3 +8,8 @@ OpAmps:
 
 	TI OPA604
 	https://www.digikey.ca/product-detail/en/texas-instruments/OPA604AP/OPA604AP-ND/251162
+
+FPGA:
+	Intel/Altera 10CL010YE144C8G
+	https://www.digikey.ca/product-detail/en/intel/10CL010YE144C8G/544-3578-ND/7593560
+	https://www.intel.com/content/www/us/en/programmable/products/fpga/cyclone-series/cyclone-10/cyclone-10-lp/support.html
