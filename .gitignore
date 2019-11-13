@@ -59,3 +59,6 @@ __pycache__
 
 #Simulation outputs
 Simulation/out/
+
+#KiCad
+fp-info-cache
