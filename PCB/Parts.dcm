@@ -12,6 +12,12 @@ K temperature humidity I2C
 F https://ams.com/ens210
 $ENDCMP
 #
+$CMP LED_ABGR
+D RGB LED, anode/red/green/blue
+K LED RGB diode
+F https://www.cree.com/led-components/media/documents/1273-CLMVC-FKA.pdf
+$ENDCMP
+#
 $CMP LIS2DE12
 D MEMS digital output motion sensor: ultra low-power high performance 3-axes femto accelerometer
 K accelerometer

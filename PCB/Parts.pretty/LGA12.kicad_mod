@@ -1,9 +1,9 @@
-(module LGA12 (layer F.Cu) (tedit 5DCD07D4)
+(module LGA12 (layer F.Cu) (tedit 5DCD100C)
   (attr smd)
-  (fp_text reference LGA12 (at -0.175288 -2.1172) (layer F.SilkS)
+  (fp_text reference LGA12 (at -0.175288 -2.1172) (layer F.SilkS) hide
     (effects (font (size 0.64328 0.64328) (thickness 0.05)))
   )
-  (fp_text value VAL** (at 0.2323 2.19638) (layer F.SilkS)
+  (fp_text value VAL** (at 0 2.286) (layer F.SilkS)
     (effects (font (size 0.640816 0.640816) (thickness 0.05)))
   )
   (fp_line (start -1 -1) (end 1 -1) (layer Eco2.User) (width 0.127))

@@ -11,3 +11,5 @@ Simulation/out/
 #KiCad
 fp-info-cache
 *.bck
+*.sch-bak
+*.kicad_pcb-bak
