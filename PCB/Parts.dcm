@@ -12,4 +12,10 @@ K temperature humidity I2C
 F https://ams.com/ens210
 $ENDCMP
 #
+$CMP LIS2DE12
+D MEMS digital output motion sensor: ultra low-power high performance 3-axes femto accelerometer
+K accelerometer
+F https://www.st.com/content/st_com/en/products/mems-and-sensors/accelerometers/lis2de12.html
+$ENDCMP
+#
 #End Doc Library
