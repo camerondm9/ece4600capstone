@@ -6,4 +6,10 @@ K fpga cyclone
 F https://www.intel.com/content/www/us/en/programmable/products/fpga/cyclone-series/cyclone-10/cyclone-10-lp/support.html
 $ENDCMP
 #
+$CMP ENS210
+D ENS210 Series 3.6V 100%RH Relative Humidity & Temperature Sensor w/I²C Interface
+K temperature humidity I2C
+F https://ams.com/ens210
+$ENDCMP
+#
 #End Doc Library
