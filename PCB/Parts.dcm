@@ -6,6 +6,12 @@ K fpga cyclone
 F https://www.intel.com/content/www/us/en/programmable/products/fpga/cyclone-series/cyclone-10/cyclone-10-lp/support.html
 $ENDCMP
 #
+$CMP AD5450
+D High bandwidth current-mode DAC with serial interface
+K current-mode DAC SPI
+F https://www.analog.com/en/products/ad5450.html
+$ENDCMP
+#
 $CMP ECS-5032MV
 D Miniature SMD HCMOS oscillator with MultiVolt capability
 K crystal oscillator HCMOS
@@ -28,6 +34,12 @@ $CMP LIS2DE12
 D MEMS digital output motion sensor: ultra low-power high performance 3-axes femto accelerometer
 K accelerometer
 F https://www.st.com/content/st_com/en/products/mems-and-sensors/accelerometers/lis2de12.html
+$ENDCMP
+#
+$CMP MAX11116
+D Low-power serial ADC
+K SPI ADC
+F https://www.maximintegrated.com/en/products/analog/data-converters/analog-to-digital-converters/MAX11116.html
 $ENDCMP
 #
 $CMP TPS63030
