@@ -24,4 +24,10 @@ K accelerometer
 F https://www.st.com/content/st_com/en/products/mems-and-sensors/accelerometers/lis2de12.html
 $ENDCMP
 #
+$CMP TPS63030
+D High Efficient Single Inductor Buck-Boost Converter with 1-A Switches
+K buck boost switching regulator converter
+F http://www.ti.com/product/TPS63030
+$ENDCMP
+#
 #End Doc Library
