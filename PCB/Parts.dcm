@@ -12,6 +12,12 @@ K current-mode DAC SPI
 F https://www.analog.com/en/products/ad5450.html
 $ENDCMP
 #
+$CMP BMD-360
+D Standalone Bluetooth 5 low energy module
+K bluetooth 5 le module
+F https://www.u-blox.com/en/product/bmd-360-open-cpu
+$ENDCMP
+#
 $CMP ECS-5032MV
 D Miniature SMD HCMOS oscillator with MultiVolt capability
 K crystal oscillator HCMOS
