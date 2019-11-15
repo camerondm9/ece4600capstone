@@ -12,12 +12,6 @@ K current-mode DAC SPI
 F https://www.analog.com/en/products/ad5450.html
 $ENDCMP
 #
-$CMP AP2202K-ADJTRG1
-D Diodes AP2202K-ADJTRG1, Low Noise LDO Voltage Regulator, Adjustable 150mA, 2.3  13.2 V +/-2%, 5-Pin SOT-23
-K adjustable low-noise LDO linear low-dropout regulator
-F https://www.diodes.com/part/view/AP2202
-$ENDCMP
-#
 $CMP BMD-360
 D Standalone Bluetooth 5 low energy module
 K bluetooth 5 le module
@@ -34,6 +28,16 @@ $CMP ENS210
 D ENS210 Series 3.6V 100%RH Relative Humidity & Temperature Sensor w/I²C Interface
 K temperature humidity I2C
 F https://ams.com/ens210
+$ENDCMP
+#
+$CMP GNDA-1V2
+D Power symbol creates a global label with name "GND" , ground
+K power-flag
+$ENDCMP
+#
+$CMP GNDA-3V3
+D Power symbol creates a global label with name "GND" , ground
+K power-flag
 $ENDCMP
 #
 $CMP LED_ABGR
@@ -57,6 +61,12 @@ $ENDCMP
 $CMP S2B-PH-SM4-TB
 D JST-PH Series 2 Position 2.0 mm Pitch Surface-Mount Side-Entry Shrouded Header
 F http://www.jst-mfg.com/product/detail_e.php?series=199
+$ENDCMP
+#
+$CMP TCR2EF25
+D 200mA CMOS Low Dropout Regulator with Fast Load Transient Response
+K low-noise LDO linear low-dropout fast load transient response regulator
+F https://toshiba.semicon-storage.com/us/product/linear/power-supply/detail.TCR2EF25.html
 $ENDCMP
 #
 $CMP TPS63030
