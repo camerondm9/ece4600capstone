@@ -105,4 +105,15 @@ F 3 "https://www.st.com/content/st_com/en/products/mems-and-sensors/acceleromete
 	1    2600 6550
 	1    0    0    -1  
 $EndComp
+$Comp
+L Switch:SW_Push SW?
+U 1 1 5DCE5B76
+P 7250 4650
+F 0 "SW?" H 7250 4935 50  0000 C CNN
+F 1 "SW_Push" H 7250 4844 50  0000 C CNN
+F 2 "Parts:PTS645SK43SM" H 7250 4850 50  0001 C CNN
+F 3 "https://www.ckswitches.com/products/tactile/PTS645/" H 7250 4850 50  0001 C CNN
+	1    7250 4650
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
