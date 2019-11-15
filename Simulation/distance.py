@@ -24,7 +24,7 @@ center_freq		= 300*K
 chirp_freq		= 0.07
 pulse_time		= 300*u
 
-delay_time		= 2*m
+delay_time		= 500*u
 gain			= [0.5, 0.8, 1]
 signal_to_noise	= [0.2, 0.4, 1, 2.5, 5]
 corr_threshold	= [0.4, 0.5, 0.6, 0.7, 0.8]
@@ -34,6 +34,7 @@ speed_of_sound	= 343
 #Simulation controls
 simulate_runs	= 1000
 save_plots		= (simulate_runs < 5)
+plot_linewidth	= 2
 save_csv		= True
 max_error_time	= 5*u
 multicore		= True
@@ -111,6 +112,7 @@ if __name__ == '__main__':
 												sim=sim,
 												plt=plt,
 												save_plots=save_plots,
+												plot_linewidth=plot_linewidth,
 												attenuated_signal=attenuated_signal,
 												reference_signal_quantized=reference_signal_quantized,
 												max_peak=max_peak,
@@ -165,14 +167,15 @@ if __name__ == '__main__':
 												if save_plots:
 													fig = plt.figure(figsize=(64, 48))
 													plt.margins(0.002)
-													plt.plot(correlation, 'm', linewidth=0.3)
-													plt.plot(noisy_signal, 'y', linewidth=0.3)
-													plt.plot(reference_signal_quantized, 'b', linewidth=0.3)
-													plt.axvline(pulse_samples, color='b', linewidth=0.3)
-													plt.axvline(delay_samples, color='y', linewidth=0.3)
-													plt.axvline(delay_samples + pulse_samples, color='y', linewidth=0.3)
-													plt.axvline(peak * sample_rate, color='m', linewidth=0.3)
-													plt.axhline(corr_threshold, color='m', linewidth=0.3)
+													plt.plot(noisy_signal, 'y', linewidth=plot_linewidth, label='Receive')
+													plt.plot(reference_signal_quantized, 'b', linewidth=plot_linewidth, label='Transmit')
+													plt.plot(correlation / max_peak, 'm', linewidth=plot_linewidth, label='Cross-correlation')
+													plt.axvline(pulse_samples, color='b', linewidth=plot_linewidth)
+													plt.axvline(delay_samples, color='y', linewidth=plot_linewidth)
+													plt.axvline(delay_samples + pulse_samples, color='y', linewidth=plot_linewidth)
+													plt.axvline(peak * sample_rate, color='m', linewidth=plot_linewidth)
+													plt.axhline(corr_threshold / max_peak, color='m', linewidth=plot_linewidth)
+													plt.legend(fontsize=40)
 													plt.savefig('./out/' + name + '.svg', dpi=500, bbox_inches='tight')
 													plt.close(fig)
 												staging += [(params, r)]
