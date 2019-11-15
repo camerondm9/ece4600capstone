@@ -12,6 +12,12 @@ K current-mode DAC SPI
 F https://www.analog.com/en/products/ad5450.html
 $ENDCMP
 #
+$CMP AP2202K-ADJTRG1
+D Diodes AP2202K-ADJTRG1, Low Noise LDO Voltage Regulator, Adjustable 150mA, 2.3  13.2 V +/-2%, 5-Pin SOT-23
+K adjustable low-noise LDO linear low-dropout regulator
+F https://www.diodes.com/part/view/AP2202
+$ENDCMP
+#
 $CMP BMD-360
 D Standalone Bluetooth 5 low energy module
 K bluetooth 5 le module
@@ -46,6 +52,11 @@ $CMP MAX11116
 D Low-power serial ADC
 K SPI ADC
 F https://www.maximintegrated.com/en/products/analog/data-converters/analog-to-digital-converters/MAX11116.html
+$ENDCMP
+#
+$CMP S2B-PH-SM4-TB
+D JST-PH Series 2 Position 2.0 mm Pitch Surface-Mount Side-Entry Shrouded Header
+F http://www.jst-mfg.com/product/detail_e.php?series=199
 $ENDCMP
 #
 $CMP TPS63030
