@@ -62,14 +62,14 @@ F 3 "" H 6000 4300 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	5900 4300 6000 4300
-Text GLabel 6000 4000 2    50   Input ~ 0
-SWCLK
-Text GLabel 6000 4100 2    50   Input ~ 0
-SWDIO
+Text GLabel 5950 4000 2    50   Input ~ 0
+MICRO-SWCLK
+Text GLabel 5950 4100 2    50   Input ~ 0
+MICRO-SWDIO
 Wire Wire Line
-	5900 4000 6000 4000
+	5900 4000 5950 4000
 Wire Wire Line
-	6000 4100 5900 4100
+	5950 4100 5900 4100
 $Comp
 L power:+3V3 #PWR0127
 U 1 1 5DCF6F82
@@ -182,4 +182,12 @@ Wire Wire Line
 	3150 6550 3200 6550
 Wire Wire Line
 	3100 6750 3200 6750
+Text GLabel 5600 5000 0    50   Input ~ 0
+MICRO-TX
+Text GLabel 5600 5100 0    50   Input ~ 0
+MICRO-RX
+Text GLabel 5950 2800 2    50   Input ~ 0
+MICRO-nRESET
+Wire Wire Line
+	5950 2800 5900 2800
 $EndSCHEMATC
