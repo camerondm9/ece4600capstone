@@ -15,10 +15,10 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L power:GND #PWR?
+L power:GND #PWR0130
 U 1 1 5DCE40E5
 P 2000 3200
-F 0 "#PWR?" H 2000 2950 50  0001 C CNN
+F 0 "#PWR0130" H 2000 2950 50  0001 C CNN
 F 1 "GND" H 2005 3027 50  0000 C CNN
 F 2 "" H 2000 3200 50  0001 C CNN
 F 3 "" H 2000 3200 50  0001 C CNN
@@ -37,10 +37,10 @@ F 3 "http://www.jst-mfg.com/product/detail_e.php?series=199" H 1700 3100 50  000
 	-1   0    0    -1  
 $EndComp
 $Comp
-L power:+BATT #PWR?
+L power:+BATT #PWR0131
 U 1 1 5DCED91D
 P 2250 3000
-F 0 "#PWR?" H 2250 2850 50  0001 C CNN
+F 0 "#PWR0131" H 2250 2850 50  0001 C CNN
 F 1 "+BATT" H 2265 3173 50  0000 C CNN
 F 2 "" H 2250 3000 50  0001 C CNN
 F 3 "" H 2250 3000 50  0001 C CNN
@@ -58,4 +58,42 @@ Wire Wire Line
 Connection ~ 1950 3200
 Wire Wire Line
 	1950 3200 2000 3200
+Text GLabel 8400 3000 0    50   Input ~ 0
+TRANSDUCER
+$Comp
+L Device:R R?
+U 1 1 5DE80022
+P 8450 3250
+F 0 "R?" H 8520 3296 50  0000 L CNN
+F 1 "R" H 8520 3205 50  0000 L CNN
+F 2 "" V 8380 3250 50  0001 C CNN
+F 3 "~" H 8450 3250 50  0001 C CNN
+	1    8450 3250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8400 3000 8450 3000
+Wire Wire Line
+	8450 3000 8450 3100
+$Comp
+L power:GND #PWR?
+U 1 1 5DE80E0C
+P 8450 3500
+F 0 "#PWR?" H 8450 3250 50  0001 C CNN
+F 1 "GND" H 8455 3327 50  0000 C CNN
+F 2 "" H 8450 3500 50  0001 C CNN
+F 3 "" H 8450 3500 50  0001 C CNN
+	1    8450 3500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8450 3400 8450 3450
+Wire Wire Line
+	8450 3000 8650 3000
+Connection ~ 8450 3000
+Wire Wire Line
+	8450 3450 8650 3450
+Connection ~ 8450 3450
+Wire Wire Line
+	8450 3450 8450 3500
 $EndSCHEMATC
