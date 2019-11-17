@@ -728,4 +728,16 @@ Text GLabel 5750 6350 0    50   Input ~ 0
 FPGA-DOUT
 Wire Wire Line
 	5750 6350 5800 6350
+Text Notes 5400 3600 0    50   ~ 0
+TODO: Add decoupling capacitors to all ICs
+Text GLabel 5750 5400 0    50   Input ~ 0
+FPGA-LINK0
+Text GLabel 5750 5500 0    50   Input ~ 0
+FPGA-LINK1
+Text GLabel 5750 5600 0    50   Input ~ 0
+FPGA-LINK2
+Text GLabel 5750 5700 0    50   Input ~ 0
+FPGA-LINK3
+Text GLabel 5750 5800 0    50   Input ~ 0
+FPGA-LINK4
 $EndSCHEMATC
