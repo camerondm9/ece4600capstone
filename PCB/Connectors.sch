@@ -120,7 +120,7 @@ L Connector:Conn_01x08_Male J?
 U 1 1 5DD08B5F
 P 3000 4200
 F 0 "J?" H 2972 4174 50  0000 R CNN
-F 1 "MICRO-DEBUG" H 2972 4083 50  0000 R CNN
+F 1 "PH1-08-UA" H 2972 4083 50  0000 R CNN
 F 2 "Pin_Headers:Pin_Header_Straight_1x08_Pitch2.54mm" H 3000 4200 50  0001 C CNN
 F 3 "https://www.digikey.ca/product-detail/en/adam-tech/PH1-08-UA/2057-PH1-08-UA-ND/9830442" H 3000 4200 50  0001 C CNN
 	1    3000 4200
@@ -149,7 +149,7 @@ L Connector:Conn_01x08_Male J?
 U 1 1 5DD1A649
 P 3000 5850
 F 0 "J?" H 2972 5824 50  0000 R CNN
-F 1 "FPGA-DEBUG" H 2972 5733 50  0000 R CNN
+F 1 "PH1-08-UA" H 2972 5733 50  0000 R CNN
 F 2 "Pin_Headers:Pin_Header_Straight_1x08_Pitch2.54mm" H 3000 5850 50  0001 C CNN
 F 3 "https://www.digikey.ca/product-detail/en/adam-tech/PH1-08-UA/2057-PH1-08-UA-ND/9830442" H 3000 5850 50  0001 C CNN
 	1    3000 5850
@@ -233,4 +233,47 @@ F 3 "" H 2700 5550 50  0001 C CNN
 	1    2700 5550
 	1    0    0    -1  
 $EndComp
+$Comp
+L Connector:Conn_01x08_Male J?
+U 1 1 5DF84ABE
+P 5050 4200
+F 0 "J?" H 5022 4174 50  0000 R CNN
+F 1 "PH1-08-UA" H 5022 4083 50  0000 R CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x08_Pitch2.54mm" H 5050 4200 50  0001 C CNN
+F 3 "https://www.digikey.ca/product-detail/en/adam-tech/PH1-08-UA/2057-PH1-08-UA-ND/9830442" H 5050 4200 50  0001 C CNN
+	1    5050 4200
+	-1   0    0    -1  
+$EndComp
+Text GLabel 4800 3900 0    50   Input ~ 0
+FPGA-DOUT
+Text GLabel 4800 4400 0    50   Input ~ 0
+FPGA-nSTATUS
+Text GLabel 4800 4000 0    50   Input ~ 0
+FPGA-DCLK
+Text GLabel 4800 4100 0    50   Input ~ 0
+FPGA-DIN
+Text GLabel 4800 4500 0    50   Input ~ 0
+FPGA-nCONFIG
+Text GLabel 4800 4200 0    50   Input ~ 0
+FPGA-CONF_DONE
+Text GLabel 4800 4600 0    50   Input ~ 0
+FPGA-INIT_DONE
+Text GLabel 4800 4300 0    50   Input ~ 0
+FPGA-CRC_ERROR
+Wire Wire Line
+	4800 3900 4850 3900
+Wire Wire Line
+	4850 4000 4800 4000
+Wire Wire Line
+	4800 4100 4850 4100
+Wire Wire Line
+	4850 4200 4800 4200
+Wire Wire Line
+	4800 4300 4850 4300
+Wire Wire Line
+	4850 4400 4800 4400
+Wire Wire Line
+	4800 4500 4850 4500
+Wire Wire Line
+	4850 4600 4800 4600
 $EndSCHEMATC

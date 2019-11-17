@@ -26,17 +26,6 @@ F 3 "https://www.u-blox.com/en/product/bmd-360-open-cpu" H 5300 2000 50  0001 L 
 	1    0    0    -1  
 $EndComp
 $Comp
-L Parts:LED_ABGR D?
-U 1 1 5DCF3816
-P 7350 3450
-F 0 "D?" H 7350 3947 50  0000 C CNN
-F 1 "LED_ABGR" H 7350 3856 50  0000 C CNN
-F 2 "Parts:CLMVC-FKA" H 7350 3025 50  0001 C CNN
-F 3 "https://www.cree.com/led-components/media/documents/1273-CLMVC-FKA.pdf" H 7350 3400 50  0001 C CNN
-	1    7350 3450
-	1    0    0    -1  
-$EndComp
-$Comp
 L power:+3V3 #PWR0125
 U 1 1 5DCF44EC
 P 6000 2400
@@ -73,16 +62,14 @@ Wire Wire Line
 $Comp
 L power:+3V3 #PWR0127
 U 1 1 5DCF6F82
-P 7650 3450
-F 0 "#PWR0127" H 7650 3300 50  0001 C CNN
-F 1 "+3V3" H 7665 3623 50  0000 C CNN
-F 2 "" H 7650 3450 50  0001 C CNN
-F 3 "" H 7650 3450 50  0001 C CNN
-	1    7650 3450
+P 1750 3200
+F 0 "#PWR0127" H 1750 3050 50  0001 C CNN
+F 1 "+3V3" H 1765 3373 50  0000 C CNN
+F 2 "" H 1750 3200 50  0001 C CNN
+F 3 "" H 1750 3200 50  0001 C CNN
+	1    1750 3200
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	7550 3450 7650 3450
 $Comp
 L Parts:ENS210 U?
 U 1 1 5DD2033C
@@ -190,19 +177,19 @@ Text GLabel 5950 2800 2    50   Input ~ 0
 MICRO-nRESET
 Wire Wire Line
 	5950 2800 5900 2800
-Text GLabel 4450 3700 0    50   Input ~ 0
-FPGA-nSTATUS
-Text GLabel 4450 3800 0    50   Input ~ 0
-FPGA-DCLK
-Text GLabel 4450 3900 0    50   Input ~ 0
-FPGA-DATA0
-Text GLabel 4450 4000 0    50   Input ~ 0
-FPGA-nCONFIG
 Text GLabel 4450 4100 0    50   Input ~ 0
-FPGA-CONF_DONE
+FPGA-nSTATUS
+Text GLabel 4450 3700 0    50   Input ~ 0
+FPGA-DCLK
+Text GLabel 4450 3800 0    50   Input ~ 0
+FPGA-DIN
 Text GLabel 4450 4200 0    50   Input ~ 0
-FPGA-INIT_DONE
+FPGA-nCONFIG
+Text GLabel 4450 3900 0    50   Input ~ 0
+FPGA-CONF_DONE
 Text GLabel 4450 4300 0    50   Input ~ 0
+FPGA-INIT_DONE
+Text GLabel 4450 4000 0    50   Input ~ 0
 FPGA-CRC_ERROR
 Text Label 1950 5550 0    50   ~ 0
 SCL
@@ -246,4 +233,85 @@ Text GLabel 4450 3600 0    50   Input ~ 0
 FPGA-DOUT
 Wire Wire Line
 	4450 3600 4500 3600
+Wire Wire Line
+	1750 3200 1800 3200
+Text Notes 4200 2050 0    50   ~ 0
+Note: Low-speed is defined by Nordic Semi as < 10kHz
+$Comp
+L Device:R R?
+U 1 1 5DF9D7B6
+P 2650 3200
+F 0 "R?" V 2443 3200 50  0000 C CNN
+F 1 "47" V 2534 3200 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603_HandSoldering" V 2580 3200 50  0001 C CNN
+F 3 "https://www.digikey.ca/product-detail/en/stackpole-electronics-inc/RMCF0603FT47R0/RMCF0603FT47R0CT-ND/1942954" H 2650 3200 50  0001 C CNN
+	1    2650 3200
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5DF9DA34
+P 2400 3000
+F 0 "R?" V 2193 3000 50  0000 C CNN
+F 1 "30" V 2284 3000 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603_HandSoldering" V 2330 3000 50  0001 C CNN
+F 3 "https://www.digikey.ca/product-detail/en/stackpole-electronics-inc/RMCF0603FT30R0/RMCF0603FT30R0CT-ND/4425092" H 2400 3000 50  0001 C CNN
+	1    2400 3000
+	0    1    1    0   
+$EndComp
+$Comp
+L Parts:LED_ABGR D?
+U 1 1 5DCF3816
+P 2000 3200
+F 0 "D?" H 2000 3697 50  0000 C CNN
+F 1 "LED_ABGR" H 2000 3606 50  0000 C CNN
+F 2 "Parts:CLMVC-FKA" H 2000 2775 50  0001 C CNN
+F 3 "https://www.cree.com/led-components/media/documents/1273-CLMVC-FKA.pdf" H 2000 3150 50  0001 C CNN
+	1    2000 3200
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	2200 3000 2250 3000
+Wire Wire Line
+	2200 3200 2500 3200
+Wire Wire Line
+	4500 3200 2800 3200
+Wire Wire Line
+	3050 3400 3100 3400
+Wire Wire Line
+	3100 3400 3100 3300
+Wire Wire Line
+	3100 3300 4500 3300
+Wire Wire Line
+	2550 3000 3100 3000
+Wire Wire Line
+	3100 3000 3100 3100
+Wire Wire Line
+	3100 3100 4500 3100
+$Comp
+L Device:R R?
+U 1 1 5DFB4959
+P 2400 3400
+F 0 "R?" V 2193 3400 50  0000 C CNN
+F 1 "30" V 2284 3400 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603_HandSoldering" V 2330 3400 50  0001 C CNN
+F 3 "https://www.digikey.ca/product-detail/en/stackpole-electronics-inc/RMCF0603FT30R0/RMCF0603FT30R0CT-ND/4425092" H 2400 3400 50  0001 C CNN
+	1    2400 3400
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5DFB4DBC
+P 2900 3400
+F 0 "R?" V 2693 3400 50  0000 C CNN
+F 1 "47" V 2784 3400 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603_HandSoldering" V 2830 3400 50  0001 C CNN
+F 3 "https://www.digikey.ca/product-detail/en/stackpole-electronics-inc/RMCF0603FT47R0/RMCF0603FT47R0CT-ND/1942954" H 2900 3400 50  0001 C CNN
+	1    2900 3400
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2550 3400 2750 3400
+Wire Wire Line
+	2250 3400 2200 3400
 $EndSCHEMATC
