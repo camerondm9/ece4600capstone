@@ -190,4 +190,60 @@ Text GLabel 5950 2800 2    50   Input ~ 0
 MICRO-nRESET
 Wire Wire Line
 	5950 2800 5900 2800
+Text GLabel 4450 3700 0    50   Input ~ 0
+FPGA-nSTATUS
+Text GLabel 4450 3800 0    50   Input ~ 0
+FPGA-DCLK
+Text GLabel 4450 3900 0    50   Input ~ 0
+FPGA-DATA0
+Text GLabel 4450 4000 0    50   Input ~ 0
+FPGA-nCONFIG
+Text GLabel 4450 4100 0    50   Input ~ 0
+FPGA-CONF_DONE
+Text GLabel 4450 4200 0    50   Input ~ 0
+FPGA-INIT_DONE
+Text GLabel 4450 4300 0    50   Input ~ 0
+FPGA-CRC_ERROR
+Text Label 1950 5550 0    50   ~ 0
+SCL
+Text Label 1950 5650 0    50   ~ 0
+SDA
+Text Label 1900 6350 0    50   ~ 0
+SCL
+Text Label 1900 6450 0    50   ~ 0
+SDA
+Wire Wire Line
+	1950 5550 2150 5550
+Wire Wire Line
+	2150 5650 1950 5650
+Wire Wire Line
+	2100 6350 1900 6350
+Wire Wire Line
+	1900 6450 2100 6450
+Text Label 5950 2600 0    50   ~ 0
+SCL
+Text Label 5950 2700 0    50   ~ 0
+SDA
+Wire Wire Line
+	5950 2600 5900 2600
+Wire Wire Line
+	5900 2700 5950 2700
+Wire Wire Line
+	4450 4300 4500 4300
+Wire Wire Line
+	4500 4200 4450 4200
+Wire Wire Line
+	4450 4100 4500 4100
+Wire Wire Line
+	4500 4000 4450 4000
+Wire Wire Line
+	4450 3900 4500 3900
+Wire Wire Line
+	4500 3800 4450 3800
+Wire Wire Line
+	4450 3700 4500 3700
+Text GLabel 4450 3600 0    50   Input ~ 0
+FPGA-DOUT
+Wire Wire Line
+	4450 3600 4500 3600
 $EndSCHEMATC
