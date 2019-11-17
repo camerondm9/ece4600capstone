@@ -57,6 +57,12 @@ K accelerometer
 F https://www.st.com/content/st_com/en/products/mems-and-sensors/accelerometers/lis2de12.html
 $ENDCMP
 #
+$CMP LTC6090-5
+D 140V CMOS rail-to-rail output picoamp input current opamp
+K high-voltage rail-to-rail output current opamp
+F https://www.analog.com/en/products/ltc6090.html
+$ENDCMP
+#
 $CMP MAX11116
 D Low-power serial ADC
 K SPI ADC

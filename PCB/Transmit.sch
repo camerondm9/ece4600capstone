@@ -28,12 +28,12 @@ $EndComp
 $Comp
 L Device:D_x2_Serial_AKC D?
 U 1 1 5DCE8F52
-P 8600 3750
-F 0 "D?" H 8600 3966 50  0000 C CNN
-F 1 "D_x2_Serial_AKC" H 8600 3875 50  0000 C CNN
-F 2 "Parts:MMBD7000L" H 8600 3750 50  0001 C CNN
-F 3 "https://www.onsemi.com/products/discretes-drivers/diodes-rectifiers/small-signal-switching-diodes/mmbd7000l" H 8600 3750 50  0001 C CNN
-	1    8600 3750
+P 8600 3600
+F 0 "D?" H 8600 3816 50  0000 C CNN
+F 1 "D_x2_Serial_AKC" H 8600 3725 50  0000 C CNN
+F 2 "Parts:MMBD7000L" H 8600 3600 50  0001 C CNN
+F 3 "https://www.onsemi.com/products/discretes-drivers/diodes-rectifiers/small-signal-switching-diodes/mmbd7000l" H 8600 3600 50  0001 C CNN
+	1    8600 3600
 	0    1    1    0   
 $EndComp
 $Comp
@@ -75,35 +75,46 @@ Wire Wire Line
 Wire Wire Line
 	1750 4000 1800 4000
 Wire Wire Line
-	8600 3450 8600 3400
+	8600 3300 8600 3250
 Wire Wire Line
-	8600 3400 8900 3400
+	8600 3250 8900 3250
 Wire Wire Line
-	8900 3400 8900 3750
+	8900 3250 8900 3600
 Wire Wire Line
-	8600 4100 8600 4050
+	8600 3950 8600 3900
 $Comp
 L Device:C_Small C?
 U 1 1 5DE7A1A8
-P 9100 3750
-F 0 "C?" V 8871 3750 50  0000 C CNN
-F 1 "C_Small" V 8962 3750 50  0000 C CNN
-F 2 "" H 9100 3750 50  0001 C CNN
-F 3 "~" H 9100 3750 50  0001 C CNN
-	1    9100 3750
+P 9100 3600
+F 0 "C?" V 8871 3600 50  0000 C CNN
+F 1 "C_Small" V 8962 3600 50  0000 C CNN
+F 2 "" H 9100 3600 50  0001 C CNN
+F 3 "~" H 9100 3600 50  0001 C CNN
+	1    9100 3600
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	8900 3750 9000 3750
+	8900 3600 9000 3600
 Wire Wire Line
-	8600 4100 8900 4100
+	8600 3950 8900 3950
 Wire Wire Line
-	8900 4100 8900 3750
-Connection ~ 8900 3750
-Text GLabel 9300 3750 2    50   Input ~ 0
+	8900 3950 8900 3600
+Connection ~ 8900 3600
+Text GLabel 9300 3600 2    50   Input ~ 0
 TRANSDUCER
 Wire Wire Line
-	9200 3750 9300 3750
+	9200 3600 9300 3600
 Wire Wire Line
-	8400 3750 7600 3750
+	8400 3600 5900 3600
+$Comp
+L Parts:LTC6090-5 U?
+U 1 1 5E088DE1
+P 5550 3800
+F 0 "U?" H 5550 4287 60  0000 C CNN
+F 1 "LTC6090-5" H 5550 4181 60  0000 C CNN
+F 2 "Parts:SOIC8-PAD" H 5550 3350 60  0001 C CNN
+F 3 "https://www.analog.com/en/products/ltc6090.html" H 5200 4000 60  0001 C CNN
+	1    5550 3800
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
