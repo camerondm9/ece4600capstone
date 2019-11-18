@@ -72,12 +72,12 @@ $EndComp
 $Comp
 L power:+2V5 #PWR?
 U 1 1 5DE217EB
-P 1100 2400
-F 0 "#PWR?" H 1100 2250 50  0001 C CNN
-F 1 "+2V5" H 1115 2573 50  0000 C CNN
-F 2 "" H 1100 2400 50  0001 C CNN
-F 3 "" H 1100 2400 50  0001 C CNN
-	1    1100 2400
+P 1100 2100
+F 0 "#PWR?" H 1100 1950 50  0001 C CNN
+F 1 "+2V5" H 1115 2273 50  0000 C CNN
+F 2 "" H 1100 2100 50  0001 C CNN
+F 3 "" H 1100 2100 50  0001 C CNN
+	1    1100 2100
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -241,25 +241,25 @@ Wire Wire Line
 Wire Wire Line
 	1100 900  1300 900 
 Wire Wire Line
-	1350 2300 1300 2300
-Wire Wire Line
-	1300 2300 1300 2400
-Wire Wire Line
-	1300 2400 1350 2400
-Wire Wire Line
-	1100 2400 1300 2400
-Connection ~ 1300 2400
-Wire Wire Line
 	1350 2000 1300 2000
-Wire Wire Line
-	1300 2100 1350 2100
-Text Label 900  2000 0    50   ~ 0
-3V3-PLL
 Wire Wire Line
 	1300 2000 1300 2100
 Wire Wire Line
-	900  2000 1300 2000
-Connection ~ 1300 2000
+	1300 2100 1350 2100
+Wire Wire Line
+	1100 2100 1300 2100
+Connection ~ 1300 2100
+Wire Wire Line
+	1350 2300 1300 2300
+Wire Wire Line
+	1300 2400 1350 2400
+Text Label 900  2300 0    50   ~ 0
+1V2-PLL
+Wire Wire Line
+	1300 2300 1300 2400
+Wire Wire Line
+	900  2300 1300 2300
+Connection ~ 1300 2300
 Text GLabel 4550 2000 0    50   Input ~ 0
 DAC-~CS
 Text GLabel 4550 2100 0    50   Input ~ 0
