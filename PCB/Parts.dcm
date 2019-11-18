@@ -80,6 +80,12 @@ K low-noise LDO linear low-dropout fast load transient response regulator
 F https://toshiba.semicon-storage.com/us/product/linear/power-supply/detail.TCR2EF25.html
 $ENDCMP
 #
+$CMP TPS62262
+D 2.25-MHz 600-mA Step Down Converter
+K buck step down converter regulator
+F http://www.ti.com/product/TPS62262
+$ENDCMP
+#
 $CMP TPS63030
 D High Efficient Single Inductor Buck-Boost Converter with 1-A Switches
 K buck boost switching regulator converter
