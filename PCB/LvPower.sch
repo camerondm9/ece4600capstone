@@ -37,11 +37,6 @@ F 3 "" H 8700 2750 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	5250 3250 5250 3300
-Connection ~ 5250 3250
-Wire Wire Line
-	5100 3250 5250 3250
-Wire Wire Line
 	3250 3050 3250 3100
 Wire Wire Line
 	4500 2800 4800 2800
@@ -62,18 +57,13 @@ F 3 "https://www.digikey.ca/product-detail/en/w-rth-elektronik/885012105010/732-
 	1    3250 2950
 	1    0    0    -1  
 $EndComp
-Connection ~ 5250 2500
 Wire Wire Line
-	5250 2500 5650 2500
+	5300 2750 5300 2800
 Wire Wire Line
-	5650 2750 5650 2800
+	5300 2500 5300 2550
+Connection ~ 5300 2500
 Wire Wire Line
-	5250 2500 5250 2550
-Wire Wire Line
-	5650 2500 5650 2550
-Connection ~ 5650 2500
-Wire Wire Line
-	5650 2450 5650 2500
+	5300 2450 5300 2500
 Wire Wire Line
 	2600 2500 2600 2550
 Connection ~ 2600 2500
@@ -109,39 +99,11 @@ F 3 "https://www.digikey.ca/product-detail/en/kemet/C0805C106K8PACTU/399-4925-1-
 $EndComp
 Connection ~ 3550 2800
 Wire Wire Line
-	3550 2900 3600 2900
-Wire Wire Line
-	3550 2800 3550 2900
-Wire Wire Line
 	3550 2800 3600 2800
 Wire Wire Line
 	3550 2600 3550 2800
 Wire Wire Line
 	3600 2600 3550 2600
-Wire Wire Line
-	5250 3200 5250 3250
-$Comp
-L Device:R R?
-U 1 1 5DCFE76B
-P 5250 3050
-F 0 "R?" H 5320 3096 50  0000 L CNN
-F 1 "1M" H 5320 3005 50  0000 L CNN
-F 2 "Resistors_SMD:R_0805_HandSoldering" V 5180 3050 50  0001 C CNN
-F 3 "https://www.digikey.ca/product-detail/en/panasonic-electronic-components/ERA-6AEB105V/P1MDACT-ND/1466019" H 5250 3050 50  0001 C CNN
-	1    5250 3050
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R?
-U 1 1 5DCFD0C2
-P 5250 3450
-F 0 "R?" H 5320 3496 50  0000 L CNN
-F 1 "200k" H 5320 3405 50  0000 L CNN
-F 2 "Resistors_SMD:R_0603_HandSoldering" V 5180 3450 50  0001 C CNN
-F 3 "https://www.digikey.ca/product-detail/en/panasonic-electronic-components/ERA-3AEB204V/P200KDBCT-ND/1466107" H 5250 3450 50  0001 C CNN
-	1    5250 3450
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	4550 3000 4600 3000
 Connection ~ 4550 3000
@@ -151,17 +113,6 @@ Wire Wire Line
 	4500 2900 4550 2900
 Wire Wire Line
 	4500 3000 4550 3000
-$Comp
-L Parts:TPS63030 U?
-U 1 1 5DCF7F00
-P 4050 2700
-F 0 "U?" H 4050 3265 50  0000 C CNN
-F 1 "TPS63030" H 4050 3174 50  0000 C CNN
-F 2 "Parts:WSON10-PAD" H 4050 2250 60  0001 C CNN
-F 3 "http://www.ti.com/product/TPS63030" H 3600 2600 60  0001 C CNN
-	1    4050 2700
-	1    0    0    -1  
-$EndComp
 $Comp
 L power:+BATT #PWR0103
 U 1 1 5DCDADE4
@@ -176,12 +127,12 @@ $EndComp
 $Comp
 L power:+3V3 #PWR0104
 U 1 1 5DCD8EE2
-P 5650 2450
-F 0 "#PWR0104" H 5650 2300 50  0001 C CNN
-F 1 "+3V3" H 5665 2623 50  0000 C CNN
-F 2 "" H 5650 2450 50  0001 C CNN
-F 3 "" H 5650 2450 50  0001 C CNN
-	1    5650 2450
+P 5300 2450
+F 0 "#PWR0104" H 5300 2300 50  0001 C CNN
+F 1 "+3V3" H 5315 2623 50  0000 C CNN
+F 2 "" H 5300 2450 50  0001 C CNN
+F 3 "" H 5300 2450 50  0001 C CNN
+	1    5300 2450
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -217,8 +168,6 @@ F 3 "" H 3150 4700 50  0001 C CNN
 	1    3150 4700
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	5250 3650 5250 3600
 $Comp
 L Parts:GNDA-3V3 #PWR0106
 U 1 1 5DD4DDED
@@ -242,17 +191,6 @@ F 3 "" H 4800 2800 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Parts:GNDA-3V3 #PWR0108
-U 1 1 5DD4F61F
-P 5250 3650
-F 0 "#PWR0108" H 5250 3400 50  0001 C CNN
-F 1 "GNDA-3V3" H 5255 3477 50  0000 C CNN
-F 2 "" H 5250 3650 50  0001 C CNN
-F 3 "" H 5250 3650 50  0001 C CNN
-	1    5250 3650
-	1    0    0    -1  
-$EndComp
-$Comp
 L Parts:GNDA-3V3 #PWR0109
 U 1 1 5DD4FC46
 P 3850 3350
@@ -266,12 +204,12 @@ $EndComp
 $Comp
 L power:GND #PWR0110
 U 1 1 5DD501DF
-P 5650 2850
-F 0 "#PWR0110" H 5650 2600 50  0001 C CNN
-F 1 "GND" H 5655 2677 50  0000 C CNN
-F 2 "" H 5650 2850 50  0001 C CNN
-F 3 "" H 5650 2850 50  0001 C CNN
-	1    5650 2850
+P 5300 2850
+F 0 "#PWR0110" H 5300 2600 50  0001 C CNN
+F 1 "GND" H 5305 2677 50  0000 C CNN
+F 2 "" H 5300 2850 50  0001 C CNN
+F 3 "" H 5300 2850 50  0001 C CNN
+	1    5300 2850
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -376,12 +314,12 @@ $EndComp
 $Comp
 L Device:C_Small C?
 U 1 1 5DD59F79
-P 5650 2650
-F 0 "C?" H 5742 2696 50  0000 L CNN
-F 1 "10uF" H 5742 2605 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0805_HandSoldering" H 5650 2650 50  0001 C CNN
-F 3 "https://www.digikey.ca/product-detail/en/kemet/C0805C106K8PACTU/399-4925-1-ND/1090920" H 5650 2650 50  0001 C CNN
-	1    5650 2650
+P 5300 2650
+F 0 "C?" H 5392 2696 50  0000 L CNN
+F 1 "10uF" H 5392 2605 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805_HandSoldering" H 5300 2650 50  0001 C CNN
+F 3 "https://www.digikey.ca/product-detail/en/kemet/C0805C106K8PACTU/399-4925-1-ND/1090920" H 5300 2650 50  0001 C CNN
+	1    5300 2650
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -398,25 +336,25 @@ $EndComp
 $Comp
 L Device:C_Small C?
 U 1 1 5DD5CD9A
-P 6000 2650
-F 0 "C?" H 6092 2696 50  0000 L CNN
-F 1 "10uF" H 6092 2605 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0805_HandSoldering" H 6000 2650 50  0001 C CNN
-F 3 "https://www.digikey.ca/product-detail/en/kemet/C0805C106K8PACTU/399-4925-1-ND/1090920" H 6000 2650 50  0001 C CNN
-	1    6000 2650
+P 5650 2650
+F 0 "C?" H 5742 2696 50  0000 L CNN
+F 1 "10uF" H 5742 2605 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805_HandSoldering" H 5650 2650 50  0001 C CNN
+F 3 "https://www.digikey.ca/product-detail/en/kemet/C0805C106K8PACTU/399-4925-1-ND/1090920" H 5650 2650 50  0001 C CNN
+	1    5650 2650
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	5650 2500 6000 2500
+	5300 2500 5650 2500
 Wire Wire Line
-	6000 2500 6000 2550
+	5650 2500 5650 2550
 Wire Wire Line
-	6000 2750 6000 2800
+	5650 2750 5650 2800
 Wire Wire Line
-	6000 2800 5650 2800
-Connection ~ 5650 2800
+	5650 2800 5300 2800
+Connection ~ 5300 2800
 Wire Wire Line
-	5650 2850 5650 2800
+	5300 2850 5300 2800
 Wire Wire Line
 	5300 5000 5300 5050
 $Comp
@@ -524,25 +462,6 @@ Wire Wire Line
 	4150 2050 4500 2050
 Wire Wire Line
 	4500 2050 4500 2400
-Wire Wire Line
-	4500 2500 5250 2500
-Wire Wire Line
-	4500 2600 5100 2600
-$Comp
-L Device:R R?
-U 1 1 5DDE565F
-P 5250 2700
-F 0 "R?" H 5320 2746 50  0000 L CNN
-F 1 "120k" H 5320 2655 50  0000 L CNN
-F 2 "Resistors_SMD:R_0805_HandSoldering" V 5180 2700 50  0001 C CNN
-F 3 "https://www.digikey.ca/product-detail/en/panasonic-electronic-components/ERA-6AED124V/P123803CT-ND/9467732" H 5250 2700 50  0001 C CNN
-	1    5250 2700
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	5250 2850 5250 2900
-Wire Wire Line
-	5100 2600 5100 3250
 $Comp
 L Parts:TCR2EF25 U?
 U 1 1 5DDF87D4
@@ -649,5 +568,29 @@ F 2 "Inductors:Inductor_Taiyo-Yuden_MD-3030" H 4600 4750 50  0001 C CNN
 F 3 "https://www.digikey.ca/product-detail/en/murata-electronics/LQH3NPN2R2MMEL/490-15950-1-ND/6800615" H 4600 4750 50  0001 C CNN
 	1    4600 4750
 	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	3550 2900 3600 2900
+Wire Wire Line
+	3550 2800 3550 2900
+Wire Wire Line
+	4500 2500 4550 2500
+Wire Wire Line
+	4500 2600 4550 2600
+Wire Wire Line
+	4550 2600 4550 2500
+Wire Wire Line
+	4550 2500 5300 2500
+Connection ~ 4550 2500
+$Comp
+L Parts:TPS63031 U?
+U 1 1 5DDC16A1
+P 4050 2700
+F 0 "U?" H 4050 3265 50  0000 C CNN
+F 1 "TPS63031" H 4050 3174 50  0000 C CNN
+F 2 "Parts:WSON10-PAD" H 4050 2250 60  0001 C CNN
+F 3 "http://www.ti.com/product/TPS63031" H 3600 2600 60  0001 C CNN
+	1    4050 2700
+	1    0    0    -1  
 $EndComp
 $EndSCHEMATC

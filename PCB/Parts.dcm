@@ -86,10 +86,10 @@ K buck step down converter regulator
 F http://www.ti.com/product/TPS62262
 $ENDCMP
 #
-$CMP TPS63030
+$CMP TPS63031
 D High Efficient Single Inductor Buck-Boost Converter with 1-A Switches
 K buck boost switching regulator converter
-F http://www.ti.com/product/TPS63030
+F http://www.ti.com/product/TPS63031
 $ENDCMP
 #
 #End Doc Library
