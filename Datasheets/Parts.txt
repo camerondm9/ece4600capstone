@@ -1,3 +1,12 @@
+Radio module:
+	uBlox BMD-360
+	https://www.digikey.ca/product-detail/en/u-blox-america-inc/BMD-360-A-R/1604-BMD-360-A-RCT-ND/10279460
+	(has microcontroller)
+
+Microcontroller:
+	Nordic nRF52811
+	(on radio module)
+
 Transducer:
 	Unictron A300A
 	https://www.digikey.ca/product-detail/en/unictron-technologies-corporation/H2KA300KA1CD00/2047-H2KA300KA1CD00-ND/9921568
