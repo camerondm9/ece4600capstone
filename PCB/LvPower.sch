@@ -52,8 +52,8 @@ U 1 1 5DCFFBE9
 P 3250 2950
 F 0 "C?" H 3342 2996 50  0000 L CNN
 F 1 "100nF" H 3342 2905 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0402" H 3250 2950 50  0001 C CNN
-F 3 "https://www.digikey.ca/product-detail/en/w-rth-elektronik/885012105010/732-7487-1-ND/5454114" H 3250 2950 50  0001 C CNN
+F 2 "Capacitors_SMD:C_0603_HandSoldering" H 3250 2950 50  0001 C CNN
+F 3 "https://www.digikey.ca/product-detail/en/w-rth-elektronik/885012206020/732-7939-1-ND/5454566" H 3250 2950 50  0001 C CNN
 	1    3250 2950
 	1    0    0    -1  
 $EndComp
@@ -591,6 +591,222 @@ F 1 "TPS63031" H 4050 3174 50  0000 C CNN
 F 2 "Parts:WSON10-PAD" H 4050 2250 60  0001 C CNN
 F 3 "http://www.ti.com/product/TPS63031" H 3600 2600 60  0001 C CNN
 	1    4050 2700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Parts:+3V3-LN #PWR?
+U 1 1 5DD3C0A0
+P 8250 4200
+F 0 "#PWR?" H 8250 4050 50  0001 C CNN
+F 1 "+3V3-LN" H 8265 4373 50  0000 C CNN
+F 2 "" H 8250 4200 50  0001 C CNN
+F 3 "" H 8250 4200 50  0001 C CNN
+	1    8250 4200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR?
+U 1 1 5DD3E19F
+P 7550 4200
+F 0 "#PWR?" H 7550 4050 50  0001 C CNN
+F 1 "+3V3" H 7565 4373 50  0000 C CNN
+F 2 "" H 7550 4200 50  0001 C CNN
+F 3 "" H 7550 4200 50  0001 C CNN
+	1    7550 4200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C?
+U 1 1 5DD3EB70
+P 8250 4400
+F 0 "C?" H 8342 4446 50  0000 L CNN
+F 1 "10uF" H 8342 4355 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805_HandSoldering" H 8250 4400 50  0001 C CNN
+F 3 "https://www.digikey.ca/product-detail/en/kemet/C0805C106K8PACTU/399-4925-1-ND/1090920" H 8250 4400 50  0001 C CNN
+	1    8250 4400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8250 4200 8250 4250
+$Comp
+L Device:C_Small C?
+U 1 1 5DD417D3
+P 8600 4400
+F 0 "C?" H 8692 4446 50  0000 L CNN
+F 1 "10uF" H 8692 4355 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805_HandSoldering" H 8600 4400 50  0001 C CNN
+F 3 "https://www.digikey.ca/product-detail/en/kemet/C0805C106K8PACTU/399-4925-1-ND/1090920" H 8600 4400 50  0001 C CNN
+	1    8600 4400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8250 4250 8600 4250
+Wire Wire Line
+	8600 4250 8600 4300
+Connection ~ 8250 4250
+Wire Wire Line
+	8250 4250 8250 4300
+Wire Wire Line
+	8600 4500 8600 4550
+Wire Wire Line
+	8600 4550 8250 4550
+Wire Wire Line
+	8250 4550 8250 4500
+$Comp
+L power:GND #PWR?
+U 1 1 5DD45711
+P 8250 4600
+F 0 "#PWR?" H 8250 4350 50  0001 C CNN
+F 1 "GND" H 8255 4427 50  0000 C CNN
+F 2 "" H 8250 4600 50  0001 C CNN
+F 3 "" H 8250 4600 50  0001 C CNN
+	1    8250 4600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8250 4600 8250 4550
+Connection ~ 8250 4550
+$Comp
+L Device:L_Core_Ferrite_Small L?
+U 1 1 5DD48EC8
+P 7900 4250
+F 0 "L?" V 8105 4250 50  0000 C CNN
+F 1 "100nH" V 8014 4250 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" H 7900 4250 50  0001 C CNN
+F 3 "https://www.digikey.ca/product-detail/en/tdk-corporation/MLZ2012DR10DT000/445-6395-1-ND/2465721" H 7900 4250 50  0001 C CNN
+	1    7900 4250
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	8000 4250 8250 4250
+Wire Wire Line
+	7800 4250 7550 4250
+Wire Wire Line
+	7550 4250 7550 4200
+$Comp
+L Device:C_Small C?
+U 1 1 5DD59CF4
+P 7550 4400
+F 0 "C?" H 7642 4446 50  0000 L CNN
+F 1 "1uF" H 7642 4355 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603_HandSoldering" H 7550 4400 50  0001 C CNN
+F 3 "https://www.digikey.ca/product-detail/en/samsung-electro-mechanics/CL10A105MP8NNNC/1276-1866-1-ND/3889952" H 7550 4400 50  0001 C CNN
+	1    7550 4400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7550 4300 7550 4250
+Connection ~ 7550 4250
+Wire Wire Line
+	7550 4500 7550 4550
+Wire Wire Line
+	7550 4550 8250 4550
+$Comp
+L Device:C_Small C?
+U 1 1 5DD65CDB
+P 8250 5450
+F 0 "C?" H 8342 5496 50  0000 L CNN
+F 1 "10uF" H 8342 5405 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805_HandSoldering" H 8250 5450 50  0001 C CNN
+F 3 "https://www.digikey.ca/product-detail/en/kemet/C0805C106K8PACTU/399-4925-1-ND/1090920" H 8250 5450 50  0001 C CNN
+	1    8250 5450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8250 5250 8250 5300
+$Comp
+L Device:C_Small C?
+U 1 1 5DD65CE6
+P 8600 5450
+F 0 "C?" H 8692 5496 50  0000 L CNN
+F 1 "10uF" H 8692 5405 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805_HandSoldering" H 8600 5450 50  0001 C CNN
+F 3 "https://www.digikey.ca/product-detail/en/kemet/C0805C106K8PACTU/399-4925-1-ND/1090920" H 8600 5450 50  0001 C CNN
+	1    8600 5450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8250 5300 8600 5300
+Wire Wire Line
+	8600 5300 8600 5350
+Connection ~ 8250 5300
+Wire Wire Line
+	8250 5300 8250 5350
+Wire Wire Line
+	8600 5550 8600 5600
+Wire Wire Line
+	8600 5600 8250 5600
+Wire Wire Line
+	8250 5600 8250 5550
+$Comp
+L power:GND #PWR?
+U 1 1 5DD65CF7
+P 8250 5650
+F 0 "#PWR?" H 8250 5400 50  0001 C CNN
+F 1 "GND" H 8255 5477 50  0000 C CNN
+F 2 "" H 8250 5650 50  0001 C CNN
+F 3 "" H 8250 5650 50  0001 C CNN
+	1    8250 5650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8250 5650 8250 5600
+Connection ~ 8250 5600
+$Comp
+L Device:L_Core_Ferrite_Small L?
+U 1 1 5DD65D03
+P 7900 5300
+F 0 "L?" V 8105 5300 50  0000 C CNN
+F 1 "100nH" V 8014 5300 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" H 7900 5300 50  0001 C CNN
+F 3 "https://www.digikey.ca/product-detail/en/tdk-corporation/MLZ2012DR10DT000/445-6395-1-ND/2465721" H 7900 5300 50  0001 C CNN
+	1    7900 5300
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	8000 5300 8250 5300
+Wire Wire Line
+	7800 5300 7550 5300
+Wire Wire Line
+	7550 5300 7550 5250
+$Comp
+L Device:C_Small C?
+U 1 1 5DD65D10
+P 7550 5450
+F 0 "C?" H 7642 5496 50  0000 L CNN
+F 1 "1uF" H 7642 5405 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603_HandSoldering" H 7550 5450 50  0001 C CNN
+F 3 "https://www.digikey.ca/product-detail/en/samsung-electro-mechanics/CL10A105MP8NNNC/1276-1866-1-ND/3889952" H 7550 5450 50  0001 C CNN
+	1    7550 5450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7550 5350 7550 5300
+Connection ~ 7550 5300
+Wire Wire Line
+	7550 5550 7550 5600
+Wire Wire Line
+	7550 5600 8250 5600
+$Comp
+L power:+1V2 #PWR?
+U 1 1 5DD6DA7B
+P 7550 5250
+F 0 "#PWR?" H 7550 5100 50  0001 C CNN
+F 1 "+1V2" H 7565 5423 50  0000 C CNN
+F 2 "" H 7550 5250 50  0001 C CNN
+F 3 "" H 7550 5250 50  0001 C CNN
+	1    7550 5250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Parts:+1V2-LN #PWR?
+U 1 1 5DD6F7D4
+P 8250 5250
+F 0 "#PWR?" H 8250 5100 50  0001 C CNN
+F 1 "+1V2-LN" H 8265 5423 50  0000 C CNN
+F 2 "" H 8250 5250 50  0001 C CNN
+F 3 "" H 8250 5250 50  0001 C CNN
+	1    8250 5250
 	1    0    0    -1  
 $EndComp
 $EndSCHEMATC

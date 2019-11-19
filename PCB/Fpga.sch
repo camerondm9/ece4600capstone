@@ -253,13 +253,8 @@ Wire Wire Line
 	1350 2300 1300 2300
 Wire Wire Line
 	1300 2400 1350 2400
-Text Label 900  2300 0    50   ~ 0
-1V2-PLL
 Wire Wire Line
 	1300 2300 1300 2400
-Wire Wire Line
-	900  2300 1300 2300
-Connection ~ 1300 2300
 Text GLabel 4550 2000 0    50   Input ~ 0
 DAC-~CS
 Text GLabel 4550 2100 0    50   Input ~ 0
@@ -729,7 +724,7 @@ FPGA-DOUT
 Wire Wire Line
 	5750 6350 5800 6350
 Text Notes 5400 3600 0    50   ~ 0
-TODO: Add decoupling capacitors to all ICs
+TODO: Add decoupling capacitors to FPGA
 Text GLabel 5750 5400 0    50   Input ~ 0
 FPGA-LINK0
 Text GLabel 5750 5500 0    50   Input ~ 0
@@ -777,4 +772,57 @@ Wire Wire Line
 Connection ~ 10050 950 
 Wire Wire Line
 	10050 950  10100 950 
+$Comp
+L Parts:+1V2-LN #PWR?
+U 1 1 5DD72B66
+P 1100 2400
+F 0 "#PWR?" H 1100 2250 50  0001 C CNN
+F 1 "+1V2-LN" H 1115 2573 50  0000 C CNN
+F 2 "" H 1100 2400 50  0001 C CNN
+F 3 "" H 1100 2400 50  0001 C CNN
+	1    1100 2400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1100 2400 1300 2400
+Connection ~ 1300 2400
+$Comp
+L Device:C_Small C?
+U 1 1 5DD852FA
+P 9650 1050
+F 0 "C?" H 9742 1096 50  0000 L CNN
+F 1 "100nF" H 9742 1005 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603_HandSoldering" H 9650 1050 50  0001 C CNN
+F 3 "https://www.digikey.ca/product-detail/en/w-rth-elektronik/885012206020/732-7939-1-ND/5454566" H 9650 1050 50  0001 C CNN
+	1    9650 1050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR?
+U 1 1 5DD89B39
+P 9650 900
+F 0 "#PWR?" H 9650 750 50  0001 C CNN
+F 1 "+3V3" H 9665 1073 50  0000 C CNN
+F 2 "" H 9650 900 50  0001 C CNN
+F 3 "" H 9650 900 50  0001 C CNN
+	1    9650 900 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9650 900  9650 950 
+$Comp
+L power:GND #PWR?
+U 1 1 5DD8DD81
+P 9650 1200
+F 0 "#PWR?" H 9650 950 50  0001 C CNN
+F 1 "GND" H 9655 1027 50  0000 C CNN
+F 2 "" H 9650 1200 50  0001 C CNN
+F 3 "" H 9650 1200 50  0001 C CNN
+	1    9650 1200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9650 1150 9650 1200
+Text GLabel 5750 5900 0    50   Input ~ 0
+FPGA-LINK5
 $EndSCHEMATC

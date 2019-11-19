@@ -169,9 +169,9 @@ Wire Wire Line
 	3150 6550 3200 6550
 Wire Wire Line
 	3100 6750 3200 6750
-Text GLabel 2500 2000 0    50   Input ~ 0
-MICRO-TX
 Text GLabel 2500 2100 0    50   Input ~ 0
+MICRO-TX
+Text GLabel 2500 2200 0    50   Input ~ 0
 MICRO-RX
 Text GLabel 8950 3300 0    50   Input ~ 0
 MICRO-nRESET
@@ -484,8 +484,6 @@ F 3 "" H 2000 6750 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	2000 6750 2100 6750
-Text Notes 1800 4750 0    50   ~ 0
-TODO: Add decoupling capacitors to all ICs
 $Comp
 L power:+3V3 #PWR?
 U 1 1 5E02953A
@@ -577,17 +575,15 @@ Wire Wire Line
 	2550 1800 2150 1800
 Wire Wire Line
 	2500 2100 2550 2100
-Wire Wire Line
-	2500 2000 2550 2000
-Text GLabel 2500 2400 0    50   Input ~ 0
+Text GLabel 2500 2300 0    50   Input ~ 0
 FPGA-LINK0
-Text GLabel 2500 2500 0    50   Input ~ 0
+Text GLabel 2500 2400 0    50   Input ~ 0
 FPGA-LINK1
-Text GLabel 2500 2600 0    50   Input ~ 0
+Text GLabel 2500 2500 0    50   Input ~ 0
 FPGA-LINK2
-Text GLabel 2500 2700 0    50   Input ~ 0
+Text GLabel 2500 2600 0    50   Input ~ 0
 FPGA-LINK3
-Text GLabel 2500 2800 0    50   Input ~ 0
+Text GLabel 2500 2700 0    50   Input ~ 0
 FPGA-LINK4
 Wire Wire Line
 	2500 2800 2550 2800
@@ -599,4 +595,261 @@ Wire Wire Line
 	2550 2500 2500 2500
 Wire Wire Line
 	2500 2400 2550 2400
+$Comp
+L Device:C_Small C?
+U 1 1 5DD9B0BF
+P 4000 5650
+F 0 "C?" H 4092 5696 50  0000 L CNN
+F 1 "100nF" H 4092 5605 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603_HandSoldering" H 4000 5650 50  0001 C CNN
+F 3 "https://www.digikey.ca/product-detail/en/w-rth-elektronik/885012206020/732-7939-1-ND/5454566" H 4000 5650 50  0001 C CNN
+	1    4000 5650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR?
+U 1 1 5DD9C61F
+P 4000 5500
+F 0 "#PWR?" H 4000 5350 50  0001 C CNN
+F 1 "+3V3" H 4015 5673 50  0000 C CNN
+F 2 "" H 4000 5500 50  0001 C CNN
+F 3 "" H 4000 5500 50  0001 C CNN
+	1    4000 5500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5DD9CB13
+P 4000 5800
+F 0 "#PWR?" H 4000 5550 50  0001 C CNN
+F 1 "GND" H 4005 5627 50  0000 C CNN
+F 2 "" H 4000 5800 50  0001 C CNN
+F 3 "" H 4000 5800 50  0001 C CNN
+	1    4000 5800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4000 5750 4000 5800
+Wire Wire Line
+	4000 5500 4000 5550
+$Comp
+L Device:C_Small C?
+U 1 1 5DDA85BA
+P 4000 6550
+F 0 "C?" H 4092 6596 50  0000 L CNN
+F 1 "100nF" H 4092 6505 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603_HandSoldering" H 4000 6550 50  0001 C CNN
+F 3 "https://www.digikey.ca/product-detail/en/w-rth-elektronik/885012206020/732-7939-1-ND/5454566" H 4000 6550 50  0001 C CNN
+	1    4000 6550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR?
+U 1 1 5DDA85C4
+P 4000 6400
+F 0 "#PWR?" H 4000 6250 50  0001 C CNN
+F 1 "+3V3" H 4015 6573 50  0000 C CNN
+F 2 "" H 4000 6400 50  0001 C CNN
+F 3 "" H 4000 6400 50  0001 C CNN
+	1    4000 6400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5DDA85CE
+P 4000 6700
+F 0 "#PWR?" H 4000 6450 50  0001 C CNN
+F 1 "GND" H 4005 6527 50  0000 C CNN
+F 2 "" H 4000 6700 50  0001 C CNN
+F 3 "" H 4000 6700 50  0001 C CNN
+	1    4000 6700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4000 6650 4000 6700
+Wire Wire Line
+	4000 6400 4000 6450
+$Comp
+L Device:C_Small C?
+U 1 1 5DDAE8B9
+P 5100 1100
+F 0 "C?" H 5192 1146 50  0000 L CNN
+F 1 "100nF" H 5192 1055 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603_HandSoldering" H 5100 1100 50  0001 C CNN
+F 3 "https://www.digikey.ca/product-detail/en/w-rth-elektronik/885012206020/732-7939-1-ND/5454566" H 5100 1100 50  0001 C CNN
+	1    5100 1100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR?
+U 1 1 5DDAE8C3
+P 5100 900
+F 0 "#PWR?" H 5100 750 50  0001 C CNN
+F 1 "+3V3" H 5115 1073 50  0000 C CNN
+F 2 "" H 5100 900 50  0001 C CNN
+F 3 "" H 5100 900 50  0001 C CNN
+	1    5100 900 
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5DDAE8CD
+P 5100 1300
+F 0 "#PWR?" H 5100 1050 50  0001 C CNN
+F 1 "GND" H 5105 1127 50  0000 C CNN
+F 2 "" H 5100 1300 50  0001 C CNN
+F 3 "" H 5100 1300 50  0001 C CNN
+	1    5100 1300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5100 1200 5100 1250
+Wire Wire Line
+	5100 900  5100 950 
+$Comp
+L Device:C_Small C?
+U 1 1 5DDB4BBF
+P 5500 1100
+F 0 "C?" H 5592 1146 50  0000 L CNN
+F 1 "10uF" H 5592 1055 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805_HandSoldering" H 5500 1100 50  0001 C CNN
+F 3 "https://www.digikey.ca/product-detail/en/kemet/C0805C106K8PACTU/399-4925-1-ND/1090920" H 5500 1100 50  0001 C CNN
+	1    5500 1100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5100 950  5500 950 
+Wire Wire Line
+	5500 950  5500 1000
+Connection ~ 5100 950 
+Wire Wire Line
+	5100 950  5100 1000
+Wire Wire Line
+	5500 1200 5500 1250
+Wire Wire Line
+	5500 1250 5100 1250
+Connection ~ 5100 1250
+Wire Wire Line
+	5100 1250 5100 1300
+Wire Wire Line
+	2500 2200 2550 2200
+$Comp
+L power:+BATT #PWR?
+U 1 1 5DDC951F
+P 1050 1600
+F 0 "#PWR?" H 1050 1450 50  0001 C CNN
+F 1 "+BATT" H 1065 1773 50  0000 C CNN
+F 2 "" H 1050 1600 50  0001 C CNN
+F 3 "" H 1050 1600 50  0001 C CNN
+	1    1050 1600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5DDCAC58
+P 1050 2450
+F 0 "#PWR?" H 1050 2200 50  0001 C CNN
+F 1 "GND" H 1055 2277 50  0000 C CNN
+F 2 "" H 1050 2450 50  0001 C CNN
+F 3 "" H 1050 2450 50  0001 C CNN
+	1    1050 2450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5DDCCC81
+P 1050 1800
+F 0 "R?" H 1120 1846 50  0000 L CNN
+F 1 "20k" H 1120 1755 50  0000 L CNN
+F 2 "Resistors_SMD:R_0603_HandSoldering" V 980 1800 50  0001 C CNN
+F 3 "https://www.digikey.ca/product-detail/en/stackpole-electronics-inc/RMCF0603FT20K0/RMCF0603FT20K0CT-ND/1943075" H 1050 1800 50  0001 C CNN
+	1    1050 1800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5DDCDBDE
+P 1050 2200
+F 0 "R?" H 1120 2246 50  0000 L CNN
+F 1 "30k" H 1120 2155 50  0000 L CNN
+F 2 "Resistors_SMD:R_0603_HandSoldering" V 980 2200 50  0001 C CNN
+F 3 "https://www.digikey.ca/product-detail/en/stackpole-electronics-inc/RMCF0603FT30K0/RMCF0603FT30K0CT-ND/1943086" H 1050 2200 50  0001 C CNN
+	1    1050 2200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1050 2000 1050 1950
+Wire Wire Line
+	1050 2000 1400 2000
+Wire Wire Line
+	1050 2000 1050 2050
+Connection ~ 1050 2000
+Wire Wire Line
+	1050 1650 1050 1600
+Wire Wire Line
+	1050 2350 1050 2400
+Wire Wire Line
+	1050 2400 1400 2400
+Connection ~ 1050 2400
+Wire Wire Line
+	1050 2400 1050 2450
+Connection ~ 1400 2000
+Wire Wire Line
+	1400 2000 2550 2000
+Wire Wire Line
+	1400 2400 1400 2300
+Wire Wire Line
+	1400 2100 1400 2000
+$Comp
+L Device:C_Small C?
+U 1 1 5DDE1E76
+P 1400 2200
+F 0 "C?" H 1492 2246 50  0000 L CNN
+F 1 "10nF" H 1492 2155 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603_HandSoldering" H 1400 2200 50  0001 C CNN
+F 3 "https://www.digikey.ca/product-detail/en/w-rth-elektronik/885012206014/732-7933-1-ND/5454560" H 1400 2200 50  0001 C CNN
+	1    1400 2200
+	1    0    0    -1  
+$EndComp
+Text GLabel 2500 2800 0    50   Input ~ 0
+FPGA-LINK5
+Wire Wire Line
+	2500 2300 2550 2300
+$Comp
+L Device:C_Small C?
+U 1 1 5DE07715
+P 10650 2100
+F 0 "C?" H 10742 2146 50  0000 L CNN
+F 1 "10uF" H 10742 2055 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805_HandSoldering" H 10650 2100 50  0001 C CNN
+F 3 "https://www.digikey.ca/product-detail/en/kemet/C0805C106K8PACTU/399-4925-1-ND/1090920" H 10650 2100 50  0001 C CNN
+	1    10650 2100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5DE08CC0
+P 10650 2250
+F 0 "#PWR?" H 10650 2000 50  0001 C CNN
+F 1 "GND" H 10655 2077 50  0000 C CNN
+F 2 "" H 10650 2250 50  0001 C CNN
+F 3 "" H 10650 2250 50  0001 C CNN
+	1    10650 2250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR?
+U 1 1 5DE0949F
+P 10650 1950
+F 0 "#PWR?" H 10650 1800 50  0001 C CNN
+F 1 "+3V3" H 10665 2123 50  0000 C CNN
+F 2 "" H 10650 1950 50  0001 C CNN
+F 3 "" H 10650 1950 50  0001 C CNN
+	1    10650 1950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10650 1950 10650 2000
+Wire Wire Line
+	10650 2200 10650 2250
 $EndSCHEMATC

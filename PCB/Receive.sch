@@ -122,4 +122,6 @@ Text GLabel 2100 3850 0    50   Input ~ 0
 TRANSDUCER
 Wire Wire Line
 	2100 3850 2200 3850
+Text Notes 4800 3900 0    50   ~ 0
+Input is roughly 10mVpp\nOutput should be roughly 3Vpp
 $EndSCHEMATC
