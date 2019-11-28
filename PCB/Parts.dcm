@@ -10,6 +10,11 @@ D Power symbol creates a global label with name "+3V3-LN"
 K power-flag low-noise
 $ENDCMP
 #
+$CMP +50V
+D Power symbol creates a global label with name "+3V3-LN"
+K power-flag low-noise
+$ENDCMP
+#
 $CMP 10CL010
 D Cyclone 10 LP FPGA 10k LUT
 K fpga cyclone
@@ -40,6 +45,11 @@ K temperature humidity I2C
 F https://ams.com/ens210
 $ENDCMP
 #
+$CMP GNDA-12V
+D Power symbol creates a global label with name "GND" , ground
+K power-flag
+$ENDCMP
+#
 $CMP GNDA-1V2
 D Power symbol creates a global label with name "GND" , ground
 K power-flag
@@ -65,6 +75,12 @@ $CMP LIS2DE12
 D MEMS digital output motion sensor: ultra low-power high performance 3-axes femto accelerometer
 K accelerometer
 F https://www.st.com/content/st_com/en/products/mems-and-sensors/accelerometers/lis2de12.html
+$ENDCMP
+#
+$CMP LMR62421
+D Simple Switcher 24V 2.1A step-up voltage regulator
+K step-up boost switching regulator
+F http://www.ti.com/product/LMR62421
 $ENDCMP
 #
 $CMP LTC6090-5

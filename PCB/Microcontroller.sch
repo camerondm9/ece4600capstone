@@ -852,4 +852,8 @@ Wire Wire Line
 	10650 1950 10650 2000
 Wire Wire Line
 	10650 2200 10650 2250
+Text GLabel 4000 2700 2    50   Input ~ 0
+HV-ENABLE
+Wire Wire Line
+	3950 2700 4000 2700
 $EndSCHEMATC
