@@ -68,7 +68,7 @@ Wire Wire Line
 	2600 2500 2600 2550
 Connection ~ 2600 2500
 Wire Wire Line
-	2600 2450 2600 2500
+	2600 2100 2600 2150
 Wire Wire Line
 	4150 3350 4250 3350
 Wire Wire Line
@@ -116,12 +116,12 @@ Wire Wire Line
 $Comp
 L power:+BATT #PWR0103
 U 1 1 5DCDADE4
-P 2600 2450
-F 0 "#PWR0103" H 2600 2300 50  0001 C CNN
-F 1 "+BATT" H 2615 2623 50  0000 C CNN
-F 2 "" H 2600 2450 50  0001 C CNN
-F 3 "" H 2600 2450 50  0001 C CNN
-	1    2600 2450
+P 2600 2100
+F 0 "#PWR0103" H 2600 1950 50  0001 C CNN
+F 1 "+BATT" H 2615 2273 50  0000 C CNN
+F 2 "" H 2600 2100 50  0001 C CNN
+F 3 "" H 2600 2100 50  0001 C CNN
+	1    2600 2100
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -160,12 +160,12 @@ $EndComp
 $Comp
 L power:+BATT #PWR0105
 U 1 1 5DD163FB
-P 3150 4700
-F 0 "#PWR0105" H 3150 4550 50  0001 C CNN
-F 1 "+BATT" H 3165 4873 50  0000 C CNN
-F 2 "" H 3150 4700 50  0001 C CNN
-F 3 "" H 3150 4700 50  0001 C CNN
-	1    3150 4700
+P 3150 4350
+F 0 "#PWR0105" H 3150 4200 50  0001 C CNN
+F 1 "+BATT" H 3165 4523 50  0000 C CNN
+F 2 "" H 3150 4350 50  0001 C CNN
+F 3 "" H 3150 4350 50  0001 C CNN
+	1    3150 4350
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -521,7 +521,7 @@ Wire Wire Line
 	3600 5050 3650 5050
 Connection ~ 3600 4850
 Wire Wire Line
-	3150 4700 3150 4750
+	3150 4350 3150 4400
 Wire Wire Line
 	3150 4750 3600 4750
 Connection ~ 3150 4750
@@ -556,7 +556,7 @@ Wire Wire Line
 Wire Wire Line
 	4500 4750 4450 4750
 Wire Wire Line
-	4750 4750 5300 4750
+	4750 4750 4950 4750
 Connection ~ 4750 4750
 $Comp
 L Device:L_Core_Ferrite_Small L?
@@ -580,7 +580,7 @@ Wire Wire Line
 Wire Wire Line
 	4550 2600 4550 2500
 Wire Wire Line
-	4550 2500 5300 2500
+	4550 2500 4950 2500
 Connection ~ 4550 2500
 $Comp
 L Parts:TPS63031 U?
@@ -835,4 +835,56 @@ Wire Wire Line
 	8000 5300 8050 5300
 Wire Wire Line
 	7550 5600 8550 5600
+$Comp
+L Jumper:SolderJumper_2_Bridged JP?
+U 1 1 5DE955D5
+P 5100 4750
+F 0 "JP?" H 5100 4955 50  0000 C CNN
+F 1 "0" H 5100 4864 50  0000 C CNN
+F 2 "Parts:SolderJumper_0603" H 5100 4750 50  0001 C CNN
+F 3 "" H 5100 4750 50  0001 C CNN
+	1    5100 4750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Jumper:SolderJumper_2_Bridged JP?
+U 1 1 5DE9B086
+P 2600 2300
+F 0 "JP?" V 2554 2368 50  0000 L CNN
+F 1 "0" V 2645 2368 50  0000 L CNN
+F 2 "Parts:SolderJumper_0603" H 2600 2300 50  0001 C CNN
+F 3 "" H 2600 2300 50  0001 C CNN
+	1    2600 2300
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2600 2450 2600 2500
+$Comp
+L Jumper:SolderJumper_2_Bridged JP?
+U 1 1 5DEA0F33
+P 5100 2500
+F 0 "JP?" H 5100 2705 50  0000 C CNN
+F 1 "0" H 5100 2614 50  0000 C CNN
+F 2 "Parts:SolderJumper_0603" H 5100 2500 50  0001 C CNN
+F 3 "" H 5100 2500 50  0001 C CNN
+	1    5100 2500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5250 2500 5300 2500
+$Comp
+L Jumper:SolderJumper_2_Bridged JP?
+U 1 1 5DEA5A0E
+P 3150 4550
+F 0 "JP?" V 3104 4618 50  0000 L CNN
+F 1 "0" V 3195 4618 50  0000 L CNN
+F 2 "Parts:SolderJumper_0603" H 3150 4550 50  0001 C CNN
+F 3 "" H 3150 4550 50  0001 C CNN
+	1    3150 4550
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3150 4700 3150 4750
+Wire Wire Line
+	5250 4750 5300 4750
 $EndSCHEMATC

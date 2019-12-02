@@ -822,12 +822,12 @@ $Comp
 L Jumper:SolderJumper_2_Bridged JP?
 U 1 1 5DE5A1EB
 P 2150 2200
-F 0 "JP?" V 2196 2112 50  0000 R CNN
-F 1 "0" V 2105 2112 50  0000 R CNN
+F 0 "JP?" V 2104 2268 50  0000 L CNN
+F 1 "0" V 2195 2268 50  0000 L CNN
 F 2 "Parts:SolderJumper_0603" H 2150 2200 50  0001 C CNN
 F 3 "" H 2150 2200 50  0001 C CNN
 	1    2150 2200
-	0    -1   -1   0   
+	0    1    1    0   
 $EndComp
 Wire Wire Line
 	2150 2400 3500 2400
@@ -842,12 +842,12 @@ $Comp
 L Jumper:SolderJumper_2_Bridged JP?
 U 1 1 5DE833A1
 P 2150 4550
-F 0 "JP?" V 2196 4462 50  0000 R CNN
-F 1 "0" V 2105 4462 50  0000 R CNN
+F 0 "JP?" V 2104 4618 50  0000 L CNN
+F 1 "0" V 2195 4618 50  0000 L CNN
 F 2 "Parts:SolderJumper_0603" H 2150 4550 50  0001 C CNN
 F 3 "" H 2150 4550 50  0001 C CNN
 	1    2150 4550
-	0    -1   -1   0   
+	0    1    1    0   
 $EndComp
 Wire Wire Line
 	2150 4700 2150 4750
