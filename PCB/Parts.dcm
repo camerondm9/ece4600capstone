@@ -60,6 +60,11 @@ D Power symbol creates a global label with name "GND" , ground
 K power-flag
 $ENDCMP
 #
+$CMP GNDA-50V
+D Power symbol creates a global label with name "GND" , ground
+K power-flag
+$ENDCMP
+#
 $CMP GNDA-FPGA
 D Power symbol creates a global label with name "GND" , ground
 K power-flag
@@ -75,6 +80,12 @@ $CMP LIS2DE12
 D MEMS digital output motion sensor: ultra low-power high performance 3-axes femto accelerometer
 K accelerometer
 F https://www.st.com/content/st_com/en/products/mems-and-sensors/accelerometers/lis2de12.html
+$ENDCMP
+#
+$CMP LM3478
+D High-Efficiency Low-Side N-channel controller for switching regulator
+K step-up boost switching controller
+F http://www.ti.com/product/LM3478
 $ENDCMP
 #
 $CMP LMR62421
