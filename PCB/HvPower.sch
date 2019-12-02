@@ -50,12 +50,12 @@ $EndComp
 $Comp
 L power:+BATT #PWR?
 U 1 1 5DDF98F8
-P 2150 2350
-F 0 "#PWR?" H 2150 2200 50  0001 C CNN
-F 1 "+BATT" H 2165 2523 50  0000 C CNN
-F 2 "" H 2150 2350 50  0001 C CNN
-F 3 "" H 2150 2350 50  0001 C CNN
-	1    2150 2350
+P 2150 2000
+F 0 "#PWR?" H 2150 1850 50  0001 C CNN
+F 1 "+BATT" H 2165 2173 50  0000 C CNN
+F 2 "" H 2150 2000 50  0001 C CNN
+F 3 "" H 2150 2000 50  0001 C CNN
+	1    2150 2000
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -168,7 +168,7 @@ Connection ~ 5050 2400
 Wire Wire Line
 	5050 2400 4700 2400
 Wire Wire Line
-	5050 2400 5700 2400
+	5050 2400 5350 2400
 $Comp
 L Device:L_Core_Ferrite_Small L?
 U 1 1 5DE12FDC
@@ -233,9 +233,6 @@ Wire Wire Line
 Wire Wire Line
 	4700 2850 4250 2850
 Wire Wire Line
-	2150 2350 2150 2400
-Connection ~ 2150 2400
-Wire Wire Line
 	2150 2400 2150 2450
 $Comp
 L Device:Net-Tie_2 NT?
@@ -299,12 +296,12 @@ Wire Wire Line
 $Comp
 L power:+12V #PWR?
 U 1 1 5DE44608
-P 2150 4700
-F 0 "#PWR?" H 2150 4550 50  0001 C CNN
-F 1 "+12V" H 2165 4873 50  0000 C CNN
-F 2 "" H 2150 4700 50  0001 C CNN
-F 3 "" H 2150 4700 50  0001 C CNN
-	1    2150 4700
+P 2150 4350
+F 0 "#PWR?" H 2150 4200 50  0001 C CNN
+F 1 "+12V" H 2165 4523 50  0000 C CNN
+F 2 "" H 2150 4350 50  0001 C CNN
+F 3 "" H 2150 4350 50  0001 C CNN
+	1    2150 4350
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -332,7 +329,7 @@ $EndComp
 Wire Wire Line
 	2150 5050 2150 5000
 Wire Wire Line
-	2150 4700 2150 4750
+	2150 4350 2150 4400
 Connection ~ 2150 4750
 Wire Wire Line
 	2150 4750 2150 4800
@@ -380,8 +377,6 @@ Wire Wire Line
 	3050 3200 3050 3250
 Wire Wire Line
 	3050 2850 3550 2850
-Wire Wire Line
-	2150 2400 3500 2400
 Connection ~ 3500 2400
 $Comp
 L Parts:LM3478 U?
@@ -494,8 +489,6 @@ F 3 "" H 3500 5700 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	3500 5700 3550 5700
-Wire Wire Line
-	2150 4750 3100 4750
 Wire Wire Line
 	3500 4750 3500 5300
 Wire Wire Line
@@ -667,7 +660,7 @@ F 3 "https://www.digikey.ca/product-detail/en/united-chemi-con/EKYA630ELL221MJ20
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	5550 4750 5950 4750
+	5550 4750 5600 4750
 Wire Wire Line
 	5950 4750 5950 4700
 Connection ~ 5550 4750
@@ -825,4 +818,63 @@ Wire Wire Line
 Connection ~ 3100 4750
 Wire Wire Line
 	3100 4750 3500 4750
+$Comp
+L Jumper:SolderJumper_2_Bridged JP?
+U 1 1 5DE5A1EB
+P 2150 2200
+F 0 "JP?" V 2196 2112 50  0000 R CNN
+F 1 "0" V 2105 2112 50  0000 R CNN
+F 2 "Parts:SolderJumper_0603" H 2150 2200 50  0001 C CNN
+F 3 "" H 2150 2200 50  0001 C CNN
+	1    2150 2200
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	2150 2400 3500 2400
+Wire Wire Line
+	2150 2400 2150 2350
+Connection ~ 2150 2400
+Wire Wire Line
+	2150 2050 2150 2000
+Wire Wire Line
+	2150 4750 3100 4750
+$Comp
+L Jumper:SolderJumper_2_Bridged JP?
+U 1 1 5DE833A1
+P 2150 4550
+F 0 "JP?" V 2196 4462 50  0000 R CNN
+F 1 "0" V 2105 4462 50  0000 R CNN
+F 2 "Parts:SolderJumper_0603" H 2150 4550 50  0001 C CNN
+F 3 "" H 2150 4550 50  0001 C CNN
+	1    2150 4550
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	2150 4700 2150 4750
+$Comp
+L Jumper:SolderJumper_2_Bridged JP?
+U 1 1 5DE88746
+P 5500 2400
+F 0 "JP?" H 5500 2605 50  0000 C CNN
+F 1 "0" H 5500 2514 50  0000 C CNN
+F 2 "Parts:SolderJumper_0603" H 5500 2400 50  0001 C CNN
+F 3 "" H 5500 2400 50  0001 C CNN
+	1    5500 2400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5650 2400 5700 2400
+$Comp
+L Jumper:SolderJumper_2_Bridged JP?
+U 1 1 5DE89AF1
+P 5750 4750
+F 0 "JP?" H 5750 4955 50  0000 C CNN
+F 1 "0" H 5750 4864 50  0000 C CNN
+F 2 "Parts:SolderJumper_0603" H 5750 4750 50  0001 C CNN
+F 3 "" H 5750 4750 50  0001 C CNN
+	1    5750 4750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5900 4750 5950 4750
 $EndSCHEMATC

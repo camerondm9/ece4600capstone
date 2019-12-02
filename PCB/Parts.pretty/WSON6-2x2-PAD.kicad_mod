@@ -1,8 +1,8 @@
-(module WSON6-2x2-PAD (layer F.Cu) (tedit 5DDF71F6)
+(module WSON6-2x2-PAD (layer F.Cu) (tedit 5DE5668C)
   (fp_text reference REF** (at 0 -1.9) (layer F.SilkS)
     (effects (font (size 0.8 0.8) (thickness 0.05)))
   )
-  (fp_text value WSON6-2x2-PAD (at 0 2) (layer F.SilkS)
+  (fp_text value WSON6-2x2-PAD (at 0 2) (layer F.SilkS) hide
     (effects (font (size 0.8 0.8) (thickness 0.05)))
   )
   (fp_arc (start 0 -1.0541) (end 0.3048 -1.0541) (angle 180) (layer F.Fab) (width 0.1524))

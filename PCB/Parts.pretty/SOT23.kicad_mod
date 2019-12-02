@@ -1,9 +1,9 @@
-(module SOT23 (layer F.Cu) (tedit 5DCDE222)
+(module SOT23 (layer F.Cu) (tedit 5DE56628)
   (fp_text reference REF** (at 0 -2.4) (layer F.SilkS)
-    (effects (font (size 1 1) (thickness 0.15)))
+    (effects (font (size 0.8 0.8) (thickness 0.05)))
   )
   (fp_text value SOT23 (at 0 2.5) (layer F.SilkS) hide
-    (effects (font (size 1 1) (thickness 0.15)))
+    (effects (font (size 0.8 0.8) (thickness 0.05)))
   )
   (fp_arc (start 0 -1.4986) (end 0.3048 -1.4986) (angle 180) (layer F.Fab) (width 0.1524))
   (fp_line (start -1.1303 1.4778) (end -2.102599 1.4778) (layer F.CrtYd) (width 0.1524))

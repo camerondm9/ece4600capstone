@@ -1,9 +1,9 @@
-(module MMBD7000L (layer F.Cu) (tedit 5DCE1964)
+(module MMBD7000L (layer F.Cu) (tedit 5DE565DC)
   (attr smd)
   (fp_text reference REF** (at -0.6744 -2.4064) (layer F.SilkS)
     (effects (font (size 0.64 0.64) (thickness 0.05)))
   )
-  (fp_text value MMBD7000L (at -0.368 2.2936) (layer F.SilkS)
+  (fp_text value MMBD7000L (at -0.368 2.2936) (layer F.SilkS) hide
     (effects (font (size 0.64 0.64) (thickness 0.05)))
   )
   (fp_line (start -0.7 1.52) (end -0.7 -1.52) (layer Eco2.User) (width 0.127))

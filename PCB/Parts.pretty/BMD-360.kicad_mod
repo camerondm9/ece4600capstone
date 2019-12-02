@@ -1,7 +1,7 @@
-(module BMD-360 (layer F.Cu) (tedit 5DCE02F9)
+(module BMD-360 (layer F.Cu) (tedit 5DE565C2)
   (attr smd)
-  (fp_text reference REF** (at 0 -5.9) (layer F.SilkS)
-    (effects (font (size 1.00213 1.00213) (thickness 0.05)))
+  (fp_text reference REF** (at 0 -5.8) (layer F.SilkS)
+    (effects (font (size 0.8 0.8) (thickness 0.05)))
   )
   (fp_text value BMD-360 (at 0 5.9) (layer F.SilkS) hide
     (effects (font (size 0.8 0.8) (thickness 0.05)))
