@@ -106,6 +106,11 @@ K SPI ADC
 F https://www.maximintegrated.com/en/products/analog/data-converters/analog-to-digital-converters/MAX11116.html
 $ENDCMP
 #
+$CMP MIC841N
+D Comparator with 1.25% voltage reference and adjustable hysteresis
+F https://www.microchip.com/wwwproducts/en/MIC841
+$ENDCMP
+#
 $CMP S2B-PH-SM4-TB
 D JST-PH Series 2 Position 2.0 mm Pitch Surface-Mount Side-Entry Shrouded Header
 F http://www.jst-mfg.com/product/detail_e.php?series=199
@@ -127,6 +132,12 @@ $CMP TPS63031
 D High Efficient Single Inductor Buck-Boost Converter with 1-A Switches
 K buck boost switching regulator converter
 F http://www.ti.com/product/TPS63031
+$ENDCMP
+#
+$CMP W25Q80DV
+D SPIflash 8Mb serial flash memory with single/dual/quad SPI
+K SPI flash memory
+F https://www.winbond.com/hq/product/code-storage-flash-memory/serial-nor-flash/?__locale=en&partNo=W25Q80DV
 $ENDCMP
 #
 #End Doc Library

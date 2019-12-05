@@ -1586,4 +1586,14 @@ F 3 "https://www.digikey.ca/product-detail/en/w-rth-elektronik/885012206085/732-
 	1    8450 3550
 	1    0    0    -1  
 $EndComp
+Text GLabel 5750 6250 0    50   Input ~ 0
+FPGA-CS
+Text Label 2300 5150 0    50   ~ 0
+CS
+Wire Wire Line
+	2300 5150 2650 5150
+Text Label 5800 6250 0    50   ~ 0
+CS
+Wire Wire Line
+	5750 6250 5800 6250
 $EndSCHEMATC
