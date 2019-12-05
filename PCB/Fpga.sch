@@ -723,8 +723,6 @@ Text GLabel 5750 6350 0    50   Input ~ 0
 FPGA-DOUT
 Wire Wire Line
 	5750 6350 5800 6350
-Text Notes 5400 3600 0    50   ~ 0
-TODO: Add decoupling capacitors to FPGA
 Text GLabel 5750 5400 0    50   Input ~ 0
 FPGA-LINK0
 Text GLabel 5750 5500 0    50   Input ~ 0
@@ -825,4 +823,767 @@ Wire Wire Line
 	9650 1150 9650 1200
 Text GLabel 5750 5900 0    50   Input ~ 0
 FPGA-LINK5
+$Comp
+L Parts:10CL010 U?
+U 2 1 5DE8EEFD
+P 4700 750
+F 0 "U?" H 5978 496 50  0000 L CNN
+F 1 "10CL010" H 5978 405 50  0000 L CNN
+F 2 "Parts:EQFP144-PAD" H 5550 800 50  0001 L BNN
+F 3 "https://www.intel.com/content/www/us/en/programmable/products/fpga/cyclone-series/cyclone-10/cyclone-10-lp/support.html" H 4700 750 50  0001 C CNN
+	2    4700 750 
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C?
+U 1 1 5DE991E1
+P 8450 5250
+F 0 "C?" H 8542 5296 50  0000 L CNN
+F 1 "100nF" H 8542 5205 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603_HandSoldering" H 8450 5250 50  0001 C CNN
+F 3 "https://www.digikey.ca/product-detail/en/w-rth-elektronik/885012206020/732-7939-1-ND/5454566" H 8450 5250 50  0001 C CNN
+	1    8450 5250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C?
+U 1 1 5DE99C2D
+P 8850 5250
+F 0 "C?" H 8942 5296 50  0000 L CNN
+F 1 "100nF" H 8942 5205 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603_HandSoldering" H 8850 5250 50  0001 C CNN
+F 3 "https://www.digikey.ca/product-detail/en/w-rth-elektronik/885012206020/732-7939-1-ND/5454566" H 8850 5250 50  0001 C CNN
+	1    8850 5250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C?
+U 1 1 5DE9C194
+P 9250 5250
+F 0 "C?" H 9342 5296 50  0000 L CNN
+F 1 "100nF" H 9342 5205 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603_HandSoldering" H 9250 5250 50  0001 C CNN
+F 3 "https://www.digikey.ca/product-detail/en/w-rth-elektronik/885012206020/732-7939-1-ND/5454566" H 9250 5250 50  0001 C CNN
+	1    9250 5250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C?
+U 1 1 5DE9DECB
+P 9900 5250
+F 0 "C?" H 9992 5296 50  0000 L CNN
+F 1 "1uF" H 9992 5205 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603_HandSoldering" H 9900 5250 50  0001 C CNN
+F 3 "https://www.digikey.ca/product-detail/en/samsung-electro-mechanics/CL10A105MP8NNNC/1276-1866-1-ND/3889952" H 9900 5250 50  0001 C CNN
+	1    9900 5250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C?
+U 1 1 5DE9FE31
+P 10500 5250
+F 0 "C?" H 10592 5296 50  0000 L CNN
+F 1 "10uF" H 10592 5205 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805_HandSoldering" H 10500 5250 50  0001 C CNN
+F 3 "https://www.digikey.ca/product-detail/en/kemet/C0805C106K8PACTU/399-4925-1-ND/1090920" H 10500 5250 50  0001 C CNN
+	1    10500 5250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C?
+U 1 1 5DEA0A74
+P 10850 5250
+F 0 "C?" H 10942 5296 50  0000 L CNN
+F 1 "10uF" H 10942 5205 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805_HandSoldering" H 10850 5250 50  0001 C CNN
+F 3 "https://www.digikey.ca/product-detail/en/kemet/C0805C106K8PACTU/399-4925-1-ND/1090920" H 10850 5250 50  0001 C CNN
+	1    10850 5250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+1V2 #PWR?
+U 1 1 5DEA2FAA
+P 8450 5050
+F 0 "#PWR?" H 8450 4900 50  0001 C CNN
+F 1 "+1V2" H 8465 5223 50  0000 C CNN
+F 2 "" H 8450 5050 50  0001 C CNN
+F 3 "" H 8450 5050 50  0001 C CNN
+	1    8450 5050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8450 5150 8450 5100
+Wire Wire Line
+	8450 5100 8850 5100
+Wire Wire Line
+	8850 5100 8850 5150
+Connection ~ 8450 5100
+Wire Wire Line
+	8450 5100 8450 5050
+Wire Wire Line
+	8850 5100 9250 5100
+Wire Wire Line
+	9250 5100 9250 5150
+Connection ~ 8850 5100
+Wire Wire Line
+	8450 5350 8450 5400
+Wire Wire Line
+	8450 5400 8850 5400
+Wire Wire Line
+	8850 5400 8850 5350
+Wire Wire Line
+	8850 5400 9250 5400
+Wire Wire Line
+	9250 5400 9250 5350
+Connection ~ 8850 5400
+$Comp
+L power:GND #PWR?
+U 1 1 5DEB9767
+P 8450 5450
+F 0 "#PWR?" H 8450 5200 50  0001 C CNN
+F 1 "GND" H 8455 5277 50  0000 C CNN
+F 2 "" H 8450 5450 50  0001 C CNN
+F 3 "" H 8450 5450 50  0001 C CNN
+	1    8450 5450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8450 5450 8450 5400
+Connection ~ 8450 5400
+Wire Wire Line
+	9250 5100 9900 5100
+Wire Wire Line
+	9900 5100 9900 5150
+Connection ~ 9250 5100
+Wire Wire Line
+	9900 5100 10500 5100
+Wire Wire Line
+	10500 5100 10500 5150
+Connection ~ 9900 5100
+Wire Wire Line
+	10500 5100 10850 5100
+Wire Wire Line
+	10850 5100 10850 5150
+Connection ~ 10500 5100
+Wire Wire Line
+	9250 5400 9900 5400
+Wire Wire Line
+	9900 5400 9900 5350
+Connection ~ 9250 5400
+Wire Wire Line
+	9900 5400 10500 5400
+Wire Wire Line
+	10500 5400 10500 5350
+Connection ~ 9900 5400
+Wire Wire Line
+	10500 5400 10850 5400
+Wire Wire Line
+	10850 5400 10850 5350
+Connection ~ 10500 5400
+$Comp
+L power:+3V3 #PWR?
+U 1 1 5DEEB0E4
+P 7100 5800
+F 0 "#PWR?" H 7100 5650 50  0001 C CNN
+F 1 "+3V3" H 7115 5973 50  0000 C CNN
+F 2 "" H 7100 5800 50  0001 C CNN
+F 3 "" H 7100 5800 50  0001 C CNN
+	1    7100 5800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C?
+U 1 1 5DEEC243
+P 7100 6000
+F 0 "C?" H 7192 6046 50  0000 L CNN
+F 1 "22nF" H 7192 5955 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603_HandSoldering" H 7100 6000 50  0001 C CNN
+F 3 "https://www.digikey.ca/product-detail/en/w-rth-elektronik/885012206016/732-7935-1-ND/5454562" H 7100 6000 50  0001 C CNN
+	1    7100 6000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C?
+U 1 1 5DEED110
+P 7450 6000
+F 0 "C?" H 7542 6046 50  0000 L CNN
+F 1 "22nF" H 7542 5955 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603_HandSoldering" H 7450 6000 50  0001 C CNN
+F 3 "https://www.digikey.ca/product-detail/en/w-rth-elektronik/885012206016/732-7935-1-ND/5454562" H 7450 6000 50  0001 C CNN
+	1    7450 6000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C?
+U 1 1 5DEED3BE
+P 7800 6000
+F 0 "C?" H 7892 6046 50  0000 L CNN
+F 1 "22nF" H 7892 5955 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603_HandSoldering" H 7800 6000 50  0001 C CNN
+F 3 "https://www.digikey.ca/product-detail/en/w-rth-elektronik/885012206016/732-7935-1-ND/5454562" H 7800 6000 50  0001 C CNN
+	1    7800 6000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C?
+U 1 1 5DEED67B
+P 8150 6000
+F 0 "C?" H 8242 6046 50  0000 L CNN
+F 1 "22nF" H 8242 5955 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603_HandSoldering" H 8150 6000 50  0001 C CNN
+F 3 "https://www.digikey.ca/product-detail/en/w-rth-elektronik/885012206016/732-7935-1-ND/5454562" H 8150 6000 50  0001 C CNN
+	1    8150 6000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C?
+U 1 1 5DEED944
+P 8500 6000
+F 0 "C?" H 8592 6046 50  0000 L CNN
+F 1 "22nF" H 8592 5955 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603_HandSoldering" H 8500 6000 50  0001 C CNN
+F 3 "https://www.digikey.ca/product-detail/en/w-rth-elektronik/885012206016/732-7935-1-ND/5454562" H 8500 6000 50  0001 C CNN
+	1    8500 6000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C?
+U 1 1 5DEEDC2F
+P 8850 6000
+F 0 "C?" H 8942 6046 50  0000 L CNN
+F 1 "22nF" H 8942 5955 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603_HandSoldering" H 8850 6000 50  0001 C CNN
+F 3 "https://www.digikey.ca/product-detail/en/w-rth-elektronik/885012206016/732-7935-1-ND/5454562" H 8850 6000 50  0001 C CNN
+	1    8850 6000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7100 5800 7100 5850
+Wire Wire Line
+	7100 5850 7450 5850
+Wire Wire Line
+	7450 5850 7450 5900
+Connection ~ 7100 5850
+Wire Wire Line
+	7100 5850 7100 5900
+Wire Wire Line
+	7450 5850 7800 5850
+Wire Wire Line
+	7800 5850 7800 5900
+Connection ~ 7450 5850
+Wire Wire Line
+	7800 5850 8150 5850
+Wire Wire Line
+	8150 5850 8150 5900
+Connection ~ 7800 5850
+Wire Wire Line
+	8150 5850 8500 5850
+Wire Wire Line
+	8500 5850 8500 5900
+Connection ~ 8150 5850
+Wire Wire Line
+	8500 5850 8850 5850
+Wire Wire Line
+	8850 5850 8850 5900
+Connection ~ 8500 5850
+Wire Wire Line
+	7100 6100 7100 6150
+Wire Wire Line
+	7100 6150 7450 6150
+Wire Wire Line
+	7450 6150 7450 6100
+Connection ~ 7100 6150
+Wire Wire Line
+	7100 6150 7100 6200
+Wire Wire Line
+	7450 6150 7800 6150
+Wire Wire Line
+	7800 6150 7800 6100
+Connection ~ 7450 6150
+Wire Wire Line
+	7800 6150 8150 6150
+Wire Wire Line
+	8150 6150 8150 6100
+Connection ~ 7800 6150
+Wire Wire Line
+	8150 6150 8500 6150
+Wire Wire Line
+	8500 6150 8500 6100
+Connection ~ 8150 6150
+Wire Wire Line
+	8500 6150 8850 6150
+Wire Wire Line
+	8850 6150 8850 6100
+Connection ~ 8500 6150
+$Comp
+L power:GND #PWR?
+U 1 1 5DF36B33
+P 7100 6200
+F 0 "#PWR?" H 7100 5950 50  0001 C CNN
+F 1 "GND" H 7105 6027 50  0000 C CNN
+F 2 "" H 7100 6200 50  0001 C CNN
+F 3 "" H 7100 6200 50  0001 C CNN
+	1    7100 6200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C?
+U 1 1 5DF54B43
+P 9450 6000
+F 0 "C?" H 9542 6046 50  0000 L CNN
+F 1 "100nF" H 9542 5955 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603_HandSoldering" H 9450 6000 50  0001 C CNN
+F 3 "https://www.digikey.ca/product-detail/en/w-rth-elektronik/885012206020/732-7939-1-ND/5454566" H 9450 6000 50  0001 C CNN
+	1    9450 6000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C?
+U 1 1 5DF5556B
+P 9850 6000
+F 0 "C?" H 9942 6046 50  0000 L CNN
+F 1 "100nF" H 9942 5955 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603_HandSoldering" H 9850 6000 50  0001 C CNN
+F 3 "https://www.digikey.ca/product-detail/en/w-rth-elektronik/885012206020/732-7939-1-ND/5454566" H 9850 6000 50  0001 C CNN
+	1    9850 6000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8850 5850 9450 5850
+Wire Wire Line
+	9450 5850 9450 5900
+Connection ~ 8850 5850
+Wire Wire Line
+	9450 5850 9850 5850
+Wire Wire Line
+	9850 5850 9850 5900
+Connection ~ 9450 5850
+Wire Wire Line
+	8850 6150 9450 6150
+Wire Wire Line
+	9450 6150 9450 6100
+Connection ~ 8850 6150
+Wire Wire Line
+	9450 6150 9850 6150
+Wire Wire Line
+	9850 6150 9850 6100
+Connection ~ 9450 6150
+$Comp
+L Device:C_Small C?
+U 1 1 5DF730B3
+P 10450 6000
+F 0 "C?" H 10542 6046 50  0000 L CNN
+F 1 "1uF" H 10542 5955 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603_HandSoldering" H 10450 6000 50  0001 C CNN
+F 3 "https://www.digikey.ca/product-detail/en/samsung-electro-mechanics/CL10A105MP8NNNC/1276-1866-1-ND/3889952" H 10450 6000 50  0001 C CNN
+	1    10450 6000
+	1    0    0    -1  
+$EndComp
+Connection ~ 9850 5850
+Connection ~ 9850 6150
+$Comp
+L Device:C_Small C?
+U 1 1 5DF8C174
+P 10900 6000
+F 0 "C?" H 10992 6046 50  0000 L CNN
+F 1 "10uF" H 10992 5955 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805_HandSoldering" H 10900 6000 50  0001 C CNN
+F 3 "https://www.digikey.ca/product-detail/en/kemet/C0805C106K8PACTU/399-4925-1-ND/1090920" H 10900 6000 50  0001 C CNN
+	1    10900 6000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10900 5850 10900 5900
+Wire Wire Line
+	10900 6100 10900 6150
+Wire Wire Line
+	9850 5850 10450 5850
+Wire Wire Line
+	9850 6150 10450 6150
+Wire Wire Line
+	10450 5900 10450 5850
+Connection ~ 10450 5850
+Wire Wire Line
+	10450 5850 10900 5850
+Wire Wire Line
+	10450 6150 10450 6100
+Connection ~ 10450 6150
+Wire Wire Line
+	10450 6150 10900 6150
+$Comp
+L Device:C_Small C?
+U 1 1 5DFD2F78
+P 8450 4400
+F 0 "C?" H 8542 4446 50  0000 L CNN
+F 1 "22nF" H 8542 4355 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603_HandSoldering" H 8450 4400 50  0001 C CNN
+F 3 "https://www.digikey.ca/product-detail/en/w-rth-elektronik/885012206016/732-7935-1-ND/5454562" H 8450 4400 50  0001 C CNN
+	1    8450 4400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C?
+U 1 1 5DFD3554
+P 8800 4400
+F 0 "C?" H 8892 4446 50  0000 L CNN
+F 1 "22nF" H 8892 4355 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603_HandSoldering" H 8800 4400 50  0001 C CNN
+F 3 "https://www.digikey.ca/product-detail/en/w-rth-elektronik/885012206016/732-7935-1-ND/5454562" H 8800 4400 50  0001 C CNN
+	1    8800 4400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C?
+U 1 1 5DFD384B
+P 9150 4400
+F 0 "C?" H 9242 4446 50  0000 L CNN
+F 1 "22nF" H 9242 4355 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603_HandSoldering" H 9150 4400 50  0001 C CNN
+F 3 "https://www.digikey.ca/product-detail/en/w-rth-elektronik/885012206016/732-7935-1-ND/5454562" H 9150 4400 50  0001 C CNN
+	1    9150 4400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C?
+U 1 1 5DFD3C4F
+P 9500 4400
+F 0 "C?" H 9592 4446 50  0000 L CNN
+F 1 "22nF" H 9592 4355 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603_HandSoldering" H 9500 4400 50  0001 C CNN
+F 3 "https://www.digikey.ca/product-detail/en/w-rth-elektronik/885012206016/732-7935-1-ND/5454562" H 9500 4400 50  0001 C CNN
+	1    9500 4400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C?
+U 1 1 5DFD407E
+P 9850 4400
+F 0 "C?" H 9942 4446 50  0000 L CNN
+F 1 "22nF" H 9942 4355 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603_HandSoldering" H 9850 4400 50  0001 C CNN
+F 3 "https://www.digikey.ca/product-detail/en/w-rth-elektronik/885012206016/732-7935-1-ND/5454562" H 9850 4400 50  0001 C CNN
+	1    9850 4400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C?
+U 1 1 5DFD4088
+P 10200 4400
+F 0 "C?" H 10292 4446 50  0000 L CNN
+F 1 "22nF" H 10292 4355 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603_HandSoldering" H 10200 4400 50  0001 C CNN
+F 3 "https://www.digikey.ca/product-detail/en/w-rth-elektronik/885012206016/732-7935-1-ND/5454562" H 10200 4400 50  0001 C CNN
+	1    10200 4400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C?
+U 1 1 5DFD4092
+P 10550 4400
+F 0 "C?" H 10642 4446 50  0000 L CNN
+F 1 "22nF" H 10642 4355 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603_HandSoldering" H 10550 4400 50  0001 C CNN
+F 3 "https://www.digikey.ca/product-detail/en/w-rth-elektronik/885012206016/732-7935-1-ND/5454562" H 10550 4400 50  0001 C CNN
+	1    10550 4400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C?
+U 1 1 5DFD409C
+P 10900 4400
+F 0 "C?" H 10992 4446 50  0000 L CNN
+F 1 "22nF" H 10992 4355 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603_HandSoldering" H 10900 4400 50  0001 C CNN
+F 3 "https://www.digikey.ca/product-detail/en/w-rth-elektronik/885012206016/732-7935-1-ND/5454562" H 10900 4400 50  0001 C CNN
+	1    10900 4400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8450 4300 8450 4250
+Wire Wire Line
+	8450 4250 8800 4250
+Wire Wire Line
+	8800 4250 8800 4300
+Wire Wire Line
+	8800 4250 9150 4250
+Wire Wire Line
+	9150 4250 9150 4300
+Connection ~ 8800 4250
+Wire Wire Line
+	9150 4250 9500 4250
+Wire Wire Line
+	9500 4250 9500 4300
+Connection ~ 9150 4250
+Wire Wire Line
+	9500 4250 9850 4250
+Wire Wire Line
+	9850 4250 9850 4300
+Connection ~ 9500 4250
+Wire Wire Line
+	9850 4250 10200 4250
+Wire Wire Line
+	10200 4250 10200 4300
+Connection ~ 9850 4250
+Wire Wire Line
+	10200 4250 10550 4250
+Wire Wire Line
+	10550 4250 10550 4300
+Connection ~ 10200 4250
+Wire Wire Line
+	10550 4250 10900 4250
+Wire Wire Line
+	10900 4250 10900 4300
+Connection ~ 10550 4250
+Wire Wire Line
+	10900 4500 10900 4550
+Wire Wire Line
+	10900 4550 10550 4550
+Wire Wire Line
+	10550 4500 10550 4550
+Wire Wire Line
+	10550 4550 10200 4550
+Wire Wire Line
+	10200 4550 10200 4500
+Connection ~ 10550 4550
+Wire Wire Line
+	10200 4550 9850 4550
+Wire Wire Line
+	9850 4550 9850 4500
+Connection ~ 10200 4550
+Wire Wire Line
+	9850 4550 9500 4550
+Wire Wire Line
+	9500 4550 9500 4500
+Connection ~ 9850 4550
+Wire Wire Line
+	9500 4550 9150 4550
+Wire Wire Line
+	9150 4550 9150 4500
+Connection ~ 9500 4550
+Wire Wire Line
+	9150 4550 8800 4550
+Wire Wire Line
+	8800 4550 8800 4500
+Connection ~ 9150 4550
+Wire Wire Line
+	8800 4550 8450 4550
+Wire Wire Line
+	8450 4550 8450 4500
+Connection ~ 8800 4550
+$Comp
+L power:GND #PWR?
+U 1 1 5E068FA4
+P 8450 4600
+F 0 "#PWR?" H 8450 4350 50  0001 C CNN
+F 1 "GND" H 8455 4427 50  0000 C CNN
+F 2 "" H 8450 4600 50  0001 C CNN
+F 3 "" H 8450 4600 50  0001 C CNN
+	1    8450 4600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8450 4600 8450 4550
+Connection ~ 8450 4550
+$Comp
+L power:+1V2 #PWR?
+U 1 1 5E073AB0
+P 8450 4200
+F 0 "#PWR?" H 8450 4050 50  0001 C CNN
+F 1 "+1V2" H 8465 4373 50  0000 C CNN
+F 2 "" H 8450 4200 50  0001 C CNN
+F 3 "" H 8450 4200 50  0001 C CNN
+	1    8450 4200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8450 4200 8450 4250
+Connection ~ 8450 4250
+$Comp
+L Device:C_Small C?
+U 1 1 5E0D1592
+P 10900 3550
+F 0 "C?" H 10992 3596 50  0000 L CNN
+F 1 "2.2nF" H 10992 3505 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603_HandSoldering" H 10900 3550 50  0001 C CNN
+F 3 "https://www.digikey.ca/product-detail/en/w-rth-elektronik/885012206085/732-8003-1-ND/5454630" H 10900 3550 50  0001 C CNN
+	1    10900 3550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8450 3450 8450 3400
+Wire Wire Line
+	8450 3400 8800 3400
+Wire Wire Line
+	8800 3400 8800 3450
+Wire Wire Line
+	8800 3400 9150 3400
+Wire Wire Line
+	9150 3400 9150 3450
+Connection ~ 8800 3400
+Wire Wire Line
+	9150 3400 9500 3400
+Wire Wire Line
+	9500 3400 9500 3450
+Connection ~ 9150 3400
+Wire Wire Line
+	9500 3400 9850 3400
+Wire Wire Line
+	9850 3400 9850 3450
+Connection ~ 9500 3400
+Wire Wire Line
+	9850 3400 10200 3400
+Wire Wire Line
+	10200 3400 10200 3450
+Connection ~ 9850 3400
+Wire Wire Line
+	10200 3400 10550 3400
+Wire Wire Line
+	10550 3400 10550 3450
+Connection ~ 10200 3400
+Wire Wire Line
+	10550 3400 10900 3400
+Wire Wire Line
+	10900 3400 10900 3450
+Connection ~ 10550 3400
+Wire Wire Line
+	10900 3650 10900 3700
+Wire Wire Line
+	10900 3700 10550 3700
+Wire Wire Line
+	10550 3650 10550 3700
+Wire Wire Line
+	10550 3700 10200 3700
+Wire Wire Line
+	10200 3700 10200 3650
+Connection ~ 10550 3700
+Wire Wire Line
+	10200 3700 9850 3700
+Wire Wire Line
+	9850 3700 9850 3650
+Connection ~ 10200 3700
+Wire Wire Line
+	9850 3700 9500 3700
+Wire Wire Line
+	9500 3700 9500 3650
+Connection ~ 9850 3700
+Wire Wire Line
+	9500 3700 9150 3700
+Wire Wire Line
+	9150 3700 9150 3650
+Connection ~ 9500 3700
+Wire Wire Line
+	9150 3700 8800 3700
+Wire Wire Line
+	8800 3700 8800 3650
+Connection ~ 9150 3700
+Wire Wire Line
+	8800 3700 8450 3700
+Wire Wire Line
+	8450 3700 8450 3650
+Connection ~ 8800 3700
+$Comp
+L power:GND #PWR?
+U 1 1 5E0D15C6
+P 8450 3750
+F 0 "#PWR?" H 8450 3500 50  0001 C CNN
+F 1 "GND" H 8455 3577 50  0000 C CNN
+F 2 "" H 8450 3750 50  0001 C CNN
+F 3 "" H 8450 3750 50  0001 C CNN
+	1    8450 3750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8450 3750 8450 3700
+Connection ~ 8450 3700
+$Comp
+L power:+1V2 #PWR?
+U 1 1 5E0D15D2
+P 8450 3350
+F 0 "#PWR?" H 8450 3200 50  0001 C CNN
+F 1 "+1V2" H 8465 3523 50  0000 C CNN
+F 2 "" H 8450 3350 50  0001 C CNN
+F 3 "" H 8450 3350 50  0001 C CNN
+	1    8450 3350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8450 3350 8450 3400
+Connection ~ 8450 3400
+$Comp
+L Device:C_Small C?
+U 1 1 5E0E6993
+P 10550 3550
+F 0 "C?" H 10642 3596 50  0000 L CNN
+F 1 "2.2nF" H 10642 3505 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603_HandSoldering" H 10550 3550 50  0001 C CNN
+F 3 "https://www.digikey.ca/product-detail/en/w-rth-elektronik/885012206085/732-8003-1-ND/5454630" H 10550 3550 50  0001 C CNN
+	1    10550 3550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C?
+U 1 1 5E0E6C7E
+P 10200 3550
+F 0 "C?" H 10292 3596 50  0000 L CNN
+F 1 "2.2nF" H 10292 3505 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603_HandSoldering" H 10200 3550 50  0001 C CNN
+F 3 "https://www.digikey.ca/product-detail/en/w-rth-elektronik/885012206085/732-8003-1-ND/5454630" H 10200 3550 50  0001 C CNN
+	1    10200 3550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C?
+U 1 1 5E0E7051
+P 9850 3550
+F 0 "C?" H 9942 3596 50  0000 L CNN
+F 1 "2.2nF" H 9942 3505 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603_HandSoldering" H 9850 3550 50  0001 C CNN
+F 3 "https://www.digikey.ca/product-detail/en/w-rth-elektronik/885012206085/732-8003-1-ND/5454630" H 9850 3550 50  0001 C CNN
+	1    9850 3550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C?
+U 1 1 5E0E7382
+P 9500 3550
+F 0 "C?" H 9592 3596 50  0000 L CNN
+F 1 "2.2nF" H 9592 3505 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603_HandSoldering" H 9500 3550 50  0001 C CNN
+F 3 "https://www.digikey.ca/product-detail/en/w-rth-elektronik/885012206085/732-8003-1-ND/5454630" H 9500 3550 50  0001 C CNN
+	1    9500 3550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C?
+U 1 1 5E0E76D7
+P 9150 3550
+F 0 "C?" H 9242 3596 50  0000 L CNN
+F 1 "2.2nF" H 9242 3505 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603_HandSoldering" H 9150 3550 50  0001 C CNN
+F 3 "https://www.digikey.ca/product-detail/en/w-rth-elektronik/885012206085/732-8003-1-ND/5454630" H 9150 3550 50  0001 C CNN
+	1    9150 3550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C?
+U 1 1 5E0E7A3E
+P 8800 3550
+F 0 "C?" H 8892 3596 50  0000 L CNN
+F 1 "2.2nF" H 8892 3505 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603_HandSoldering" H 8800 3550 50  0001 C CNN
+F 3 "https://www.digikey.ca/product-detail/en/w-rth-elektronik/885012206085/732-8003-1-ND/5454630" H 8800 3550 50  0001 C CNN
+	1    8800 3550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C?
+U 1 1 5E0E7D2E
+P 8450 3550
+F 0 "C?" H 8542 3596 50  0000 L CNN
+F 1 "2.2nF" H 8542 3505 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603_HandSoldering" H 8450 3550 50  0001 C CNN
+F 3 "https://www.digikey.ca/product-detail/en/w-rth-elektronik/885012206085/732-8003-1-ND/5454630" H 8450 3550 50  0001 C CNN
+	1    8450 3550
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC

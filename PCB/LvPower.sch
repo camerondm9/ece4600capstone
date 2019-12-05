@@ -887,4 +887,67 @@ Wire Wire Line
 	3150 4700 3150 4750
 Wire Wire Line
 	5250 4750 5300 4750
+$Comp
+L Device:CP1_Small C?
+U 1 1 5DFB66E6
+P 6150 2650
+F 0 "C?" H 6241 2696 50  0000 L CNN
+F 1 "330uF" H 6241 2605 50  0000 L CNN
+F 2 "Capacitors_THT:CP_Radial_D6.3mm_P2.50mm" H 6150 2650 50  0001 C CNN
+F 3 "https://www.digikey.ca/product-detail/en/w-rth-elektronik/860020273010/732-8912-1-ND/5728855" H 6150 2650 50  0001 C CNN
+	1    6150 2650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5650 2500 6150 2500
+Wire Wire Line
+	6150 2500 6150 2550
+Connection ~ 5650 2500
+Wire Wire Line
+	6150 2750 6150 2800
+Wire Wire Line
+	6150 2800 5650 2800
+Connection ~ 5650 2800
+$Comp
+L Device:CP1_Small C?
+U 1 1 5DFBFE57
+P 6150 4900
+F 0 "C?" H 6241 4946 50  0000 L CNN
+F 1 "330uF" H 6241 4855 50  0000 L CNN
+F 2 "Capacitors_THT:CP_Radial_D6.3mm_P2.50mm" H 6150 4900 50  0001 C CNN
+F 3 "https://www.digikey.ca/product-detail/en/w-rth-elektronik/860020273010/732-8912-1-ND/5728855" H 6150 4900 50  0001 C CNN
+	1    6150 4900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:CP1_Small C?
+U 1 1 5DFC0807
+P 6550 4900
+F 0 "C?" H 6641 4946 50  0000 L CNN
+F 1 "330uF" H 6641 4855 50  0000 L CNN
+F 2 "Capacitors_THT:CP_Radial_D6.3mm_P2.50mm" H 6550 4900 50  0001 C CNN
+F 3 "https://www.digikey.ca/product-detail/en/w-rth-elektronik/860020273010/732-8912-1-ND/5728855" H 6550 4900 50  0001 C CNN
+	1    6550 4900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5650 4750 6150 4750
+Wire Wire Line
+	6150 4750 6150 4800
+Connection ~ 5650 4750
+Wire Wire Line
+	6150 4750 6550 4750
+Wire Wire Line
+	6550 4750 6550 4800
+Connection ~ 6150 4750
+Wire Wire Line
+	5650 5050 6150 5050
+Wire Wire Line
+	6150 5050 6150 5000
+Connection ~ 5650 5050
+Wire Wire Line
+	6150 5050 6550 5050
+Wire Wire Line
+	6550 5050 6550 5000
+Connection ~ 6150 5050
 $EndSCHEMATC
