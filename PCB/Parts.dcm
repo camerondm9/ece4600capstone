@@ -134,6 +134,12 @@ K buck boost switching regulator converter
 F http://www.ti.com/product/TPS63031
 $ENDCMP
 #
+$CMP TSX9291
+D 16 MHz rail-to-rail CMOS 16V operational amplifier
+K single opamp rail-to-rail CMOS
+F https://www.st.com/content/st_com/en/products/amplifiers-and-comparators/operational-amplifiers-op-amps/precision-op-amps-lt50-mhz/rail-to-rail-op-amps/tsx9291.html
+$ENDCMP
+#
 $CMP W25Q80DV
 D SPIflash 8Mb serial flash memory with single/dual/quad SPI
 K SPI flash memory
