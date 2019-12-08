@@ -26,17 +26,6 @@ F 3 "https://www.maximintegrated.com/en/products/analog/data-converters/analog-t
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:D_x2_Serial_AKC D?
-U 1 1 5DCEBFD1
-P 2950 4100
-F 0 "D?" H 2950 4316 50  0000 C CNN
-F 1 "D_x2_Serial_AKC" H 2950 4225 50  0000 C CNN
-F 2 "Parts:MMBD7000L" H 2950 4100 50  0001 C CNN
-F 3 "https://www.onsemi.com/products/discretes-drivers/diodes-rectifiers/small-signal-switching-diodes/mmbd7000l" H 2950 4100 50  0001 C CNN
-	1    2950 4100
-	1    0    0    1   
-$EndComp
-$Comp
 L power:+3V3 #PWR?
 U 1 1 5DE6A184
 P 7000 3750
@@ -77,29 +66,14 @@ Wire Wire Line
 $Comp
 L power:GND #PWR?
 U 1 1 5DE74334
-P 2950 4450
-F 0 "#PWR?" H 2950 4200 50  0001 C CNN
-F 1 "GND" H 2955 4277 50  0000 C CNN
-F 2 "" H 2950 4450 50  0001 C CNN
-F 3 "" H 2950 4450 50  0001 C CNN
-	1    2950 4450
+P 2950 4550
+F 0 "#PWR?" H 2950 4300 50  0001 C CNN
+F 1 "GND" H 2955 4377 50  0000 C CNN
+F 2 "" H 2950 4550 50  0001 C CNN
+F 3 "" H 2950 4550 50  0001 C CNN
+	1    2950 4550
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	2600 4400 2950 4400
-Wire Wire Line
-	3300 4400 2950 4400
-Connection ~ 2950 4400
-Wire Wire Line
-	2950 4450 2950 4400
-Wire Wire Line
-	3300 4400 3300 4100
-Wire Wire Line
-	3300 4100 3250 4100
-Wire Wire Line
-	2650 4100 2600 4100
-Wire Wire Line
-	2600 4100 2600 4400
 $Comp
 L Device:C_Small C?
 U 1 1 5DE7BD62
@@ -112,8 +86,6 @@ F 3 "~" H 2300 3850 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	2950 3850 2950 3900
-Wire Wire Line
 	2400 3850 2950 3850
 Wire Wire Line
 	2950 3850 3600 3850
@@ -124,4 +96,50 @@ Wire Wire Line
 	2100 3850 2200 3850
 Text Notes 4800 3900 0    50   ~ 0
 Input is roughly 10mVpp\nOutput should be roughly 3Vpp
+Text Notes 4700 5150 0    50   ~ 0
+See Capstone-VGA bookmarks
+$Comp
+L Device:D_Schottky_Small_ALT D?
+U 1 1 5DF00EE8
+P 3100 4350
+F 0 "D?" V 3054 4418 50  0000 L CNN
+F 1 "600mV 200mA" V 3145 4418 50  0000 L CNN
+F 2 "Diodes_SMD:D_SOD-523" V 3100 4350 50  0001 C CNN
+F 3 "https://www.digikey.ca/product-detail/en/on-semiconductor/RB520S30T5G/RB520S30T5GOSCT-ND/5213385" V 3100 4350 50  0001 C CNN
+	1    3100 4350
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:D_Schottky_Small_ALT D?
+U 1 1 5DF02261
+P 2800 4150
+F 0 "D?" V 2846 4082 50  0000 R CNN
+F 1 "600mV 200mA" V 2755 4082 50  0000 R CNN
+F 2 "Diodes_SMD:D_SOD-523" V 2800 4150 50  0001 C CNN
+F 3 "https://www.digikey.ca/product-detail/en/on-semiconductor/RB520S30T5G/RB520S30T5GOSCT-ND/5213385" V 2800 4150 50  0001 C CNN
+	1    2800 4150
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	2800 4050 2800 4000
+Wire Wire Line
+	2800 4000 2950 4000
+Wire Wire Line
+	3100 4000 3100 4250
+Wire Wire Line
+	2950 3850 2950 4000
+Connection ~ 2950 4000
+Wire Wire Line
+	2950 4000 3100 4000
+Wire Wire Line
+	2800 4250 2800 4500
+Wire Wire Line
+	2800 4500 2950 4500
+Wire Wire Line
+	3100 4500 3100 4450
+Wire Wire Line
+	2950 4500 2950 4550
+Connection ~ 2950 4500
+Wire Wire Line
+	2950 4500 3100 4500
 $EndSCHEMATC

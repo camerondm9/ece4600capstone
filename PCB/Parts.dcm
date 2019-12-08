@@ -27,6 +27,12 @@ K current-mode DAC SPI
 F https://www.analog.com/en/products/ad5450.html
 $ENDCMP
 #
+$CMP ADA4522-1
+D 55V EMI enhanced zero drift ultralow noise rail-to-rail output operation amplifier
+K single low noise opamp rail-to-rail zero drift
+F https://www.analog.com/en/products/ada4522-1.html
+$ENDCMP
+#
 $CMP BMD-360
 D Standalone Bluetooth 5 low energy module
 K bluetooth 5 le module
@@ -135,7 +141,7 @@ F http://www.ti.com/product/TPS63031
 $ENDCMP
 #
 $CMP TSX9291
-D 16 MHz rail-to-rail CMOS 16V operational amplifier
+D 16MHz rail-to-rail CMOS 16V operational amplifier
 K single opamp rail-to-rail CMOS
 F https://www.st.com/content/st_com/en/products/amplifiers-and-comparators/operational-amplifiers-op-amps/precision-op-amps-lt50-mhz/rail-to-rail-op-amps/tsx9291.html
 $ENDCMP
