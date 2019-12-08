@@ -270,4 +270,6 @@ F 3 "~" H 4950 3600 50  0001 C CNN
 	1    4950 3600
 	0    1    1    0   
 $EndComp
+Text Notes 4900 5850 0    50   ~ 0
+Also need to generate mid-rail for 50V amplifier
 $EndSCHEMATC
