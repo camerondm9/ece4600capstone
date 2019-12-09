@@ -950,4 +950,23 @@ Wire Wire Line
 Wire Wire Line
 	6550 5050 6550 5000
 Connection ~ 6150 5050
+$Comp
+L Device:C_Small C?
+U 1 1 5DFDFA9E
+P 9200 2950
+F 0 "C?" H 9292 2996 50  0000 L CNN
+F 1 "10uF" H 9292 2905 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805_HandSoldering" H 9200 2950 50  0001 C CNN
+F 3 "https://www.digikey.ca/product-detail/en/kemet/C0805C106K8PACTU/399-4925-1-ND/1090920" H 9200 2950 50  0001 C CNN
+	1    9200 2950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8700 2800 9200 2800
+Wire Wire Line
+	9200 2800 9200 2850
+Wire Wire Line
+	8700 3100 9200 3100
+Wire Wire Line
+	9200 3100 9200 3050
 $EndSCHEMATC

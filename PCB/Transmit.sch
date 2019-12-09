@@ -701,4 +701,6 @@ Wire Wire Line
 	8650 5550 8650 5600
 Wire Wire Line
 	8650 5800 8650 5850
+Text Notes 3250 3100 0    50   ~ 0
+Needs decoupling cap
 $EndSCHEMATC
