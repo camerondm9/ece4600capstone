@@ -137,7 +137,7 @@ F 3 "" H 3700 2650 50  0001 C CNN
 	1    3700 2650
 	1    0    0    -1  
 $EndComp
-Text Notes 1850 2950 0    50   ~ 0
+Text Notes 2700 2950 0    50   ~ 0
 Is the 12V rail quiet enough, or do we need a separate 10V linear-regulated rail to reduce noise?
 $Comp
 L Device:R R?
@@ -703,4 +703,66 @@ Wire Wire Line
 	8650 5800 8650 5850
 Text Notes 3250 3100 0    50   ~ 0
 Needs decoupling cap
+$Comp
+L power:GND #PWR?
+U 1 1 5E3B7B63
+P 800 3100
+F 0 "#PWR?" H 800 2850 50  0001 C CNN
+F 1 "GND" H 805 2927 50  0000 C CNN
+F 2 "" H 800 3100 50  0001 C CNN
+F 3 "" H 800 3100 50  0001 C CNN
+	1    800  3100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C?
+U 1 1 5E3B80F6
+P 800 2900
+F 0 "C?" H 892 2946 50  0000 L CNN
+F 1 "100nF" H 892 2855 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603_HandSoldering" H 800 2900 50  0001 C CNN
+F 3 "https://www.digikey.ca/product-detail/en/w-rth-elektronik/885012206020/732-7939-1-ND/5454566" H 800 2900 50  0001 C CNN
+	1    800  2900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR?
+U 1 1 5E3B8767
+P 800 2700
+F 0 "#PWR?" H 800 2550 50  0001 C CNN
+F 1 "+3V3" H 815 2873 50  0000 C CNN
+F 2 "" H 800 2700 50  0001 C CNN
+F 3 "" H 800 2700 50  0001 C CNN
+	1    800  2700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C?
+U 1 1 5E3BD08F
+P 1350 2900
+F 0 "C?" H 1442 2946 50  0000 L CNN
+F 1 "10uF" H 1442 2855 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805_HandSoldering" H 1350 2900 50  0001 C CNN
+F 3 "https://www.digikey.ca/product-detail/en/kemet/C0805C106K8PACTU/399-4925-1-ND/1090920" H 1350 2900 50  0001 C CNN
+	1    1350 2900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	800  2700 800  2750
+Wire Wire Line
+	800  2750 1350 2750
+Wire Wire Line
+	1350 2750 1350 2800
+Connection ~ 800  2750
+Wire Wire Line
+	800  2750 800  2800
+Wire Wire Line
+	800  3000 800  3050
+Wire Wire Line
+	800  3050 1350 3050
+Wire Wire Line
+	1350 3050 1350 3000
+Connection ~ 800  3050
+Wire Wire Line
+	800  3050 800  3100
 $EndSCHEMATC

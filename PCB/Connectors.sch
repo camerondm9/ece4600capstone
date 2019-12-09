@@ -15,10 +15,10 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L power:GND #PWR0130
+L power:GND #PWR?
 U 1 1 5DCE40E5
 P 2750 2200
-F 0 "#PWR0130" H 2750 1950 50  0001 C CNN
+F 0 "#PWR?" H 2750 1950 50  0001 C CNN
 F 1 "GND" H 2755 2027 50  0000 C CNN
 F 2 "" H 2750 2200 50  0001 C CNN
 F 3 "" H 2750 2200 50  0001 C CNN
@@ -37,10 +37,10 @@ F 3 "http://www.jst-mfg.com/product/detail_e.php?series=199" H 2450 2100 50  000
 	-1   0    0    -1  
 $EndComp
 $Comp
-L power:+BATT #PWR0131
+L power:+BATT #PWR?
 U 1 1 5DCED91D
 P 3000 2000
-F 0 "#PWR0131" H 3000 1850 50  0001 C CNN
+F 0 "#PWR?" H 3000 1850 50  0001 C CNN
 F 1 "+BATT" H 3015 2173 50  0000 C CNN
 F 2 "" H 3000 2000 50  0001 C CNN
 F 3 "" H 3000 2000 50  0001 C CNN

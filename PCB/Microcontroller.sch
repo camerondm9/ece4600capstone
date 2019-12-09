@@ -26,10 +26,10 @@ F 3 "https://www.u-blox.com/en/product/bmd-360-open-cpu" H 3350 1300 50  0001 L 
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+3V3 #PWR0125
+L power:+3V3 #PWR?
 U 1 1 5DCF44EC
 P 4050 1700
-F 0 "#PWR0125" H 4050 1550 50  0001 C CNN
+F 0 "#PWR?" H 4050 1550 50  0001 C CNN
 F 1 "+3V3" H 4065 1873 50  0000 C CNN
 F 2 "" H 4050 1700 50  0001 C CNN
 F 3 "" H 4050 1700 50  0001 C CNN
@@ -39,10 +39,10 @@ $EndComp
 Wire Wire Line
 	3950 1700 4050 1700
 $Comp
-L power:GND #PWR0126
+L power:GND #PWR?
 U 1 1 5DCF5A78
 P 4050 3600
-F 0 "#PWR0126" H 4050 3350 50  0001 C CNN
+F 0 "#PWR?" H 4050 3350 50  0001 C CNN
 F 1 "GND" H 4055 3427 50  0000 C CNN
 F 2 "" H 4050 3600 50  0001 C CNN
 F 3 "" H 4050 3600 50  0001 C CNN
@@ -60,10 +60,10 @@ Wire Wire Line
 Wire Wire Line
 	4000 3400 3950 3400
 $Comp
-L power:+3V3 #PWR0127
+L power:+3V3 #PWR?
 U 1 1 5DCF6F82
 P 10100 2150
-F 0 "#PWR0127" H 10100 2000 50  0001 C CNN
+F 0 "#PWR?" H 10100 2000 50  0001 C CNN
 F 1 "+3V3" H 10115 2323 50  0000 C CNN
 F 2 "" H 10100 2150 50  0001 C CNN
 F 3 "" H 10100 2150 50  0001 C CNN
@@ -1118,4 +1118,103 @@ Text GLabel 1950 3300 0    50   Input ~ 0
 TRANSMIT-ENABLE
 Wire Wire Line
 	1950 3300 2550 3300
+$Comp
+L Device:C_Small C?
+U 1 1 5E3DE021
+P 750 7250
+F 0 "C?" H 842 7296 50  0000 L CNN
+F 1 "100nF" H 842 7205 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603_HandSoldering" H 750 7250 50  0001 C CNN
+F 3 "https://www.digikey.ca/product-detail/en/w-rth-elektronik/885012206020/732-7939-1-ND/5454566" H 750 7250 50  0001 C CNN
+	1    750  7250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR?
+U 1 1 5E3DE02B
+P 750 7050
+F 0 "#PWR?" H 750 6900 50  0001 C CNN
+F 1 "+3V3" H 765 7223 50  0000 C CNN
+F 2 "" H 750 7050 50  0001 C CNN
+F 3 "" H 750 7050 50  0001 C CNN
+	1    750  7050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5E3DE035
+P 750 7450
+F 0 "#PWR?" H 750 7200 50  0001 C CNN
+F 1 "GND" H 755 7277 50  0000 C CNN
+F 2 "" H 750 7450 50  0001 C CNN
+F 3 "" H 750 7450 50  0001 C CNN
+	1    750  7450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	750  7350 750  7400
+Wire Wire Line
+	750  7050 750  7100
+$Comp
+L Device:C_Small C?
+U 1 1 5E3DE041
+P 1150 7250
+F 0 "C?" H 1242 7296 50  0000 L CNN
+F 1 "10uF" H 1242 7205 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805_HandSoldering" H 1150 7250 50  0001 C CNN
+F 3 "https://www.digikey.ca/product-detail/en/kemet/C0805C106K8PACTU/399-4925-1-ND/1090920" H 1150 7250 50  0001 C CNN
+	1    1150 7250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	750  7100 1150 7100
+Wire Wire Line
+	1150 7100 1150 7150
+Connection ~ 750  7100
+Wire Wire Line
+	750  7100 750  7150
+Wire Wire Line
+	1150 7350 1150 7400
+Wire Wire Line
+	1150 7400 750  7400
+Connection ~ 750  7400
+Wire Wire Line
+	750  7400 750  7450
+Wire Wire Line
+	3950 4500 3950 4550
+Wire Wire Line
+	3950 4750 3950 4800
+$Comp
+L power:GND #PWR?
+U 1 1 5E3E92C6
+P 3950 4800
+F 0 "#PWR?" H 3950 4550 50  0001 C CNN
+F 1 "GND" H 3955 4627 50  0000 C CNN
+F 2 "" H 3950 4800 50  0001 C CNN
+F 3 "" H 3950 4800 50  0001 C CNN
+	1    3950 4800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR?
+U 1 1 5E3E92D0
+P 3950 4500
+F 0 "#PWR?" H 3950 4350 50  0001 C CNN
+F 1 "+3V3" H 3965 4673 50  0000 C CNN
+F 2 "" H 3950 4500 50  0001 C CNN
+F 3 "" H 3950 4500 50  0001 C CNN
+	1    3950 4500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C?
+U 1 1 5E3E92DA
+P 3950 4650
+F 0 "C?" H 4042 4696 50  0000 L CNN
+F 1 "100nF" H 4042 4605 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603_HandSoldering" H 3950 4650 50  0001 C CNN
+F 3 "https://www.digikey.ca/product-detail/en/w-rth-elektronik/885012206020/732-7939-1-ND/5454566" H 3950 4650 50  0001 C CNN
+	1    3950 4650
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC

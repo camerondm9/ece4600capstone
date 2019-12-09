@@ -142,4 +142,66 @@ Wire Wire Line
 Connection ~ 2950 4500
 Wire Wire Line
 	2950 4500 3100 4500
+$Comp
+L Device:C_Small C?
+U 1 1 5E3D409D
+P 9700 3800
+F 0 "C?" H 9792 3846 50  0000 L CNN
+F 1 "10uF" H 9792 3755 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805_HandSoldering" H 9700 3800 50  0001 C CNN
+F 3 "https://www.digikey.ca/product-detail/en/kemet/C0805C106K8PACTU/399-4925-1-ND/1090920" H 9700 3800 50  0001 C CNN
+	1    9700 3800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR?
+U 1 1 5E3D46BE
+P 9150 3600
+F 0 "#PWR?" H 9150 3450 50  0001 C CNN
+F 1 "+3V3" H 9165 3773 50  0000 C CNN
+F 2 "" H 9150 3600 50  0001 C CNN
+F 3 "" H 9150 3600 50  0001 C CNN
+	1    9150 3600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5E3D4BAC
+P 9150 4000
+F 0 "#PWR?" H 9150 3750 50  0001 C CNN
+F 1 "GND" H 9155 3827 50  0000 C CNN
+F 2 "" H 9150 4000 50  0001 C CNN
+F 3 "" H 9150 4000 50  0001 C CNN
+	1    9150 4000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C?
+U 1 1 5E3D52F8
+P 9150 3800
+F 0 "C?" H 9242 3846 50  0000 L CNN
+F 1 "100nF" H 9242 3755 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603_HandSoldering" H 9150 3800 50  0001 C CNN
+F 3 "https://www.digikey.ca/product-detail/en/w-rth-elektronik/885012206020/732-7939-1-ND/5454566" H 9150 3800 50  0001 C CNN
+	1    9150 3800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9150 3600 9150 3650
+Wire Wire Line
+	9150 3650 9700 3650
+Wire Wire Line
+	9700 3650 9700 3700
+Connection ~ 9150 3650
+Wire Wire Line
+	9150 3650 9150 3700
+Wire Wire Line
+	9700 3900 9700 3950
+Wire Wire Line
+	9700 3950 9150 3950
+Wire Wire Line
+	9150 3950 9150 3900
+Wire Wire Line
+	9150 3950 9150 4000
+Connection ~ 9150 3950
 $EndSCHEMATC
