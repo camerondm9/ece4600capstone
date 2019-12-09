@@ -39,12 +39,12 @@ $EndComp
 $Comp
 L Parts:ECS-5032MV U?
 U 1 1 5DD22CF7
-P 10400 1000
-F 0 "U?" H 10400 1315 50  0000 C CNN
-F 1 "ECS-5032MV" H 10400 1224 50  0000 C CNN
-F 2 "Parts:ECS-5032MV" H 10400 700 50  0001 C CNN
-F 3 "https://ecsxtal.com/ecs-5032mv" H 10400 600 50  0001 C CNN
-	1    10400 1000
+P 10050 950
+F 0 "U?" H 10050 1265 50  0000 C CNN
+F 1 "ECS-5032MV" H 10050 1174 50  0000 C CNN
+F 2 "Parts:ECS-5032MV" H 10050 650 50  0001 C CNN
+F 3 "https://ecsxtal.com/ecs-5032mv" H 10050 550 50  0001 C CNN
+	1    10050 950 
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -255,17 +255,17 @@ Wire Wire Line
 	1300 2400 1350 2400
 Wire Wire Line
 	1300 2300 1300 2400
-Text GLabel 4550 2000 0    50   Input ~ 0
+Text GLabel 4450 2650 0    50   Input ~ 0
 DAC-~CS
-Text GLabel 4550 2100 0    50   Input ~ 0
+Text GLabel 4450 2750 0    50   Input ~ 0
 DAC-SCK
-Text GLabel 4550 2200 0    50   Input ~ 0
+Text GLabel 4450 2850 0    50   Input ~ 0
 DAC-SDI
-Text GLabel 4550 2500 0    50   Input ~ 0
+Text GLabel 4450 2150 0    50   Input ~ 0
 ADC-~CS
-Text GLabel 4550 2600 0    50   Input ~ 0
+Text GLabel 4450 2250 0    50   Input ~ 0
 ADC-SCK
-Text GLabel 4550 2700 0    50   Input ~ 0
+Text GLabel 4450 2350 0    50   Input ~ 0
 ADC-SDO
 $Comp
 L Parts:10CL010 U?
@@ -723,53 +723,44 @@ Text GLabel 5750 6350 0    50   Input ~ 0
 FPGA-DOUT
 Wire Wire Line
 	5750 6350 5800 6350
-Text GLabel 5750 5400 0    50   Input ~ 0
+Text GLabel 4450 850  0    50   Input ~ 0
 FPGA-LINK0
-Text GLabel 5750 5500 0    50   Input ~ 0
+Text GLabel 4450 950  0    50   Input ~ 0
 FPGA-LINK1
-Text GLabel 5750 5600 0    50   Input ~ 0
+Text GLabel 4450 1050 0    50   Input ~ 0
 FPGA-LINK2
-Text GLabel 5750 5700 0    50   Input ~ 0
+Text GLabel 4450 1550 0    50   Input ~ 0
 FPGA-LINK3
-Text GLabel 5750 5800 0    50   Input ~ 0
+Text GLabel 4450 1650 0    50   Input ~ 0
 FPGA-LINK4
 $Comp
 L power:+3V3 #PWR?
 U 1 1 5DD97BF5
-P 10000 950
-F 0 "#PWR?" H 10000 800 50  0001 C CNN
-F 1 "+3V3" H 10015 1123 50  0000 C CNN
-F 2 "" H 10000 950 50  0001 C CNN
-F 3 "" H 10000 950 50  0001 C CNN
-	1    10000 950 
+P 9650 900
+F 0 "#PWR?" H 9650 750 50  0001 C CNN
+F 1 "+3V3" H 9665 1073 50  0000 C CNN
+F 2 "" H 9650 900 50  0001 C CNN
+F 3 "" H 9650 900 50  0001 C CNN
+	1    9650 900 
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	10000 950  10050 950 
 $Comp
 L power:GND #PWR?
 U 1 1 5DD9CD01
-P 10800 1050
-F 0 "#PWR?" H 10800 800 50  0001 C CNN
-F 1 "GND" H 10805 877 50  0000 C CNN
-F 2 "" H 10800 1050 50  0001 C CNN
-F 3 "" H 10800 1050 50  0001 C CNN
-	1    10800 1050
+P 10450 1000
+F 0 "#PWR?" H 10450 750 50  0001 C CNN
+F 1 "GND" H 10455 827 50  0000 C CNN
+F 2 "" H 10450 1000 50  0001 C CNN
+F 3 "" H 10450 1000 50  0001 C CNN
+	1    10450 1000
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	10700 1050 10800 1050
-Text Label 10800 950  0    50   ~ 0
+	10350 1000 10450 1000
+Text Label 10450 900  0    50   ~ 0
 12MHz
 Wire Wire Line
-	10700 950  10800 950 
-Wire Wire Line
-	10050 950  10050 1050
-Wire Wire Line
-	10050 1050 10100 1050
-Connection ~ 10050 950 
-Wire Wire Line
-	10050 950  10100 950 
+	10350 900  10450 900 
 $Comp
 L Parts:+1V2-LN #PWR?
 U 1 1 5DD72B66
@@ -787,41 +778,41 @@ Connection ~ 1300 2400
 $Comp
 L Device:C_Small C?
 U 1 1 5DD852FA
-P 9650 1050
-F 0 "C?" H 9742 1096 50  0000 L CNN
-F 1 "100nF" H 9742 1005 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0603_HandSoldering" H 9650 1050 50  0001 C CNN
-F 3 "https://www.digikey.ca/product-detail/en/w-rth-elektronik/885012206020/732-7939-1-ND/5454566" H 9650 1050 50  0001 C CNN
-	1    9650 1050
+P 10850 900
+F 0 "C?" H 10942 946 50  0000 L CNN
+F 1 "100nF" H 10942 855 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603_HandSoldering" H 10850 900 50  0001 C CNN
+F 3 "https://www.digikey.ca/product-detail/en/w-rth-elektronik/885012206020/732-7939-1-ND/5454566" H 10850 900 50  0001 C CNN
+	1    10850 900 
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:+3V3 #PWR?
 U 1 1 5DD89B39
-P 9650 900
-F 0 "#PWR?" H 9650 750 50  0001 C CNN
-F 1 "+3V3" H 9665 1073 50  0000 C CNN
-F 2 "" H 9650 900 50  0001 C CNN
-F 3 "" H 9650 900 50  0001 C CNN
-	1    9650 900 
+P 10850 750
+F 0 "#PWR?" H 10850 600 50  0001 C CNN
+F 1 "+3V3" H 10865 923 50  0000 C CNN
+F 2 "" H 10850 750 50  0001 C CNN
+F 3 "" H 10850 750 50  0001 C CNN
+	1    10850 750 
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	9650 900  9650 950 
+	10850 750  10850 800 
 $Comp
 L power:GND #PWR?
 U 1 1 5DD8DD81
-P 9650 1200
-F 0 "#PWR?" H 9650 950 50  0001 C CNN
-F 1 "GND" H 9655 1027 50  0000 C CNN
-F 2 "" H 9650 1200 50  0001 C CNN
-F 3 "" H 9650 1200 50  0001 C CNN
-	1    9650 1200
+P 10850 1050
+F 0 "#PWR?" H 10850 800 50  0001 C CNN
+F 1 "GND" H 10855 877 50  0000 C CNN
+F 2 "" H 10850 1050 50  0001 C CNN
+F 3 "" H 10850 1050 50  0001 C CNN
+	1    10850 1050
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	9650 1150 9650 1200
-Text GLabel 5750 5900 0    50   Input ~ 0
+	10850 1000 10850 1050
+Text GLabel 4450 1750 0    50   Input ~ 0
 FPGA-LINK5
 $Comp
 L Parts:10CL010 U?
@@ -1720,4 +1711,74 @@ F 3 "https://www.digikey.ca/product-detail/en/w-rth-elektronik/885012206020/732-
 	1    10500 2700
 	1    0    0    -1  
 $EndComp
+$Comp
+L Parts:10CL010 U?
+U 6 1 5E0ED08E
+P 4700 2050
+F 0 "U?" H 5978 1646 50  0000 L CNN
+F 1 "10CL010" H 5978 1555 50  0000 L CNN
+F 2 "Parts:EQFP144-PAD" H 5550 2100 50  0001 L BNN
+F 3 "https://www.intel.com/content/www/us/en/programmable/products/fpga/cyclone-series/cyclone-10/cyclone-10-lp/support.html" H 4700 2050 50  0001 C CNN
+	6    4700 2050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4450 2150 4500 2150
+Wire Wire Line
+	4500 2250 4450 2250
+Wire Wire Line
+	4450 2350 4500 2350
+Wire Wire Line
+	4500 2650 4450 2650
+Wire Wire Line
+	4450 2750 4500 2750
+Wire Wire Line
+	4500 2850 4450 2850
+$Comp
+L Parts:10CL010 U?
+U 10 1 5E1E1598
+P 7350 750
+F 0 "U?" H 8628 -104 50  0000 L CNN
+F 1 "10CL010" H 8628 -195 50  0000 L CNN
+F 2 "Parts:EQFP144-PAD" H 8200 800 50  0001 L BNN
+F 3 "https://www.intel.com/content/www/us/en/programmable/products/fpga/cyclone-series/cyclone-10/cyclone-10-lp/support.html" H 7350 750 50  0001 C CNN
+	10   7350 750 
+	1    0    0    -1  
+$EndComp
+Text Label 6850 1550 0    50   ~ 0
+12MHz
+Wire Wire Line
+	6850 1550 7150 1550
+Wire Wire Line
+	9650 900  9700 900 
+Wire Wire Line
+	9700 900  9700 1000
+Wire Wire Line
+	9700 1000 9750 1000
+Connection ~ 9700 900 
+Wire Wire Line
+	9700 900  9750 900 
+$Comp
+L Parts:10CL010 U?
+U 3 1 5E2AA860
+P 4700 1450
+F 0 "U?" H 5978 1246 50  0000 L CNN
+F 1 "10CL010" H 5978 1155 50  0000 L CNN
+F 2 "Parts:EQFP144-PAD" H 5550 1500 50  0001 L BNN
+F 3 "https://www.intel.com/content/www/us/en/programmable/products/fpga/cyclone-series/cyclone-10/cyclone-10-lp/support.html" H 4700 1450 50  0001 C CNN
+	3    4700 1450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4450 850  4500 850 
+Wire Wire Line
+	4450 950  4500 950 
+Wire Wire Line
+	4500 1050 4450 1050
+Wire Wire Line
+	4450 1550 4500 1550
+Wire Wire Line
+	4500 1650 4450 1650
+Wire Wire Line
+	4450 1750 4500 1750
 $EndSCHEMATC
