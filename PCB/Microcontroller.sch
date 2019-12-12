@@ -1114,10 +1114,6 @@ Text GLabel 1550 6800 0    50   Input ~ 0
 FPGA-DOUT
 Wire Wire Line
 	1550 6800 1600 6800
-Text GLabel 1950 3300 0    50   Input ~ 0
-TRANSMIT-ENABLE
-Wire Wire Line
-	1950 3300 2550 3300
 $Comp
 L Device:C_Small C?
 U 1 1 5E3DE021

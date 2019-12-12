@@ -255,11 +255,11 @@ Wire Wire Line
 	1300 2400 1350 2400
 Wire Wire Line
 	1300 2300 1300 2400
-Text GLabel 4450 2650 0    50   Input ~ 0
+Text GLabel 4450 3300 0    50   Input ~ 0
 DAC-~CS
-Text GLabel 4450 2750 0    50   Input ~ 0
+Text GLabel 4450 3400 0    50   Input ~ 0
 DAC-SCK
-Text GLabel 4450 2850 0    50   Input ~ 0
+Text GLabel 4450 3600 0    50   Input ~ 0
 DAC-SDI
 Text GLabel 4450 2150 0    50   Input ~ 0
 ADC-~CS
@@ -1781,4 +1781,53 @@ Wire Wire Line
 	4500 1650 4450 1650
 Wire Wire Line
 	4450 1750 4500 1750
+Text GLabel 4450 3700 0    50   Input ~ 0
+TRANSMIT-ENABLE
+$Comp
+L Parts:10CL010 U?
+U 7 1 5DF4242E
+P 4700 3200
+F 0 "U?" H 5975 3100 50  0000 L CNN
+F 1 "10CL010" H 5975 3000 50  0000 L CNN
+F 2 "Parts:EQFP144-PAD" H 5550 3250 50  0001 L BNN
+F 3 "https://www.intel.com/content/www/us/en/programmable/products/fpga/cyclone-series/cyclone-10/cyclone-10-lp/support.html" H 4700 3200 50  0001 C CNN
+	7    4700 3200
+	1    0    0    -1  
+$EndComp
+Text Label 2250 7050 0    50   ~ 0
+IO_B6_101
+Text Label 2250 7150 0    50   ~ 0
+IO_B6_103
+Wire Wire Line
+	2250 7050 2650 7050
+Wire Wire Line
+	2250 7150 2650 7150
+Text Label 4500 3600 0    50   ~ 0
+IO_B6_101
+Text Label 4500 3700 0    50   ~ 0
+IO_B6_103
+Wire Wire Line
+	4450 3300 4500 3300
+Wire Wire Line
+	4450 3400 4500 3400
+Wire Wire Line
+	4450 3600 4500 3600
+Wire Wire Line
+	4500 3700 4450 3700
+Text Label 2250 6250 0    50   ~ 0
+IO_B5_86
+Text Label 2250 6350 0    50   ~ 0
+IO_B5_87
+Wire Wire Line
+	2250 6350 2650 6350
+Wire Wire Line
+	2250 6250 2650 6250
+Text Label 4500 3050 0    50   ~ 0
+IO_B5_86
+Text Label 4500 3150 0    50   ~ 0
+IO_B5_87
+Wire Wire Line
+	4450 3050 4500 3050
+Wire Wire Line
+	4450 3150 4500 3150
 $EndSCHEMATC

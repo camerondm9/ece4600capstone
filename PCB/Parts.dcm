@@ -33,6 +33,12 @@ K single low noise opamp rail-to-rail zero drift
 F https://www.analog.com/en/products/ada4522-1.html
 $ENDCMP
 #
+$CMP AP2204K-ADJ
+D 150mA Wide Input Voltage Range Low Dropout Regulator
+K low-noise LDO linear low-dropout regulator
+F https://www.diodes.com/part/view/AP2204
+$ENDCMP
+#
 $CMP BMD-360
 D Standalone Bluetooth 5 low energy module
 K bluetooth 5 le module

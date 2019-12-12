@@ -877,4 +877,192 @@ F 3 "" H 5750 4750 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	5900 4750 5950 4750
+$Comp
+L Parts:AP2204K-ADJ U?
+U 1 1 5E0AC59D
+P 8950 3300
+F 0 "U?" H 8950 3665 50  0000 C CNN
+F 1 "AP2204K-ADJ" H 8950 3574 50  0000 C CNN
+F 2 "Parts:SOT23-5" H 8950 2950 50  0001 C CNN
+F 3 "https://www.diodes.com/part/view/AP2204" H 8950 2950 50  0001 C CNN
+	1    8950 3300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+12V #PWR?
+U 1 1 5E0AD6C7
+P 8150 3150
+F 0 "#PWR?" H 8150 3000 50  0001 C CNN
+F 1 "+12V" H 8165 3323 50  0000 C CNN
+F 2 "" H 8150 3150 50  0001 C CNN
+F 3 "" H 8150 3150 50  0001 C CNN
+	1    8150 3150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C?
+U 1 1 5E0B5F92
+P 8150 3350
+F 0 "C?" H 8242 3396 50  0000 L CNN
+F 1 "1uF" H 8242 3305 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805_HandSoldering" H 8150 3350 50  0001 C CNN
+F 3 "https://www.digikey.ca/product-detail/en/samsung-electro-mechanics/CL21B105KAFNNNE/1276-1066-1-ND/3889152" H 8150 3350 50  0001 C CNN
+	1    8150 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C?
+U 1 1 5E0B7046
+P 9950 3350
+F 0 "C?" H 10042 3396 50  0000 L CNN
+F 1 "1uF" H 10042 3305 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805_HandSoldering" H 9950 3350 50  0001 C CNN
+F 3 "https://www.digikey.ca/product-detail/en/samsung-electro-mechanics/CL21B105KAFNNNE/1276-1066-1-ND/3889152" H 9950 3350 50  0001 C CNN
+	1    9950 3350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8550 3400 8500 3400
+Wire Wire Line
+	8500 3400 8500 3200
+Wire Wire Line
+	8500 3200 8550 3200
+Wire Wire Line
+	8500 3200 8150 3200
+Wire Wire Line
+	8150 3200 8150 3150
+Connection ~ 8500 3200
+Wire Wire Line
+	8150 3200 8150 3250
+Connection ~ 8150 3200
+Wire Wire Line
+	8150 3500 8150 3450
+$Comp
+L power:GND #PWR?
+U 1 1 5E0CD1D0
+P 8150 3500
+F 0 "#PWR?" H 8150 3250 50  0001 C CNN
+F 1 "GND" H 8155 3327 50  0000 C CNN
+F 2 "" H 8150 3500 50  0001 C CNN
+F 3 "" H 8150 3500 50  0001 C CNN
+	1    8150 3500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+10V #PWR?
+U 1 1 5E0CFA90
+P 9950 3150
+F 0 "#PWR?" H 9950 3000 50  0001 C CNN
+F 1 "+10V" H 9965 3323 50  0000 C CNN
+F 2 "" H 9950 3150 50  0001 C CNN
+F 3 "" H 9950 3150 50  0001 C CNN
+	1    9950 3150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9950 3200 9950 3150
+Wire Wire Line
+	9950 3200 9950 3250
+Connection ~ 9950 3200
+Wire Wire Line
+	9350 3200 9600 3200
+$Comp
+L Device:R R?
+U 1 1 5E0E52C3
+P 9600 3400
+F 0 "R?" H 9670 3446 50  0000 L CNN
+F 1 "220k" H 9670 3355 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603_HandSoldering" V 9530 3400 50  0001 C CNN
+F 3 "https://www.digikey.ca/product-detail/en/stackpole-electronics-inc/RMCF0603FT220K/RMCF0603FT220KCT-ND/2417988" H 9600 3400 50  0001 C CNN
+	1    9600 3400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5E0E587B
+P 9600 3800
+F 0 "R?" H 9670 3846 50  0000 L CNN
+F 1 "30k" H 9670 3755 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603_HandSoldering" V 9530 3800 50  0001 C CNN
+F 3 "https://www.digikey.ca/product-detail/en/stackpole-electronics-inc/RMCF0603FT30K0/RMCF0603FT30K0CT-ND/1943086" H 9600 3800 50  0001 C CNN
+	1    9600 3800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9600 3250 9600 3200
+Connection ~ 9600 3200
+Wire Wire Line
+	9600 3200 9950 3200
+Wire Wire Line
+	9350 3300 9500 3300
+Wire Wire Line
+	9500 3300 9500 3600
+Wire Wire Line
+	9500 3600 9600 3600
+Wire Wire Line
+	9600 3600 9600 3550
+Wire Wire Line
+	9600 3600 9600 3650
+Connection ~ 9600 3600
+Wire Wire Line
+	9350 3400 9400 3400
+Wire Wire Line
+	9600 4000 9600 3950
+$Comp
+L power:GND #PWR?
+U 1 1 5E0FC5E1
+P 9950 3550
+F 0 "#PWR?" H 9950 3300 50  0001 C CNN
+F 1 "GND" H 9955 3377 50  0000 C CNN
+F 2 "" H 9950 3550 50  0001 C CNN
+F 3 "" H 9950 3550 50  0001 C CNN
+	1    9950 3550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9950 3550 9950 3500
+$Comp
+L power:GND #PWR?
+U 1 1 5E101152
+P 9600 4000
+F 0 "#PWR?" H 9600 3750 50  0001 C CNN
+F 1 "GND" H 9605 3827 50  0000 C CNN
+F 2 "" H 9600 4000 50  0001 C CNN
+F 3 "" H 9600 4000 50  0001 C CNN
+	1    9600 4000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5E1017EA
+P 9400 3400
+F 0 "#PWR?" H 9400 3150 50  0001 C CNN
+F 1 "GND" H 9405 3227 50  0000 C CNN
+F 2 "" H 9400 3400 50  0001 C CNN
+F 3 "" H 9400 3400 50  0001 C CNN
+	1    9400 3400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C?
+U 1 1 5E1058BA
+P 10350 3350
+F 0 "C?" H 10442 3396 50  0000 L CNN
+F 1 "10uF" H 10442 3305 50  0000 L CNN
+F 2 "Capacitors_SMD:C_1206_HandSoldering" H 10350 3350 50  0001 C CNN
+F 3 "https://www.digikey.ca/product-detail/en/kemet/C1206C106M3PACTU/399-8153-1-ND/3471876" H 10350 3350 50  0001 C CNN
+	1    10350 3350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9950 3200 10350 3200
+Wire Wire Line
+	10350 3200 10350 3250
+Wire Wire Line
+	9950 3500 10350 3500
+Wire Wire Line
+	10350 3500 10350 3450
+Connection ~ 9950 3500
+Wire Wire Line
+	9950 3500 9950 3450
 $EndSCHEMATC

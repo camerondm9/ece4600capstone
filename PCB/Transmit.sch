@@ -127,19 +127,6 @@ F 3 "" H 3700 3950 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+12V #PWR?
-U 1 1 5DED5B08
-P 3700 2650
-F 0 "#PWR?" H 3700 2500 50  0001 C CNN
-F 1 "+12V" H 3715 2823 50  0000 C CNN
-F 2 "" H 3700 2650 50  0001 C CNN
-F 3 "" H 3700 2650 50  0001 C CNN
-	1    3700 2650
-	1    0    0    -1  
-$EndComp
-Text Notes 2700 2950 0    50   ~ 0
-Is the 12V rail quiet enough, or do we need a separate 10V linear-regulated rail to reduce noise?
-$Comp
 L Device:R R?
 U 1 1 5DEDD2CE
 P 4600 4300
@@ -701,8 +688,6 @@ Wire Wire Line
 	8650 5550 8650 5600
 Wire Wire Line
 	8650 5800 8650 5850
-Text Notes 3250 3100 0    50   ~ 0
-Needs decoupling cap
 $Comp
 L power:GND #PWR?
 U 1 1 5E3B7B63
@@ -765,4 +750,54 @@ Wire Wire Line
 Connection ~ 800  3050
 Wire Wire Line
 	800  3050 800  3100
+$Comp
+L power:+10V #PWR?
+U 1 1 5E0A0743
+P 3700 3250
+F 0 "#PWR?" H 3700 3100 50  0001 C CNN
+F 1 "+10V" H 3715 3423 50  0000 C CNN
+F 2 "" H 3700 3250 50  0001 C CNN
+F 3 "" H 3700 3250 50  0001 C CNN
+	1    3700 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C?
+U 1 1 5E1245EE
+P 4200 2900
+F 0 "C?" H 4292 2946 50  0000 L CNN
+F 1 "100nF" H 4292 2855 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603_HandSoldering" H 4200 2900 50  0001 C CNN
+F 3 "https://www.digikey.ca/product-detail/en/samsung-electro-mechanics/CL10B104KB8NNNC/1276-1000-1-ND/3889086" H 4200 2900 50  0001 C CNN
+	1    4200 2900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+10V #PWR?
+U 1 1 5E124B96
+P 4200 2750
+F 0 "#PWR?" H 4200 2600 50  0001 C CNN
+F 1 "+10V" H 4215 2923 50  0000 C CNN
+F 2 "" H 4200 2750 50  0001 C CNN
+F 3 "" H 4200 2750 50  0001 C CNN
+	1    4200 2750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4200 2750 4200 2800
+$Comp
+L power:GND #PWR?
+U 1 1 5E1277BF
+P 4200 3050
+F 0 "#PWR?" H 4200 2800 50  0001 C CNN
+F 1 "GND" H 4205 2877 50  0000 C CNN
+F 2 "" H 4200 3050 50  0001 C CNN
+F 3 "" H 4200 3050 50  0001 C CNN
+	1    4200 3050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4200 3050 4200 3000
+Wire Wire Line
+	3700 3250 3700 3300
 $EndSCHEMATC
