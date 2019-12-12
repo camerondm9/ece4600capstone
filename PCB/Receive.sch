@@ -96,8 +96,6 @@ Wire Wire Line
 	2100 3850 2200 3850
 Text Notes 4800 3900 0    50   ~ 0
 Input is roughly 10mVpp\nOutput should be roughly 3Vpp
-Text Notes 4700 5150 0    50   ~ 0
-See Capstone-VGA bookmarks
 $Comp
 L Device:D_Schottky_Small_ALT D?
 U 1 1 5DF00EE8
@@ -204,4 +202,39 @@ Wire Wire Line
 Wire Wire Line
 	9150 3950 9150 4000
 Connection ~ 9150 3950
+$Comp
+L Device:C_Small C?
+U 1 1 5E132FDE
+P 4500 2700
+F 0 "C?" H 4592 2746 50  0000 L CNN
+F 1 "100nF" H 4592 2655 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603_HandSoldering" H 4500 2700 50  0001 C CNN
+F 3 "https://www.digikey.ca/product-detail/en/w-rth-elektronik/885012206020/732-7939-1-ND/5454566" H 4500 2700 50  0001 C CNN
+	1    4500 2700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C?
+U 1 1 5E133797
+P 4900 2700
+F 0 "C?" H 4992 2746 50  0000 L CNN
+F 1 "100nF" H 4992 2655 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603_HandSoldering" H 4900 2700 50  0001 C CNN
+F 3 "https://www.digikey.ca/product-detail/en/w-rth-elektronik/885012206020/732-7939-1-ND/5454566" H 4900 2700 50  0001 C CNN
+	1    4900 2700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C?
+U 1 1 5E133C95
+P 5450 2700
+F 0 "C?" H 5542 2746 50  0000 L CNN
+F 1 "10uF" H 5542 2655 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805_HandSoldering" H 5450 2700 50  0001 C CNN
+F 3 "https://www.digikey.ca/product-detail/en/kemet/C0805C106K8PACTU/399-4925-1-ND/1090920" H 5450 2700 50  0001 C CNN
+	1    5450 2700
+	1    0    0    -1  
+$EndComp
+Text Notes 4600 2500 0    50   ~ 0
+Decoupling for opamps
 $EndSCHEMATC
