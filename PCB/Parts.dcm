@@ -118,6 +118,18 @@ K SPI ADC
 F https://www.maximintegrated.com/en/products/analog/data-converters/analog-to-digital-converters/MAX11116.html
 $ENDCMP
 #
+$CMP MAX5394L
+D Single 256-tap volatile SPI low-voltage linear taper digital potentiometer
+K single digital potentiometer SPI linear taper
+F https://www.maximintegrated.com/en/products/analog/data-converters/digital-potentiometers/MAX5394.html
+$ENDCMP
+#
+$CMP MCP6L1
+D 2.8MHz 200uA opamp
+K single opamp rail-to-rail output
+F https://www.microchip.com/wwwproducts/en/MCP6L1
+$ENDCMP
+#
 $CMP MIC841N
 D Comparator with 1.25% voltage reference and adjustable hysteresis
 F https://www.microchip.com/wwwproducts/en/MIC841
@@ -132,6 +144,12 @@ $CMP TCR2EF25
 D 200mA CMOS Low Dropout Regulator with Fast Load Transient Response
 K low-noise LDO linear low-dropout fast load transient response regulator
 F https://toshiba.semicon-storage.com/us/product/linear/power-supply/detail.TCR2EF25.html
+$ENDCMP
+#
+$CMP TLV3544
+D 200MHz rail-to-rail IO CMOS opamp for cost-sensitive systems
+K low noise rail-to-rail input high current output opamp
+F https://www.ti.com/product/TLV3544
 $ENDCMP
 #
 $CMP TPS62262

@@ -1830,4 +1830,14 @@ Wire Wire Line
 	4450 3050 4500 3050
 Wire Wire Line
 	4450 3150 4500 3150
+Text GLabel 4450 2650 0    50   Input ~ 0
+VGA-~CS0
+Text GLabel 4450 3150 0    50   Input ~ 0
+VGA-~CS1
+Text GLabel 4450 2850 0    50   Input ~ 0
+VGA-SCLK
+Text GLabel 4450 2750 0    50   Input ~ 0
+VGA-D0
+Text GLabel 4450 3050 0    50   Input ~ 0
+VGA-D1
 $EndSCHEMATC
