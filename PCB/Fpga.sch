@@ -1835,7 +1835,7 @@ VGA-~CS0
 Text GLabel 4450 3150 0    50   Input ~ 0
 VGA-~CS1
 Text GLabel 4450 2850 0    50   Input ~ 0
-VGA-SCLK
+VGA-SCK
 Text GLabel 4450 2750 0    50   Input ~ 0
 VGA-D0
 Text GLabel 4450 3050 0    50   Input ~ 0

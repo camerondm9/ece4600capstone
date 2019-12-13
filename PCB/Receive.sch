@@ -1032,9 +1032,9 @@ Wire Wire Line
 Wire Wire Line
 	6350 1350 6350 1400
 Text GLabel 5250 2900 0    50   Input ~ 0
-VGA-SCLK
+VGA-SCK
 Text GLabel 6700 2300 0    50   Input ~ 0
-VGA-SCLK
+VGA-SCK
 Text GLabel 5250 2800 0    50   Input ~ 0
 VGA-D0
 Text GLabel 6700 2200 0    50   Input ~ 0

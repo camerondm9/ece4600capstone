@@ -1213,4 +1213,16 @@ F 3 "https://www.digikey.ca/product-detail/en/w-rth-elektronik/885012206020/732-
 	1    3950 4650
 	1    0    0    -1  
 $EndComp
+Text GLabel 6350 1900 0    50   Input ~ 0
+MICRO-SCL
+Text GLabel 6350 2000 0    50   Input ~ 0
+MICRO-SDA
+Text Label 6400 1900 0    50   ~ 0
+SCL
+Text Label 6400 2000 0    50   ~ 0
+SDA
+Wire Wire Line
+	6350 1900 6400 1900
+Wire Wire Line
+	6350 2000 6400 2000
 $EndSCHEMATC

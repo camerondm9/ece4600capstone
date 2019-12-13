@@ -459,4 +459,169 @@ F 3 "" H 6200 4550 50  0001 C CNN
 	1    6200 4550
 	1    0    0    -1  
 $EndComp
+Text GLabel 4800 6250 0    50   Input ~ 0
+FPGA-CS
+Text GLabel 8800 4500 0    50   Input ~ 0
+MICRO-SCL
+Text GLabel 8800 4600 0    50   Input ~ 0
+MICRO-SDA
+Text GLabel 8800 4800 0    50   Input ~ 0
+ADC-~CS
+Text GLabel 8800 4900 0    50   Input ~ 0
+ADC-SCK
+Text GLabel 8800 5000 0    50   Input ~ 0
+ADC-SDO
+Text GLabel 8800 5200 0    50   Input ~ 0
+VGA-~CS0
+Text GLabel 8800 5300 0    50   Input ~ 0
+VGA-D0
+Text GLabel 8800 5400 0    50   Input ~ 0
+VGA-SCK
+Text GLabel 8800 5500 0    50   Input ~ 0
+VGA-D1
+Text GLabel 8800 5600 0    50   Input ~ 0
+VGA-~CS1
+Text GLabel 8800 5900 0    50   Input ~ 0
+DAC-~CS
+Text GLabel 8800 6000 0    50   Input ~ 0
+DAC-SCK
+Text GLabel 8800 6100 0    50   Input ~ 0
+DAC-SDI
+Text GLabel 8800 5800 0    50   Input ~ 0
+TRANSMIT-ENABLE
+Wire Wire Line
+	4800 6250 4850 6250
+$Comp
+L Connector:Conn_01x02_Male J?
+U 1 1 5E2272DF
+P 9050 4600
+F 0 "J?" H 9022 4482 50  0000 R CNN
+F 1 "DNP" H 9022 4573 50  0000 R CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x02_Pitch2.54mm" H 9050 4600 50  0001 C CNN
+F 3 "https://www.digikey.ca/product-detail/en/adam-tech/PH1-02-UA/2057-PH1-02-UA-ND/9830266" H 9050 4600 50  0001 C CNN
+	1    9050 4600
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	8850 4500 8800 4500
+Wire Wire Line
+	8800 4600 8850 4600
+$Comp
+L Connector:Conn_01x03_Male J?
+U 1 1 5E22DC4D
+P 9050 4900
+F 0 "J?" H 9022 4832 50  0000 R CNN
+F 1 "Conn_01x03_Male" H 9022 4923 50  0000 R CNN
+F 2 "" H 9050 4900 50  0001 C CNN
+F 3 "~" H 9050 4900 50  0001 C CNN
+	1    9050 4900
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	8800 4800 8850 4800
+Wire Wire Line
+	8850 4900 8800 4900
+Wire Wire Line
+	8800 5000 8850 5000
+$Comp
+L Connector:Conn_01x03_Male J?
+U 1 1 5E232910
+P 9050 5300
+F 0 "J?" H 9022 5232 50  0000 R CNN
+F 1 "Conn_01x03_Male" H 9022 5323 50  0000 R CNN
+F 2 "" H 9050 5300 50  0001 C CNN
+F 3 "~" H 9050 5300 50  0001 C CNN
+	1    9050 5300
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	8800 5200 8850 5200
+Wire Wire Line
+	8800 5300 8850 5300
+Wire Wire Line
+	8800 5400 8850 5400
+$Comp
+L Connector:Conn_01x03_Male J?
+U 1 1 5E236FC5
+P 9050 5600
+F 0 "J?" H 9022 5532 50  0000 R CNN
+F 1 "Conn_01x03_Male" H 9022 5623 50  0000 R CNN
+F 2 "" H 9050 5600 50  0001 C CNN
+F 3 "~" H 9050 5600 50  0001 C CNN
+	1    9050 5600
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	8800 5500 8850 5500
+Wire Wire Line
+	8850 5600 8800 5600
+Wire Wire Line
+	8800 5800 8850 5800
+Wire Wire Line
+	8850 5800 8850 5700
+$Comp
+L Connector:Conn_01x03_Male J?
+U 1 1 5E23BCC1
+P 9050 6000
+F 0 "J?" H 9022 5932 50  0000 R CNN
+F 1 "Conn_01x03_Male" H 9022 6023 50  0000 R CNN
+F 2 "" H 9050 6000 50  0001 C CNN
+F 3 "~" H 9050 6000 50  0001 C CNN
+	1    9050 6000
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	8800 5900 8850 5900
+Wire Wire Line
+	8800 6000 8850 6000
+Wire Wire Line
+	8800 6100 8850 6100
+$Comp
+L Mechanical:MountingHole_Pad H?
+U 1 1 5E24249E
+P 3750 2250
+F 0 "H?" V 3704 2400 50  0000 L CNN
+F 1 "MountingHole_Pad" V 3795 2400 50  0000 L CNN
+F 2 "" H 3750 2250 50  0001 C CNN
+F 3 "~" H 3750 2250 50  0001 C CNN
+	1    3750 2250
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5E243B36
+P 3550 2250
+F 0 "#PWR?" H 3550 2000 50  0001 C CNN
+F 1 "GND" H 3555 2077 50  0000 C CNN
+F 2 "" H 3550 2250 50  0001 C CNN
+F 3 "" H 3550 2250 50  0001 C CNN
+	1    3550 2250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3550 2250 3650 2250
+$Comp
+L Mechanical:MountingHole_Pad H?
+U 1 1 5E246FF3
+P 3750 2000
+F 0 "H?" V 3704 2150 50  0000 L CNN
+F 1 "MountingHole_Pad" V 3795 2150 50  0000 L CNN
+F 2 "" H 3750 2000 50  0001 C CNN
+F 3 "~" H 3750 2000 50  0001 C CNN
+	1    3750 2000
+	0    1    1    0   
+$EndComp
+$Comp
+L power:+BATT #PWR?
+U 1 1 5E24725E
+P 3550 2000
+F 0 "#PWR?" H 3550 1850 50  0001 C CNN
+F 1 "+BATT" H 3565 2173 50  0000 C CNN
+F 2 "" H 3550 2000 50  0001 C CNN
+F 3 "" H 3550 2000 50  0001 C CNN
+	1    3550 2000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3550 2000 3650 2000
 $EndSCHEMATC
