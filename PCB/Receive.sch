@@ -15,10 +15,10 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L Parts:MAX11116 U?
+L Parts:MAX11116 U20
 U 1 1 5DCE353E
 P 9250 3750
-F 0 "U?" H 9250 4137 60  0000 C CNN
+F 0 "U20" H 9250 4137 60  0000 C CNN
 F 1 "MAX11116" H 9250 4031 60  0000 C CNN
 F 2 "Parts:SOT23" H 9250 3500 60  0001 C CNN
 F 3 "https://www.maximintegrated.com/en/products/analog/data-converters/analog-to-digital-converters/MAX11116.html" H 8750 3750 60  0001 C CNN
@@ -26,10 +26,10 @@ F 3 "https://www.maximintegrated.com/en/products/analog/data-converters/analog-t
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR?
+L power:GND #PWR0165
 U 1 1 5DE6B0BA
 P 8650 3850
-F 0 "#PWR?" H 8650 3600 50  0001 C CNN
+F 0 "#PWR0165" H 8650 3600 50  0001 C CNN
 F 1 "GND" H 8655 3677 50  0000 C CNN
 F 2 "" H 8650 3850 50  0001 C CNN
 F 3 "" H 8650 3850 50  0001 C CNN
@@ -53,10 +53,10 @@ Wire Wire Line
 Wire Wire Line
 	9750 3850 9800 3850
 $Comp
-L power:GND #PWR?
+L power:GND #PWR0166
 U 1 1 5DE74334
 P 2150 4450
-F 0 "#PWR?" H 2150 4200 50  0001 C CNN
+F 0 "#PWR0166" H 2150 4200 50  0001 C CNN
 F 1 "GND" H 2155 4277 50  0000 C CNN
 F 2 "" H 2150 4450 50  0001 C CNN
 F 3 "" H 2150 4450 50  0001 C CNN
@@ -64,10 +64,10 @@ F 3 "" H 2150 4450 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C_Small C?
+L Device:C_Small C94
 U 1 1 5DE7BD62
 P 1800 3750
-F 0 "C?" V 1571 3750 50  0000 C CNN
+F 0 "C94" V 1571 3750 50  0000 C CNN
 F 1 "100nF" V 1662 3750 50  0000 C CNN
 F 2 "Capacitors_SMD:C_1206_HandSoldering" H 1800 3750 50  0001 C CNN
 F 3 "https://www.digikey.ca/product-detail/en/murata-electronics/GRM31C5C2A104JA01L/490-16315-1-ND/7363297" H 1800 3750 50  0001 C CNN
@@ -81,10 +81,10 @@ TRANSDUCER
 Wire Wire Line
 	1600 3750 1700 3750
 $Comp
-L Device:D_Schottky_Small_ALT D?
+L Device:D_Schottky_Small_ALT D8
 U 1 1 5DF00EE8
 P 2300 4250
-F 0 "D?" V 2254 4318 50  0000 L CNN
+F 0 "D8" V 2254 4318 50  0000 L CNN
 F 1 "600mV 200mA" V 2345 4318 50  0000 L CNN
 F 2 "Diodes_SMD:D_SOD-523" V 2300 4250 50  0001 C CNN
 F 3 "https://www.digikey.ca/product-detail/en/on-semiconductor/RB520S30T5G/RB520S30T5GOSCT-ND/5213385" V 2300 4250 50  0001 C CNN
@@ -92,10 +92,10 @@ F 3 "https://www.digikey.ca/product-detail/en/on-semiconductor/RB520S30T5G/RB520
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:D_Schottky_Small_ALT D?
+L Device:D_Schottky_Small_ALT D7
 U 1 1 5DF02261
 P 2000 4050
-F 0 "D?" V 2046 3982 50  0000 R CNN
+F 0 "D7" V 2046 3982 50  0000 R CNN
 F 1 "600mV 200mA" V 1955 3982 50  0000 R CNN
 F 2 "Diodes_SMD:D_SOD-523" V 2000 4050 50  0001 C CNN
 F 3 "https://www.digikey.ca/product-detail/en/on-semiconductor/RB520S30T5G/RB520S30T5GOSCT-ND/5213385" V 2000 4050 50  0001 C CNN
@@ -125,10 +125,10 @@ Connection ~ 2150 4400
 Wire Wire Line
 	2150 4400 2300 4400
 $Comp
-L Device:C_Small C?
+L Device:C_Small C93
 U 1 1 5E3D409D
 P 10400 2900
-F 0 "C?" H 10492 2946 50  0000 L CNN
+F 0 "C93" H 10492 2946 50  0000 L CNN
 F 1 "10uF" H 10492 2855 50  0000 L CNN
 F 2 "Capacitors_SMD:C_0805_HandSoldering" H 10400 2900 50  0001 C CNN
 F 3 "https://www.digikey.ca/product-detail/en/kemet/C0805C106K8PACTU/399-4925-1-ND/1090920" H 10400 2900 50  0001 C CNN
@@ -136,10 +136,10 @@ F 3 "https://www.digikey.ca/product-detail/en/kemet/C0805C106K8PACTU/399-4925-1-
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR?
+L power:GND #PWR0163
 U 1 1 5E3D4BAC
 P 9850 3100
-F 0 "#PWR?" H 9850 2850 50  0001 C CNN
+F 0 "#PWR0163" H 9850 2850 50  0001 C CNN
 F 1 "GND" H 9855 2927 50  0000 C CNN
 F 2 "" H 9850 3100 50  0001 C CNN
 F 3 "" H 9850 3100 50  0001 C CNN
@@ -147,10 +147,10 @@ F 3 "" H 9850 3100 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C_Small C?
+L Device:C_Small C92
 U 1 1 5E3D52F8
 P 9850 2900
-F 0 "C?" H 9942 2946 50  0000 L CNN
+F 0 "C92" H 9942 2946 50  0000 L CNN
 F 1 "100nF" H 9942 2855 50  0000 L CNN
 F 2 "Capacitors_SMD:C_0603_HandSoldering" H 9850 2900 50  0001 C CNN
 F 3 "https://www.digikey.ca/product-detail/en/w-rth-elektronik/885012206020/732-7939-1-ND/5454566" H 9850 2900 50  0001 C CNN
@@ -176,10 +176,10 @@ Wire Wire Line
 	9850 3050 9850 3100
 Connection ~ 9850 3050
 $Comp
-L Device:C_Small C?
+L Device:C_Small C99
 U 1 1 5E132FDE
 P 4450 5300
-F 0 "C?" H 4542 5346 50  0000 L CNN
+F 0 "C99" H 4542 5346 50  0000 L CNN
 F 1 "100nF" H 4542 5255 50  0000 L CNN
 F 2 "Capacitors_SMD:C_0603_HandSoldering" H 4450 5300 50  0001 C CNN
 F 3 "https://www.digikey.ca/product-detail/en/w-rth-elektronik/885012206020/732-7939-1-ND/5454566" H 4450 5300 50  0001 C CNN
@@ -187,10 +187,10 @@ F 3 "https://www.digikey.ca/product-detail/en/w-rth-elektronik/885012206020/732-
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C_Small C?
+L Device:C_Small C101
 U 1 1 5E133797
 P 6050 5400
-F 0 "C?" H 6142 5446 50  0000 L CNN
+F 0 "C101" H 6142 5446 50  0000 L CNN
 F 1 "100nF" H 6142 5355 50  0000 L CNN
 F 2 "Capacitors_SMD:C_0603_HandSoldering" H 6050 5400 50  0001 C CNN
 F 3 "https://www.digikey.ca/product-detail/en/w-rth-elektronik/885012206020/732-7939-1-ND/5454566" H 6050 5400 50  0001 C CNN
@@ -198,10 +198,10 @@ F 3 "https://www.digikey.ca/product-detail/en/w-rth-elektronik/885012206020/732-
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C_Small C?
+L Device:C_Small C100
 U 1 1 5E133C95
 P 4950 5300
-F 0 "C?" H 5042 5346 50  0000 L CNN
+F 0 "C100" H 5042 5346 50  0000 L CNN
 F 1 "10uF" H 5042 5255 50  0000 L CNN
 F 2 "Capacitors_SMD:C_0805_HandSoldering" H 4950 5300 50  0001 C CNN
 F 3 "https://www.digikey.ca/product-detail/en/kemet/C0805C106K8PACTU/399-4925-1-ND/1090920" H 4950 5300 50  0001 C CNN
@@ -209,10 +209,10 @@ F 3 "https://www.digikey.ca/product-detail/en/kemet/C0805C106K8PACTU/399-4925-1-
 	1    0    0    -1  
 $EndComp
 $Comp
-L Parts:MCP6L1 U?
+L Parts:MCP6L1 U22
 U 1 1 5DF2C139
 P 7450 5350
-F 0 "U?" H 7794 5396 50  0000 L CNN
+F 0 "U22" H 7794 5396 50  0000 L CNN
 F 1 "MCP6L1" H 7794 5305 50  0000 L CNN
 F 2 "Parts:SOT23-5" H 7350 5150 50  0001 L CNN
 F 3 "https://www.microchip.com/wwwproducts/en/MCP6L1" H 7600 5500 50  0001 C CNN
@@ -220,54 +220,54 @@ F 3 "https://www.microchip.com/wwwproducts/en/MCP6L1" H 7600 5500 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Parts:TLV3544 U?
+L Parts:TLV3544 U21
 U 1 1 5DF3CF89
-P 3800 3850
-F 0 "U?" H 3800 4217 50  0000 C CNN
-F 1 "TLV3544" H 3800 4126 50  0000 C CNN
-F 2 "Parts:SSOP14" H 3800 3600 50  0001 C CNN
-F 3 "https://www.ti.com/product/TLV3544" H 3800 3850 60  0001 C CNN
-	1    3800 3850
-	1    0    0    -1  
-$EndComp
-$Comp
-L Parts:TLV3544 U?
-U 2 1 5DF3E279
-P 5200 3850
-F 0 "U?" H 5200 4217 50  0000 C CNN
-F 1 "TLV3544" H 5200 4126 50  0000 C CNN
-F 2 "Parts:SSOP14" H 5200 3600 50  0001 C CNN
-F 3 "https://www.ti.com/product/TLV3544" H 5200 3850 60  0001 C CNN
-	2    5200 3850
-	1    0    0    -1  
-$EndComp
-$Comp
-L Parts:TLV3544 U?
-U 3 1 5DF3F202
-P 6650 3850
-F 0 "U?" H 6650 4217 50  0000 C CNN
-F 1 "TLV3544" H 6650 4126 50  0000 C CNN
-F 2 "Parts:SSOP14" H 6650 3600 50  0001 C CNN
-F 3 "https://www.ti.com/product/TLV3544" H 6650 3850 60  0001 C CNN
-	3    6650 3850
-	1    0    0    -1  
-$EndComp
-$Comp
-L Parts:TLV3544 U?
-U 4 1 5DF4019C
 P 8100 3850
-F 0 "U?" H 8100 4217 50  0000 C CNN
+F 0 "U21" H 8100 4217 50  0000 C CNN
 F 1 "TLV3544" H 8100 4126 50  0000 C CNN
 F 2 "Parts:SSOP14" H 8100 3600 50  0001 C CNN
 F 3 "https://www.ti.com/product/TLV3544" H 8100 3850 60  0001 C CNN
-	4    8100 3850
+	1    8100 3850
 	1    0    0    -1  
 $EndComp
 $Comp
-L Parts:TLV3544 U?
+L Parts:TLV3544 U21
+U 2 1 5DF3E279
+P 3800 3850
+F 0 "U21" H 3800 4217 50  0000 C CNN
+F 1 "TLV3544" H 3800 4126 50  0000 C CNN
+F 2 "Parts:SSOP14" H 3800 3600 50  0001 C CNN
+F 3 "https://www.ti.com/product/TLV3544" H 3800 3850 60  0001 C CNN
+	2    3800 3850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Parts:TLV3544 U21
+U 3 1 5DF3F202
+P 5200 3850
+F 0 "U21" H 5200 4217 50  0000 C CNN
+F 1 "TLV3544" H 5200 4126 50  0000 C CNN
+F 2 "Parts:SSOP14" H 5200 3600 50  0001 C CNN
+F 3 "https://www.ti.com/product/TLV3544" H 5200 3850 60  0001 C CNN
+	3    5200 3850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Parts:TLV3544 U21
+U 4 1 5DF4019C
+P 6650 3850
+F 0 "U21" H 6650 4217 50  0000 C CNN
+F 1 "TLV3544" H 6650 4126 50  0000 C CNN
+F 2 "Parts:SSOP14" H 6650 3600 50  0001 C CNN
+F 3 "https://www.ti.com/product/TLV3544" H 6650 3850 60  0001 C CNN
+	4    6650 3850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Parts:TLV3544 U21
 U 5 1 5DF41081
 P 3800 5350
-F 0 "U?" H 4030 5396 50  0000 L CNN
+F 0 "U21" H 4030 5396 50  0000 L CNN
 F 1 "TLV3544" H 4030 5305 50  0000 L CNN
 F 2 "Parts:SSOP14" H 3800 5100 50  0001 C CNN
 F 3 "https://www.ti.com/product/TLV3544" H 3800 5350 60  0001 C CNN
@@ -278,10 +278,10 @@ Connection ~ 2150 3750
 Wire Wire Line
 	2150 3750 2800 3750
 $Comp
-L power:GND #PWR?
+L power:GND #PWR0173
 U 1 1 5DF502DD
 P 6050 5550
-F 0 "#PWR?" H 6050 5300 50  0001 C CNN
+F 0 "#PWR0173" H 6050 5300 50  0001 C CNN
 F 1 "GND" H 6055 5377 50  0000 C CNN
 F 2 "" H 6050 5550 50  0001 C CNN
 F 3 "" H 6050 5550 50  0001 C CNN
@@ -293,10 +293,10 @@ Wire Wire Line
 Wire Wire Line
 	6050 5500 6050 5550
 $Comp
-L power:GND #PWR?
+L power:GND #PWR0172
 U 1 1 5DF53278
 P 4450 5500
-F 0 "#PWR?" H 4450 5250 50  0001 C CNN
+F 0 "#PWR0172" H 4450 5250 50  0001 C CNN
 F 1 "GND" H 4455 5327 50  0000 C CNN
 F 2 "" H 4450 5500 50  0001 C CNN
 F 3 "" H 4450 5500 50  0001 C CNN
@@ -322,10 +322,10 @@ Connection ~ 4450 5450
 Wire Wire Line
 	4450 5450 4450 5500
 $Comp
-L power:GND #PWR?
+L power:GND #PWR0174
 U 1 1 5DF58B7E
 P 3700 5650
-F 0 "#PWR?" H 3700 5400 50  0001 C CNN
+F 0 "#PWR0174" H 3700 5400 50  0001 C CNN
 F 1 "GND" H 3705 5477 50  0000 C CNN
 F 2 "" H 3700 5650 50  0001 C CNN
 F 3 "" H 3700 5650 50  0001 C CNN
@@ -337,10 +337,10 @@ Wire Wire Line
 Wire Wire Line
 	3700 5050 3700 5100
 $Comp
-L Device:C_Small C?
+L Device:C_Small C95
 U 1 1 5DF5C548
 P 2900 3750
-F 0 "C?" V 3125 3700 50  0000 L CNN
+F 0 "C95" V 3125 3700 50  0000 L CNN
 F 1 "150nF" V 3025 3625 50  0000 L CNN
 F 2 "Capacitors_SMD:C_0603_HandSoldering" H 2900 3750 50  0001 C CNN
 F 3 "https://www.digikey.ca/product-detail/en/samsung-electro-mechanics/CL10B154KO8NNNC/1276-1972-1-ND/3890058" H 2900 3750 50  0001 C CNN
@@ -348,10 +348,10 @@ F 3 "https://www.digikey.ca/product-detail/en/samsung-electro-mechanics/CL10B154
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Device:R R?
+L Device:R R57
 U 1 1 5DF6543D
 P 3250 3750
-F 0 "R?" V 3043 3750 50  0000 C CNN
+F 0 "R57" V 3043 3750 50  0000 C CNN
 F 1 "2.7k" V 3134 3750 50  0000 C CNN
 F 2 "Resistors_SMD:R_0603_HandSoldering" V 3180 3750 50  0001 C CNN
 F 3 "https://www.digikey.ca/product-detail/en/stackpole-electronics-inc/RMCF0603FT2K70/RMCF0603FT2K70CT-ND/1943018" H 3250 3750 50  0001 C CNN
@@ -359,10 +359,10 @@ F 3 "https://www.digikey.ca/product-detail/en/stackpole-electronics-inc/RMCF0603
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:R R?
+L Device:R R53
 U 1 1 5DF69414
 P 3800 3350
-F 0 "R?" V 3593 3350 50  0000 C CNN
+F 0 "R53" V 3593 3350 50  0000 C CNN
 F 1 "47k" V 3684 3350 50  0000 C CNN
 F 2 "Resistors_SMD:R_0603_HandSoldering" V 3730 3350 50  0001 C CNN
 F 3 "https://www.digikey.ca/product-detail/en/stackpole-electronics-inc/RMCF0603FT47K0/RMCF0603FT47K0CT-ND/1943099" H 3800 3350 50  0001 C CNN
@@ -385,10 +385,10 @@ Wire Wire Line
 Text Label 3500 4250 1    50   ~ 0
 MIDRAIL
 $Comp
-L Device:R R?
+L Device:R R58
 U 1 1 5DF705AE
 P 4650 3750
-F 0 "R?" V 4443 3750 50  0000 C CNN
+F 0 "R58" V 4443 3750 50  0000 C CNN
 F 1 "2.7k" V 4534 3750 50  0000 C CNN
 F 2 "Resistors_SMD:R_0603_HandSoldering" V 4580 3750 50  0001 C CNN
 F 3 "https://www.digikey.ca/product-detail/en/stackpole-electronics-inc/RMCF0603FT2K70/RMCF0603FT2K70CT-ND/1943018" H 4650 3750 50  0001 C CNN
@@ -396,10 +396,10 @@ F 3 "https://www.digikey.ca/product-detail/en/stackpole-electronics-inc/RMCF0603
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:R R?
+L Device:R R54
 U 1 1 5DF70B06
 P 5200 3350
-F 0 "R?" V 4993 3350 50  0000 C CNN
+F 0 "R54" V 4993 3350 50  0000 C CNN
 F 1 "47k" V 5084 3350 50  0000 C CNN
 F 2 "Resistors_SMD:R_0603_HandSoldering" V 5130 3350 50  0001 C CNN
 F 3 "https://www.digikey.ca/product-detail/en/stackpole-electronics-inc/RMCF0603FT47K0/RMCF0603FT47K0CT-ND/1943099" H 5200 3350 50  0001 C CNN
@@ -420,10 +420,10 @@ Wire Wire Line
 Wire Wire Line
 	4150 3350 4150 3750
 $Comp
-L Device:C_Small C?
+L Device:C_Small C96
 U 1 1 5DF78526
 P 4300 3750
-F 0 "C?" V 4525 3700 50  0000 L CNN
+F 0 "C96" V 4525 3700 50  0000 L CNN
 F 1 "150nF" V 4425 3625 50  0000 L CNN
 F 2 "Capacitors_SMD:C_0603_HandSoldering" H 4300 3750 50  0001 C CNN
 F 3 "https://www.digikey.ca/product-detail/en/samsung-electro-mechanics/CL10B154KO8NNNC/1276-1972-1-ND/3890058" H 4300 3750 50  0001 C CNN
@@ -458,10 +458,10 @@ Connection ~ 5550 3750
 Wire Wire Line
 	5550 3750 5550 3850
 $Comp
-L Device:C_Small C?
+L Device:C_Small C97
 U 1 1 5DF8BDC4
 P 5700 3750
-F 0 "C?" V 5925 3700 50  0000 L CNN
+F 0 "C97" V 5925 3700 50  0000 L CNN
 F 1 "150nF" V 5825 3625 50  0000 L CNN
 F 2 "Capacitors_SMD:C_0603_HandSoldering" H 5700 3750 50  0001 C CNN
 F 3 "https://www.digikey.ca/product-detail/en/samsung-electro-mechanics/CL10B154KO8NNNC/1276-1972-1-ND/3890058" H 5700 3750 50  0001 C CNN
@@ -469,10 +469,10 @@ F 3 "https://www.digikey.ca/product-detail/en/samsung-electro-mechanics/CL10B154
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Device:R R?
+L Device:R R59
 U 1 1 5DF9115A
 P 6050 3750
-F 0 "R?" V 5843 3750 50  0000 C CNN
+F 0 "R59" V 5843 3750 50  0000 C CNN
 F 1 "330" V 5934 3750 50  0000 C CNN
 F 2 "Resistors_SMD:R_0603_HandSoldering" V 5980 3750 50  0001 C CNN
 F 3 "https://www.digikey.ca/product-detail/en/stackpole-electronics-inc/RMCF0603FT330R/RMCF0603FT330RCT-ND/1942981" H 6050 3750 50  0001 C CNN
@@ -487,10 +487,10 @@ Connection ~ 5850 3750
 Wire Wire Line
 	5850 3750 5900 3750
 $Comp
-L Device:R R?
+L Device:R R55
 U 1 1 5DF97DB7
 P 6650 3350
-F 0 "R?" V 6443 3350 50  0000 C CNN
+F 0 "R55" V 6443 3350 50  0000 C CNN
 F 1 "7.5k" V 6534 3350 50  0000 C CNN
 F 2 "Resistors_SMD:R_0603_HandSoldering" V 6580 3350 50  0001 C CNN
 F 3 "https://www.digikey.ca/product-detail/en/stackpole-electronics-inc/RMCF0603FT7K50/RMCF0603FT7K50CT-ND/1943049" H 6650 3350 50  0001 C CNN
@@ -498,10 +498,10 @@ F 3 "https://www.digikey.ca/product-detail/en/stackpole-electronics-inc/RMCF0603
 	0    1    1    0   
 $EndComp
 $Comp
-L Parts:MAX5394L U?
+L Parts:MAX5394L U19
 U 1 1 5DFA2624
 P 5700 2700
-F 0 "U?" H 5700 3189 60  0000 C CNN
+F 0 "U19" H 5700 3189 60  0000 C CNN
 F 1 "MAX5394L" H 5700 3083 60  0000 C CNN
 F 2 "Parts:TDFN8-PAD" H 5700 2350 60  0001 C CNN
 F 3 "https://www.maximintegrated.com/en/products/analog/data-converters/digital-potentiometers/MAX5394.html" H 5300 2700 60  0001 C CNN
@@ -525,10 +525,10 @@ Wire Wire Line
 Wire Wire Line
 	6350 3350 6500 3350
 $Comp
-L power:GND #PWR?
+L power:GND #PWR0162
 U 1 1 5DFD250D
 P 6150 2900
-F 0 "#PWR?" H 6150 2650 50  0001 C CNN
+F 0 "#PWR0162" H 6150 2650 50  0001 C CNN
 F 1 "GND" H 6155 2727 50  0000 C CNN
 F 2 "" H 6150 2900 50  0001 C CNN
 F 3 "" H 6150 2900 50  0001 C CNN
@@ -550,10 +550,10 @@ Wire Wire Line
 Wire Wire Line
 	6250 3750 6200 3750
 $Comp
-L Device:C_Small C?
+L Device:C_Small C98
 U 1 1 5DFF8C03
 P 7150 3750
-F 0 "C?" V 7375 3700 50  0000 L CNN
+F 0 "C98" V 7375 3700 50  0000 L CNN
 F 1 "150nF" V 7275 3625 50  0000 L CNN
 F 2 "Capacitors_SMD:C_0603_HandSoldering" H 7150 3750 50  0001 C CNN
 F 3 "https://www.digikey.ca/product-detail/en/samsung-electro-mechanics/CL10B154KO8NNNC/1276-1972-1-ND/3890058" H 7150 3750 50  0001 C CNN
@@ -573,10 +573,10 @@ Wire Wire Line
 	7300 3750 7350 3750
 Connection ~ 7300 3750
 $Comp
-L Device:R R?
+L Device:R R60
 U 1 1 5E00032B
 P 7500 3750
-F 0 "R?" V 7293 3750 50  0000 C CNN
+F 0 "R60" V 7293 3750 50  0000 C CNN
 F 1 "330" V 7384 3750 50  0000 C CNN
 F 2 "Resistors_SMD:R_0603_HandSoldering" V 7430 3750 50  0001 C CNN
 F 3 "https://www.digikey.ca/product-detail/en/stackpole-electronics-inc/RMCF0603FT330R/RMCF0603FT330RCT-ND/1942981" H 7500 3750 50  0001 C CNN
@@ -588,10 +588,10 @@ Wire Wire Line
 Wire Wire Line
 	7800 3750 7750 3750
 $Comp
-L Device:R R?
+L Device:R R56
 U 1 1 5E008695
 P 8100 3350
-F 0 "R?" V 7893 3350 50  0000 C CNN
+F 0 "R56" V 7893 3350 50  0000 C CNN
 F 1 "7.5k" V 7984 3350 50  0000 C CNN
 F 2 "Resistors_SMD:R_0603_HandSoldering" V 8030 3350 50  0001 C CNN
 F 3 "https://www.digikey.ca/product-detail/en/stackpole-electronics-inc/RMCF0603FT7K50/RMCF0603FT7K50CT-ND/1943049" H 8100 3350 50  0001 C CNN
@@ -612,10 +612,10 @@ Connection ~ 8450 3750
 Wire Wire Line
 	8450 3750 8450 3850
 $Comp
-L Parts:MAX5394L U?
+L Parts:MAX5394L U18
 U 1 1 5E024FA6
 P 7150 2100
-F 0 "U?" H 7150 2589 60  0000 C CNN
+F 0 "U18" H 7150 2589 60  0000 C CNN
 F 1 "MAX5394L" H 7150 2483 60  0000 C CNN
 F 2 "Parts:TDFN8-PAD" H 7150 1750 60  0001 C CNN
 F 3 "https://www.maximintegrated.com/en/products/analog/data-converters/digital-potentiometers/MAX5394.html" H 6750 2100 60  0001 C CNN
@@ -635,10 +635,10 @@ Wire Wire Line
 Wire Wire Line
 	7700 2100 7700 3750
 $Comp
-L power:GND #PWR?
+L power:GND #PWR0159
 U 1 1 5E02E9B9
 P 7600 2300
-F 0 "#PWR?" H 7600 2050 50  0001 C CNN
+F 0 "#PWR0159" H 7600 2050 50  0001 C CNN
 F 1 "GND" H 7605 2127 50  0000 C CNN
 F 2 "" H 7600 2300 50  0001 C CNN
 F 3 "" H 7600 2300 50  0001 C CNN
@@ -652,10 +652,10 @@ Wire Wire Line
 Wire Wire Line
 	7350 4950 7350 5050
 $Comp
-L power:GND #PWR?
+L power:GND #PWR0176
 U 1 1 5E055C0B
 P 7350 5700
-F 0 "#PWR?" H 7350 5450 50  0001 C CNN
+F 0 "#PWR0176" H 7350 5450 50  0001 C CNN
 F 1 "GND" H 7355 5527 50  0000 C CNN
 F 2 "" H 7350 5700 50  0001 C CNN
 F 3 "" H 7350 5700 50  0001 C CNN
@@ -682,10 +682,10 @@ Connection ~ 3050 3750
 Wire Wire Line
 	3050 3750 3100 3750
 $Comp
-L Device:R R?
+L Device:R R61
 U 1 1 5E076197
 P 3050 3950
-F 0 "R?" H 3120 3996 50  0000 L CNN
+F 0 "R61" H 3120 3996 50  0000 L CNN
 F 1 "1k" H 3120 3905 50  0000 L CNN
 F 2 "Resistors_SMD:R_0603_HandSoldering" V 2980 3950 50  0001 C CNN
 F 3 "https://www.digikey.ca/product-detail/en/stackpole-electronics-inc/RMCF0603FT1K00/RMCF0603FT1K00CT-ND/1942996" H 3050 3950 50  0001 C CNN
@@ -697,10 +697,10 @@ MIDRAIL
 Wire Wire Line
 	3050 4400 3050 4100
 $Comp
-L Device:R R?
+L Device:R R62
 U 1 1 5E07FCBB
 P 4450 4000
-F 0 "R?" H 4520 4046 50  0000 L CNN
+F 0 "R62" H 4520 4046 50  0000 L CNN
 F 1 "1k" H 4520 3955 50  0000 L CNN
 F 2 "Resistors_SMD:R_0603_HandSoldering" V 4380 4000 50  0001 C CNN
 F 3 "https://www.digikey.ca/product-detail/en/stackpole-electronics-inc/RMCF0603FT1K00/RMCF0603FT1K00CT-ND/1942996" H 4450 4000 50  0001 C CNN
@@ -716,10 +716,10 @@ MIDRAIL
 Wire Wire Line
 	5850 4450 5850 4150
 $Comp
-L Device:R R?
+L Device:R R64
 U 1 1 5E08830E
 P 7300 4000
-F 0 "R?" H 7370 4046 50  0000 L CNN
+F 0 "R64" H 7370 4046 50  0000 L CNN
 F 1 "1k" H 7370 3955 50  0000 L CNN
 F 2 "Resistors_SMD:R_0603_HandSoldering" V 7230 4000 50  0001 C CNN
 F 3 "https://www.digikey.ca/product-detail/en/stackpole-electronics-inc/RMCF0603FT1K00/RMCF0603FT1K00CT-ND/1942996" H 7300 4000 50  0001 C CNN
@@ -731,10 +731,10 @@ MIDRAIL
 Wire Wire Line
 	7300 4450 7300 4150
 $Comp
-L Device:R R?
+L Device:R R63
 U 1 1 5E0841CC
 P 5850 4000
-F 0 "R?" H 5920 4046 50  0000 L CNN
+F 0 "R63" H 5920 4046 50  0000 L CNN
 F 1 "1k" H 5920 3955 50  0000 L CNN
 F 2 "Resistors_SMD:R_0603_HandSoldering" V 5780 4000 50  0001 C CNN
 F 3 "https://www.digikey.ca/product-detail/en/stackpole-electronics-inc/RMCF0603FT1K00/RMCF0603FT1K00CT-ND/1942996" H 5850 4000 50  0001 C CNN
@@ -742,10 +742,10 @@ F 3 "https://www.digikey.ca/product-detail/en/stackpole-electronics-inc/RMCF0603
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R?
+L Device:R R65
 U 1 1 5E0A65F5
 P 6550 5250
-F 0 "R?" H 6620 5296 50  0000 L CNN
+F 0 "R65" H 6620 5296 50  0000 L CNN
 F 1 "30k" H 6620 5205 50  0000 L CNN
 F 2 "Resistors_SMD:R_0603_HandSoldering" V 6480 5250 50  0001 C CNN
 F 3 "https://www.digikey.ca/product-detail/en/stackpole-electronics-inc/RMCF0603FT30K0/RMCF0603FT30K0CT-ND/1943086" H 6550 5250 50  0001 C CNN
@@ -755,10 +755,10 @@ $EndComp
 Wire Wire Line
 	6550 5050 6550 5100
 $Comp
-L power:GND #PWR?
+L power:GND #PWR0177
 U 1 1 5E0AC1BB
 P 6550 5900
-F 0 "#PWR?" H 6550 5650 50  0001 C CNN
+F 0 "#PWR0177" H 6550 5650 50  0001 C CNN
 F 1 "GND" H 6555 5727 50  0000 C CNN
 F 2 "" H 6550 5900 50  0001 C CNN
 F 3 "" H 6550 5900 50  0001 C CNN
@@ -775,10 +775,10 @@ Connection ~ 6550 5450
 Wire Wire Line
 	6550 5450 6550 5500
 $Comp
-L Device:R R?
+L Device:R R67
 U 1 1 5E0D80B7
 P 6550 5650
-F 0 "R?" H 6620 5696 50  0000 L CNN
+F 0 "R67" H 6620 5696 50  0000 L CNN
 F 1 "30k" H 6620 5605 50  0000 L CNN
 F 2 "Resistors_SMD:R_0603_HandSoldering" V 6480 5650 50  0001 C CNN
 F 3 "https://www.digikey.ca/product-detail/en/stackpole-electronics-inc/RMCF0603FT30K0/RMCF0603FT30K0CT-ND/1943086" H 6550 5650 50  0001 C CNN
@@ -786,10 +786,10 @@ F 3 "https://www.digikey.ca/product-detail/en/stackpole-electronics-inc/RMCF0603
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C_Small C?
+L Device:C_Small C103
 U 1 1 5E0D9D1C
 P 6900 5650
-F 0 "C?" H 6992 5696 50  0000 L CNN
+F 0 "C103" H 6992 5696 50  0000 L CNN
 F 1 "2.2nF" H 6992 5605 50  0000 L CNN
 F 2 "Capacitors_SMD:C_0603_HandSoldering" H 6900 5650 50  0001 C CNN
 F 3 "https://www.digikey.ca/product-detail/en/w-rth-elektronik/885012206085/732-8003-1-ND/5454630" H 6900 5650 50  0001 C CNN
@@ -809,10 +809,10 @@ Connection ~ 6550 5850
 Wire Wire Line
 	6550 5850 6550 5900
 $Comp
-L Device:C_Small C?
+L Device:C_Small C102
 U 1 1 5E0E564B
 P 8500 5500
-F 0 "C?" H 8592 5546 50  0000 L CNN
+F 0 "C102" H 8592 5546 50  0000 L CNN
 F 1 "4.7uF" H 8592 5455 50  0000 L CNN
 F 2 "Capacitors_SMD:C_0603_HandSoldering" H 8500 5500 50  0001 C CNN
 F 3 "https://www.digikey.ca/product-detail/en/samsung-electro-mechanics/CL10A475KQ8NNNC/1276-1045-1-ND/3889131" H 8500 5500 50  0001 C CNN
@@ -820,10 +820,10 @@ F 3 "https://www.digikey.ca/product-detail/en/samsung-electro-mechanics/CL10A475
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR?
+L power:GND #PWR0175
 U 1 1 5E0F1B62
 P 8500 5650
-F 0 "#PWR?" H 8500 5400 50  0001 C CNN
+F 0 "#PWR0175" H 8500 5400 50  0001 C CNN
 F 1 "GND" H 8505 5477 50  0000 C CNN
 F 2 "" H 8500 5650 50  0001 C CNN
 F 3 "" H 8500 5650 50  0001 C CNN
@@ -833,10 +833,10 @@ $EndComp
 Wire Wire Line
 	8500 5600 8500 5650
 $Comp
-L Device:R R?
+L Device:R R66
 U 1 1 5E0F85B0
 P 8250 5350
-F 0 "R?" V 8043 5350 50  0000 C CNN
+F 0 "R66" V 8043 5350 50  0000 C CNN
 F 1 "10" V 8134 5350 50  0000 C CNN
 F 2 "Resistors_SMD:R_0603_HandSoldering" V 8180 5350 50  0001 C CNN
 F 3 "https://www.digikey.ca/product-detail/en/stackpole-electronics-inc/RMCF0603FT10R0/RMCF0603FT10R0CT-ND/1942943" H 8250 5350 50  0001 C CNN
@@ -859,10 +859,10 @@ Wire Wire Line
 Wire Wire Line
 	6350 2500 6350 3350
 $Comp
-L power:GND #PWR?
+L power:GND #PWR0158
 U 1 1 5E15077B
 P 4900 2250
-F 0 "#PWR?" H 4900 2000 50  0001 C CNN
+F 0 "#PWR0158" H 4900 2000 50  0001 C CNN
 F 1 "GND" H 4905 2077 50  0000 C CNN
 F 2 "" H 4900 2250 50  0001 C CNN
 F 3 "" H 4900 2250 50  0001 C CNN
@@ -870,10 +870,10 @@ F 3 "" H 4900 2250 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C_Small C?
+L Device:C_Small C91
 U 1 1 5E150785
 P 4900 2100
-F 0 "C?" H 4992 2146 50  0000 L CNN
+F 0 "C91" H 4992 2146 50  0000 L CNN
 F 1 "100nF" H 4992 2055 50  0000 L CNN
 F 2 "Capacitors_SMD:C_0603_HandSoldering" H 4900 2100 50  0001 C CNN
 F 3 "https://www.digikey.ca/product-detail/en/w-rth-elektronik/885012206020/732-7939-1-ND/5454566" H 4900 2100 50  0001 C CNN
@@ -885,10 +885,10 @@ Wire Wire Line
 Wire Wire Line
 	4900 1950 4900 2000
 $Comp
-L power:GND #PWR?
+L power:GND #PWR0155
 U 1 1 5E168AE1
 P 6350 1650
-F 0 "#PWR?" H 6350 1400 50  0001 C CNN
+F 0 "#PWR0155" H 6350 1400 50  0001 C CNN
 F 1 "GND" H 6355 1477 50  0000 C CNN
 F 2 "" H 6350 1650 50  0001 C CNN
 F 3 "" H 6350 1650 50  0001 C CNN
@@ -896,10 +896,10 @@ F 3 "" H 6350 1650 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C_Small C?
+L Device:C_Small C90
 U 1 1 5E168AEB
 P 6350 1500
-F 0 "C?" H 6442 1546 50  0000 L CNN
+F 0 "C90" H 6442 1546 50  0000 L CNN
 F 1 "100nF" H 6442 1455 50  0000 L CNN
 F 2 "Capacitors_SMD:C_0603_HandSoldering" H 6350 1500 50  0001 C CNN
 F 3 "https://www.digikey.ca/product-detail/en/w-rth-elektronik/885012206020/732-7939-1-ND/5454566" H 6350 1500 50  0001 C CNN
@@ -935,10 +935,10 @@ Wire Wire Line
 Wire Wire Line
 	5250 2900 5300 2900
 $Comp
-L power:+3V3 #PWR?
+L power:+3V3 #PWR0156
 U 1 1 5E033FD3
 P 6700 1900
-F 0 "#PWR?" H 6700 1750 50  0001 C CNN
+F 0 "#PWR0156" H 6700 1750 50  0001 C CNN
 F 1 "+3V3" H 6715 2073 50  0000 C CNN
 F 2 "" H 6700 1900 50  0001 C CNN
 F 3 "" H 6700 1900 50  0001 C CNN
@@ -946,10 +946,10 @@ F 3 "" H 6700 1900 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+3V3 #PWR?
+L power:+3V3 #PWR0154
 U 1 1 5E168AD7
 P 6350 1350
-F 0 "#PWR?" H 6350 1200 50  0001 C CNN
+F 0 "#PWR0154" H 6350 1200 50  0001 C CNN
 F 1 "+3V3" H 6365 1523 50  0000 C CNN
 F 2 "" H 6350 1350 50  0001 C CNN
 F 3 "" H 6350 1350 50  0001 C CNN
@@ -957,10 +957,10 @@ F 3 "" H 6350 1350 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+3V3 #PWR?
+L power:+3V3 #PWR0160
 U 1 1 5DFD98EC
 P 5250 2500
-F 0 "#PWR?" H 5250 2350 50  0001 C CNN
+F 0 "#PWR0160" H 5250 2350 50  0001 C CNN
 F 1 "+3V3" H 5265 2673 50  0000 C CNN
 F 2 "" H 5250 2500 50  0001 C CNN
 F 3 "" H 5250 2500 50  0001 C CNN
@@ -968,10 +968,10 @@ F 3 "" H 5250 2500 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+3V3 #PWR?
+L power:+3V3 #PWR0157
 U 1 1 5E150771
 P 4900 1950
-F 0 "#PWR?" H 4900 1800 50  0001 C CNN
+F 0 "#PWR0157" H 4900 1800 50  0001 C CNN
 F 1 "+3V3" H 4915 2123 50  0000 C CNN
 F 2 "" H 4900 1950 50  0001 C CNN
 F 3 "" H 4900 1950 50  0001 C CNN
@@ -979,10 +979,10 @@ F 3 "" H 4900 1950 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Parts:+3V3-LN #PWR?
+L Parts:+3V3-LN #PWR0164
 U 1 1 5E2A82B0
 P 8650 3650
-F 0 "#PWR?" H 8650 3500 50  0001 C CNN
+F 0 "#PWR0164" H 8650 3500 50  0001 C CNN
 F 1 "+3V3-LN" H 8665 3823 50  0000 C CNN
 F 2 "" H 8650 3650 50  0001 C CNN
 F 3 "" H 8650 3650 50  0001 C CNN
@@ -990,10 +990,10 @@ F 3 "" H 8650 3650 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Parts:+3V3-LN #PWR?
+L Parts:+3V3-LN #PWR0169
 U 1 1 5E2AAEEA
 P 6550 5050
-F 0 "#PWR?" H 6550 4900 50  0001 C CNN
+F 0 "#PWR0169" H 6550 4900 50  0001 C CNN
 F 1 "+3V3-LN" H 6565 5223 50  0000 C CNN
 F 2 "" H 6550 5050 50  0001 C CNN
 F 3 "" H 6550 5050 50  0001 C CNN
@@ -1001,10 +1001,10 @@ F 3 "" H 6550 5050 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Parts:+3V3-LN #PWR?
+L Parts:+3V3-LN #PWR0161
 U 1 1 5E2AD2A7
 P 9850 2700
-F 0 "#PWR?" H 9850 2550 50  0001 C CNN
+F 0 "#PWR0161" H 9850 2550 50  0001 C CNN
 F 1 "+3V3-LN" H 9865 2873 50  0000 C CNN
 F 2 "" H 9850 2700 50  0001 C CNN
 F 3 "" H 9850 2700 50  0001 C CNN
@@ -1012,10 +1012,10 @@ F 3 "" H 9850 2700 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Parts:+3V3-LN #PWR?
+L Parts:+3V3-LN #PWR0167
 U 1 1 5E2AFA32
 P 7350 4950
-F 0 "#PWR?" H 7350 4800 50  0001 C CNN
+F 0 "#PWR0167" H 7350 4800 50  0001 C CNN
 F 1 "+3V3-LN" H 7365 5123 50  0000 C CNN
 F 2 "" H 7350 4950 50  0001 C CNN
 F 3 "" H 7350 4950 50  0001 C CNN
@@ -1023,10 +1023,10 @@ F 3 "" H 7350 4950 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Parts:+3V3-LN #PWR?
+L Parts:+3V3-LN #PWR0171
 U 1 1 5E2AFFB8
 P 6050 5250
-F 0 "#PWR?" H 6050 5100 50  0001 C CNN
+F 0 "#PWR0171" H 6050 5100 50  0001 C CNN
 F 1 "+3V3-LN" H 6065 5423 50  0000 C CNN
 F 2 "" H 6050 5250 50  0001 C CNN
 F 3 "" H 6050 5250 50  0001 C CNN
@@ -1034,10 +1034,10 @@ F 3 "" H 6050 5250 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Parts:+3V3-LN #PWR?
+L Parts:+3V3-LN #PWR0170
 U 1 1 5E2B0647
 P 4450 5100
-F 0 "#PWR?" H 4450 4950 50  0001 C CNN
+F 0 "#PWR0170" H 4450 4950 50  0001 C CNN
 F 1 "+3V3-LN" H 4465 5273 50  0000 C CNN
 F 2 "" H 4450 5100 50  0001 C CNN
 F 3 "" H 4450 5100 50  0001 C CNN
@@ -1045,10 +1045,10 @@ F 3 "" H 4450 5100 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Parts:+3V3-LN #PWR?
+L Parts:+3V3-LN #PWR0168
 U 1 1 5E2B0FA3
 P 3700 5050
-F 0 "#PWR?" H 3700 4900 50  0001 C CNN
+F 0 "#PWR0168" H 3700 4900 50  0001 C CNN
 F 1 "+3V3-LN" H 3715 5223 50  0000 C CNN
 F 2 "" H 3700 5050 50  0001 C CNN
 F 3 "" H 3700 5050 50  0001 C CNN
