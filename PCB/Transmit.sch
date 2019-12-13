@@ -26,17 +26,6 @@ F 3 "https://www.analog.com/en/products/ad5450.html" H 1850 4100 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+3V3 #PWR?
-U 1 1 5DE63453
-P 1750 3700
-F 0 "#PWR?" H 1750 3550 50  0001 C CNN
-F 1 "+3V3" H 1765 3873 50  0000 C CNN
-F 2 "" H 1750 3700 50  0001 C CNN
-F 3 "" H 1750 3700 50  0001 C CNN
-	1    1750 3700
-	1    0    0    -1  
-$EndComp
-$Comp
 L power:GND #PWR?
 U 1 1 5DE63ED6
 P 2750 4100
@@ -711,17 +700,6 @@ F 3 "https://www.digikey.ca/product-detail/en/w-rth-elektronik/885012206020/732-
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+3V3 #PWR?
-U 1 1 5E3B8767
-P 800 2700
-F 0 "#PWR?" H 800 2550 50  0001 C CNN
-F 1 "+3V3" H 815 2873 50  0000 C CNN
-F 2 "" H 800 2700 50  0001 C CNN
-F 3 "" H 800 2700 50  0001 C CNN
-	1    800  2700
-	1    0    0    -1  
-$EndComp
-$Comp
 L Device:C_Small C?
 U 1 1 5E3BD08F
 P 1350 2900
@@ -800,4 +778,26 @@ Wire Wire Line
 	4200 3050 4200 3000
 Wire Wire Line
 	3700 3250 3700 3300
+$Comp
+L Parts:+3V3-LN #PWR?
+U 1 1 5E29A668
+P 1750 3700
+F 0 "#PWR?" H 1750 3550 50  0001 C CNN
+F 1 "+3V3-LN" H 1765 3873 50  0000 C CNN
+F 2 "" H 1750 3700 50  0001 C CNN
+F 3 "" H 1750 3700 50  0001 C CNN
+	1    1750 3700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Parts:+3V3-LN #PWR?
+U 1 1 5E29D33A
+P 800 2700
+F 0 "#PWR?" H 800 2550 50  0001 C CNN
+F 1 "+3V3-LN" H 815 2873 50  0000 C CNN
+F 2 "" H 800 2700 50  0001 C CNN
+F 3 "" H 800 2700 50  0001 C CNN
+	1    800  2700
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
