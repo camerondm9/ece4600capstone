@@ -500,8 +500,8 @@ L Connector:Conn_01x03_Male J?
 U 1 1 5E22DC4D
 P 9050 4900
 F 0 "J?" H 9022 4832 50  0000 R CNN
-F 1 "Conn_01x03_Male" H 9022 4923 50  0000 R CNN
-F 2 "" H 9050 4900 50  0001 C CNN
+F 1 "DNP" H 9022 4923 50  0000 R CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x03_Pitch2.54mm" H 9050 4900 50  0001 C CNN
 F 3 "~" H 9050 4900 50  0001 C CNN
 	1    9050 4900
 	-1   0    0    1   
@@ -517,8 +517,8 @@ L Connector:Conn_01x03_Male J?
 U 1 1 5E232910
 P 9050 5300
 F 0 "J?" H 9022 5232 50  0000 R CNN
-F 1 "Conn_01x03_Male" H 9022 5323 50  0000 R CNN
-F 2 "" H 9050 5300 50  0001 C CNN
+F 1 "DNP" H 9022 5323 50  0000 R CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x03_Pitch2.54mm" H 9050 5300 50  0001 C CNN
 F 3 "~" H 9050 5300 50  0001 C CNN
 	1    9050 5300
 	-1   0    0    1   
@@ -534,8 +534,8 @@ L Connector:Conn_01x03_Male J?
 U 1 1 5E236FC5
 P 9050 5600
 F 0 "J?" H 9022 5532 50  0000 R CNN
-F 1 "Conn_01x03_Male" H 9022 5623 50  0000 R CNN
-F 2 "" H 9050 5600 50  0001 C CNN
+F 1 "DNP" H 9022 5623 50  0000 R CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x03_Pitch2.54mm" H 9050 5600 50  0001 C CNN
 F 3 "~" H 9050 5600 50  0001 C CNN
 	1    9050 5600
 	-1   0    0    1   
@@ -553,8 +553,8 @@ L Connector:Conn_01x03_Male J?
 U 1 1 5E23BCC1
 P 9050 6000
 F 0 "J?" H 9022 5932 50  0000 R CNN
-F 1 "Conn_01x03_Male" H 9022 6023 50  0000 R CNN
-F 2 "" H 9050 6000 50  0001 C CNN
+F 1 "DNP" H 9022 6023 50  0000 R CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x03_Pitch2.54mm" H 9050 6000 50  0001 C CNN
 F 3 "~" H 9050 6000 50  0001 C CNN
 	1    9050 6000
 	-1   0    0    1   
@@ -571,7 +571,7 @@ U 1 1 5E24249E
 P 3750 2250
 F 0 "H?" V 3704 2400 50  0000 L CNN
 F 1 "MountingHole_Pad" V 3795 2400 50  0000 L CNN
-F 2 "" H 3750 2250 50  0001 C CNN
+F 2 "Mounting_Holes:MountingHole_4mm_Pad_Via" H 3750 2250 50  0001 C CNN
 F 3 "~" H 3750 2250 50  0001 C CNN
 	1    3750 2250
 	0    1    1    0   
@@ -595,7 +595,7 @@ U 1 1 5E246FF3
 P 3750 2000
 F 0 "H?" V 3704 2150 50  0000 L CNN
 F 1 "MountingHole_Pad" V 3795 2150 50  0000 L CNN
-F 2 "" H 3750 2000 50  0001 C CNN
+F 2 "Mounting_Holes:MountingHole_4mm_Pad_Via" H 3750 2000 50  0001 C CNN
 F 3 "~" H 3750 2000 50  0001 C CNN
 	1    3750 2000
 	0    1    1    0   
