@@ -81,29 +81,29 @@ F 3 "https://www.ckswitches.com/products/tactile/PTS645/" H 9850 4600 50  0001 C
 	1    9850 4400
 	1    0    0    -1  
 $EndComp
-Text GLabel 2500 2100 0    50   Input ~ 0
+Text GLabel 4000 1900 2    50   Input ~ 0
 MICRO-TX
-Text GLabel 2500 2200 0    50   Input ~ 0
+Text GLabel 4000 2000 2    50   Input ~ 0
 MICRO-RX
 Text GLabel 8950 4400 0    50   Input ~ 0
 MICRO-nRESET
-Text GLabel 4000 2700 2    50   Input ~ 0
+Text GLabel 4000 2800 2    50   Input ~ 0
 FPGA-nSTATUS
 Text GLabel 2500 3000 0    50   Input ~ 0
 FPGA-DCLK
 Text GLabel 2500 3100 0    50   Input ~ 0
 FPGA-DIN
-Text GLabel 4000 2600 2    50   Input ~ 0
+Text GLabel 4000 2700 2    50   Input ~ 0
 FPGA-nCONFIG
-Text GLabel 4000 2400 2    50   Input ~ 0
+Text GLabel 4000 3100 2    50   Input ~ 0
 FPGA-CONF_DONE
-Text GLabel 4000 2500 2    50   Input ~ 0
+Text GLabel 4000 3000 2    50   Input ~ 0
 FPGA-INIT_DONE
-Text GLabel 4000 2800 2    50   Input ~ 0
+Text GLabel 4000 2900 2    50   Input ~ 0
 FPGA-CRC_ERROR
-Text Label 4000 1900 0    50   ~ 0
+Text Label 2350 2100 0    50   ~ 0
 SCL
-Text Label 4000 2000 0    50   ~ 0
+Text Label 2350 2200 0    50   ~ 0
 SDA
 Wire Wire Line
 	2550 3100 2500 3100
@@ -181,11 +181,9 @@ Wire Wire Line
 Wire Wire Line
 	9300 2350 9100 2350
 Wire Wire Line
-	3950 2400 4000 2400
-Wire Wire Line
 	3950 2200 4000 2200
 Wire Wire Line
-	3950 2300 4000 2300
+	3950 2300 4500 2300
 Text Label 2250 3400 0    50   ~ 0
 LED-R
 Text Label 2250 3500 0    50   ~ 0
@@ -207,31 +205,31 @@ LED-B
 Text Label 4000 2100 0    50   ~ 0
 nRESET
 Wire Wire Line
-	3950 2100 4250 2100
+	3950 2100 4450 2100
 $Comp
 L Device:R R7
 U 1 1 5DFF7E66
-P 4400 2100
-F 0 "R7" V 4193 2100 50  0000 C CNN
-F 1 "10k" V 4284 2100 50  0000 C CNN
-F 2 "Resistors_SMD:R_0603_HandSoldering" V 4330 2100 50  0001 C CNN
-F 3 "https://www.digikey.ca/product-detail/en/stackpole-electronics-inc/RMCF0603FT10K0/RMCF0603FT10K0CT-ND/1943057" H 4400 2100 50  0001 C CNN
-	1    4400 2100
+P 4600 2100
+F 0 "R7" V 4393 2100 50  0000 C CNN
+F 1 "10k" V 4484 2100 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603_HandSoldering" V 4530 2100 50  0001 C CNN
+F 3 "https://www.digikey.ca/product-detail/en/stackpole-electronics-inc/RMCF0603FT10K0/RMCF0603FT10K0CT-ND/1943057" H 4600 2100 50  0001 C CNN
+	1    4600 2100
 	0    1    1    0   
 $EndComp
 $Comp
 L power:+3V3 #PWR035
 U 1 1 5DFFAB56
-P 4600 2100
-F 0 "#PWR035" H 4600 1950 50  0001 C CNN
-F 1 "+3V3" V 4600 2300 50  0000 C CNN
-F 2 "" H 4600 2100 50  0001 C CNN
-F 3 "" H 4600 2100 50  0001 C CNN
-	1    4600 2100
+P 4800 2100
+F 0 "#PWR035" H 4800 1950 50  0001 C CNN
+F 1 "+3V3" V 4800 2300 50  0000 C CNN
+F 2 "" H 4800 2100 50  0001 C CNN
+F 3 "" H 4800 2100 50  0001 C CNN
+	1    4800 2100
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	4550 2100 4600 2100
+	4750 2100 4800 2100
 Text Label 9000 4400 0    50   ~ 0
 nRESET
 $Comp
@@ -336,9 +334,9 @@ F 3 "" H 10100 3950 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	10050 3950 10100 3950
-Text Label 4000 2200 0    50   ~ 0
+Text Label 4000 2500 0    50   ~ 0
 SW1
-Text Label 4000 2300 0    50   ~ 0
+Text Label 4000 2600 0    50   ~ 0
 SW2
 Wire Wire Line
 	3950 2500 4000 2500
@@ -347,55 +345,51 @@ Wire Wire Line
 $Comp
 L Device:R R6
 U 1 1 5E02C855
-P 4650 2000
-F 0 "R6" V 4443 2000 50  0000 C CNN
-F 1 "3.3k" V 4534 2000 50  0000 C CNN
-F 2 "Resistors_SMD:R_0603_HandSoldering" V 4580 2000 50  0001 C CNN
-F 3 "https://www.digikey.ca/product-detail/en/stackpole-electronics-inc/RMCF0603FT3K30/RMCF0603FT3K30CT-ND/1943024" H 4650 2000 50  0001 C CNN
-	1    4650 2000
+P 6750 2000
+F 0 "R6" V 6543 2000 50  0000 C CNN
+F 1 "3.3k" V 6634 2000 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603_HandSoldering" V 6680 2000 50  0001 C CNN
+F 3 "https://www.digikey.ca/product-detail/en/stackpole-electronics-inc/RMCF0603FT3K30/RMCF0603FT3K30CT-ND/1943024" H 6750 2000 50  0001 C CNN
+	1    6750 2000
 	0    1    1    0   
 $EndComp
 $Comp
 L Device:R R4
 U 1 1 5E033214
-P 4900 1900
-F 0 "R4" V 4693 1900 50  0000 C CNN
-F 1 "3.3k" V 4784 1900 50  0000 C CNN
-F 2 "Resistors_SMD:R_0603_HandSoldering" V 4830 1900 50  0001 C CNN
-F 3 "https://www.digikey.ca/product-detail/en/stackpole-electronics-inc/RMCF0603FT3K30/RMCF0603FT3K30CT-ND/1943024" H 4900 1900 50  0001 C CNN
-	1    4900 1900
+P 7100 1900
+F 0 "R4" V 6893 1900 50  0000 C CNN
+F 1 "3.3k" V 6984 1900 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603_HandSoldering" V 7030 1900 50  0001 C CNN
+F 3 "https://www.digikey.ca/product-detail/en/stackpole-electronics-inc/RMCF0603FT3K30/RMCF0603FT3K30CT-ND/1943024" H 7100 1900 50  0001 C CNN
+	1    7100 1900
 	0    1    1    0   
 $EndComp
-Wire Wire Line
-	3950 2000 4500 2000
-Wire Wire Line
-	3950 1900 4750 1900
 $Comp
 L power:+3V3 #PWR034
 U 1 1 5E03E227
-P 4850 2000
-F 0 "#PWR034" H 4850 1850 50  0001 C CNN
-F 1 "+3V3" V 4850 2200 50  0000 C CNN
-F 2 "" H 4850 2000 50  0001 C CNN
-F 3 "" H 4850 2000 50  0001 C CNN
-	1    4850 2000
+P 6950 2000
+F 0 "#PWR034" H 6950 1850 50  0001 C CNN
+F 1 "+3V3" V 6950 2200 50  0000 C CNN
+F 2 "" H 6950 2000 50  0001 C CNN
+F 3 "" H 6950 2000 50  0001 C CNN
+	1    6950 2000
 	0    1    1    0   
 $EndComp
 $Comp
 L power:+3V3 #PWR032
 U 1 1 5E03E918
-P 5100 1900
-F 0 "#PWR032" H 5100 1750 50  0001 C CNN
-F 1 "+3V3" V 5100 2100 50  0000 C CNN
-F 2 "" H 5100 1900 50  0001 C CNN
-F 3 "" H 5100 1900 50  0001 C CNN
-	1    5100 1900
+P 7300 1900
+F 0 "#PWR032" H 7300 1750 50  0001 C CNN
+F 1 "+3V3" V 7300 2100 50  0000 C CNN
+F 2 "" H 7300 1900 50  0001 C CNN
+F 3 "" H 7300 1900 50  0001 C CNN
+	1    7300 1900
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	5050 1900 5100 1900
+	7250 1900 7300 1900
 Wire Wire Line
-	4800 2000 4850 2000
+	6900 2000 6950 2000
 Text Label 9100 3450 0    50   ~ 0
 SW1
 Wire Wire Line
@@ -494,8 +488,6 @@ Wire Wire Line
 Connection ~ 5100 1250
 Wire Wire Line
 	5100 1250 5100 1300
-Wire Wire Line
-	2500 2200 2550 2200
 $Comp
 L power:+BATT #PWR030
 U 1 1 5DDC951F
@@ -615,16 +607,12 @@ Wire Wire Line
 	10650 1950 10650 2000
 Wire Wire Line
 	10650 2200 10650 2250
-Text GLabel 4000 2900 2    50   Input ~ 0
+Text GLabel 4000 2200 2    50   Input ~ 0
 HV-ENABLE
 Wire Wire Line
 	3950 2700 4000 2700
 Text GLabel 1600 3200 0    50   Input ~ 0
 FPGA-CS
-Wire Wire Line
-	3950 3000 4500 3000
-Wire Wire Line
-	4000 2900 3950 2900
 Wire Wire Line
 	3950 2800 4000 2800
 $Comp
@@ -985,7 +973,7 @@ Wire Wire Line
 	1050 5050 1050 5100
 Text Label 2600 4700 0    50   ~ 0
 HV-OK
-Text Label 4500 3000 0    50   ~ 0
+Text Label 4500 2300 0    50   ~ 0
 HV-OK
 $Comp
 L power:+3V3 #PWR046
@@ -1013,8 +1001,6 @@ F 3 "https://www.digikey.ca/product-detail/en/stackpole-electronics-inc/RMCF0603
 	1    3050 4700
 	0    1    1    0   
 $EndComp
-Wire Wire Line
-	2500 2100 2550 2100
 Wire Wire Line
 	2250 3400 2550 3400
 Wire Wire Line
@@ -1222,7 +1208,21 @@ SCL
 Text Label 6400 2000 0    50   ~ 0
 SDA
 Wire Wire Line
-	6350 1900 6400 1900
+	3950 2900 4000 2900
 Wire Wire Line
-	6350 2000 6400 2000
+	4000 3000 3950 3000
+Wire Wire Line
+	4000 3100 3950 3100
+Wire Wire Line
+	6350 1900 6950 1900
+Wire Wire Line
+	6350 2000 6600 2000
+Wire Wire Line
+	2350 2100 2550 2100
+Wire Wire Line
+	2350 2200 2550 2200
+Wire Wire Line
+	3950 1900 4000 1900
+Wire Wire Line
+	4000 2000 3950 2000
 $EndSCHEMATC

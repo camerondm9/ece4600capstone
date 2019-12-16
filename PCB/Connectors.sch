@@ -96,13 +96,13 @@ Wire Wire Line
 Connection ~ 5700 3000
 Wire Wire Line
 	5700 3000 5700 3050
-Text GLabel 2750 5850 0    50   Input ~ 0
+Text GLabel 2500 5950 0    50   Input ~ 0
 FPGA-TDI
-Text GLabel 2750 5650 0    50   Input ~ 0
+Text GLabel 2500 5550 0    50   Input ~ 0
 FPGA-TCK
-Text GLabel 2750 5950 0    50   Input ~ 0
+Text GLabel 2500 5750 0    50   Input ~ 0
 FPGA-TMS
-Text GLabel 2750 6050 0    50   Input ~ 0
+Text GLabel 2500 5650 0    50   Input ~ 0
 FPGA-TDO
 $Comp
 L power:+3V3 #PWR0183
@@ -144,17 +144,6 @@ Wire Wire Line
 	2750 4200 2800 4200
 Wire Wire Line
 	2750 4300 2800 4300
-$Comp
-L Connector:Conn_01x08_Male J12
-U 1 1 5DD1A649
-P 3000 5850
-F 0 "J12" H 2972 5824 50  0000 R CNN
-F 1 "PH1-08-UA" H 2972 5733 50  0000 R CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x08_Pitch2.54mm" H 3000 5850 50  0001 C CNN
-F 3 "https://www.digikey.ca/product-detail/en/adam-tech/PH1-08-UA/2057-PH1-08-UA-ND/9830442" H 3000 5850 50  0001 C CNN
-	1    3000 5850
-	-1   0    0    -1  
-$EndComp
 Wire Wire Line
 	2750 4500 2800 4500
 Wire Wire Line
@@ -179,36 +168,17 @@ Wire Wire Line
 Wire Wire Line
 	2050 4100 2800 4100
 Connection ~ 2050 4400
-Wire Wire Line
-	2700 5550 2800 5550
 $Comp
 L power:GND #PWR0194
 U 1 1 5DD3A2BB
-P 2050 6200
-F 0 "#PWR0194" H 2050 5950 50  0001 C CNN
-F 1 "GND" H 2055 6027 50  0000 C CNN
-F 2 "" H 2050 6200 50  0001 C CNN
-F 3 "" H 2050 6200 50  0001 C CNN
-	1    2050 6200
+P 3150 6000
+F 0 "#PWR0194" H 3150 5750 50  0001 C CNN
+F 1 "GND" H 3155 5827 50  0000 C CNN
+F 2 "" H 3150 6000 50  0001 C CNN
+F 3 "" H 3150 6000 50  0001 C CNN
+	1    3150 6000
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	2750 5650 2800 5650
-Wire Wire Line
-	2750 6050 2800 6050
-Wire Wire Line
-	2800 5950 2750 5950
-Wire Wire Line
-	2750 5850 2800 5850
-Wire Wire Line
-	2050 6200 2050 6150
-Wire Wire Line
-	2050 6150 2800 6150
-Wire Wire Line
-	2050 6150 2050 5750
-Wire Wire Line
-	2050 5750 2800 5750
-Connection ~ 2050 6150
 $Comp
 L Connector:Conn_01x02_Male J2
 U 1 1 5DD491B4
@@ -225,12 +195,12 @@ Wire Wire Line
 $Comp
 L power:+2V5 #PWR0191
 U 1 1 5DDAEE31
-P 2700 5550
-F 0 "#PWR0191" H 2700 5400 50  0001 C CNN
-F 1 "+2V5" H 2715 5723 50  0000 C CNN
-F 2 "" H 2700 5550 50  0001 C CNN
-F 3 "" H 2700 5550 50  0001 C CNN
-	1    2700 5550
+P 3250 5650
+F 0 "#PWR0191" H 3250 5500 50  0001 C CNN
+F 1 "+2V5" H 3265 5823 50  0000 C CNN
+F 2 "" H 3250 5650 50  0001 C CNN
+F 3 "" H 3250 5650 50  0001 C CNN
+	1    3250 5650
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -351,10 +321,10 @@ F 3 "" H 6200 5200 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector:Conn_01x02_Male J14
+L Connector:Conn_01x02_Male J13
 U 1 1 5DED5F02
 P 6500 5950
-F 0 "J14" H 6472 5832 50  0000 R CNN
+F 0 "J13" H 6472 5832 50  0000 R CNN
 F 1 "DNP" H 6472 5923 50  0000 R CNN
 F 2 "Pin_Headers:Pin_Header_Straight_1x02_Pitch2.54mm" H 6500 5950 50  0001 C CNN
 F 3 "https://www.digikey.ca/product-detail/en/adam-tech/PH1-02-UA/2057-PH1-02-UA-ND/9830266" H 6500 5950 50  0001 C CNN
@@ -388,10 +358,10 @@ F 3 "" H 6200 5850 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector:Conn_01x08_Male J13
+L Connector:Conn_01x08_Male J12
 U 1 1 5DEE094B
 P 5050 5850
-F 0 "J13" H 5022 5824 50  0000 R CNN
+F 0 "J12" H 5022 5824 50  0000 R CNN
 F 1 "DNP" H 5022 5733 50  0000 R CNN
 F 2 "Pin_Headers:Pin_Header_Straight_1x08_Pitch2.54mm" H 5050 5850 50  0001 C CNN
 F 3 "https://www.digikey.ca/product-detail/en/adam-tech/PH1-08-UA/2057-PH1-08-UA-ND/9830442" H 5050 5850 50  0001 C CNN
@@ -460,19 +430,19 @@ Text GLabel 8800 5000 0    50   Input ~ 0
 ADC-SCK
 Text GLabel 8800 4900 0    50   Input ~ 0
 ADC-SDO
-Text GLabel 8800 5200 0    50   Input ~ 0
+Text GLabel 8800 5600 0    50   Input ~ 0
 VGA-~CS0
-Text GLabel 8800 5300 0    50   Input ~ 0
+Text GLabel 8800 5500 0    50   Input ~ 0
 VGA-D0
 Text GLabel 8800 5400 0    50   Input ~ 0
 VGA-SCK
-Text GLabel 8800 5500 0    50   Input ~ 0
+Text GLabel 8800 5200 0    50   Input ~ 0
 VGA-D1
-Text GLabel 8800 5600 0    50   Input ~ 0
+Text GLabel 8800 5300 0    50   Input ~ 0
 VGA-~CS1
-Text GLabel 8800 5900 0    50   Input ~ 0
-DAC-~CS
 Text GLabel 8800 6100 0    50   Input ~ 0
+DAC-~CS
+Text GLabel 8800 5900 0    50   Input ~ 0
 DAC-SCK
 Text GLabel 8800 6000 0    50   Input ~ 0
 DAC-SDI
@@ -512,53 +482,18 @@ Wire Wire Line
 	8850 4900 8800 4900
 Wire Wire Line
 	8800 5000 8850 5000
-$Comp
-L Connector:Conn_01x03_Male J10
-U 1 1 5E232910
-P 9050 5300
-F 0 "J10" H 9022 5232 50  0000 R CNN
-F 1 "DNP" H 9022 5323 50  0000 R CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x03_Pitch2.54mm" H 9050 5300 50  0001 C CNN
-F 3 "~" H 9050 5300 50  0001 C CNN
-	1    9050 5300
-	-1   0    0    1   
-$EndComp
 Wire Wire Line
 	8800 5200 8850 5200
 Wire Wire Line
 	8800 5300 8850 5300
 Wire Wire Line
 	8800 5400 8850 5400
-$Comp
-L Connector:Conn_01x03_Male J11
-U 1 1 5E236FC5
-P 9050 5600
-F 0 "J11" H 9022 5532 50  0000 R CNN
-F 1 "DNP" H 9022 5623 50  0000 R CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x03_Pitch2.54mm" H 9050 5600 50  0001 C CNN
-F 3 "~" H 9050 5600 50  0001 C CNN
-	1    9050 5600
-	-1   0    0    1   
-$EndComp
 Wire Wire Line
 	8800 5500 8850 5500
 Wire Wire Line
 	8850 5600 8800 5600
 Wire Wire Line
 	8800 5800 8850 5800
-Wire Wire Line
-	8850 5800 8850 5700
-$Comp
-L Connector:Conn_01x03_Male J15
-U 1 1 5E23BCC1
-P 9050 6000
-F 0 "J15" H 9022 5932 50  0000 R CNN
-F 1 "DNP" H 9022 6023 50  0000 R CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x03_Pitch2.54mm" H 9050 6000 50  0001 C CNN
-F 3 "~" H 9050 6000 50  0001 C CNN
-	1    9050 6000
-	-1   0    0    1   
-$EndComp
 Wire Wire Line
 	8800 5900 8850 5900
 Wire Wire Line
@@ -623,5 +558,60 @@ F 2 "" H 6200 4550 50  0001 C CNN
 F 3 "" H 6200 4550 50  0001 C CNN
 	1    6200 4550
 	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_02x05_Odd_Even J11
+U 1 1 5E09FA0E
+P 2750 5750
+F 0 "J11" H 2800 6167 50  0000 C CNN
+F 1 "DNP" H 2800 6076 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_2x05_Pitch2.54mm" H 2750 5750 50  0001 C CNN
+F 3 "https://www.digikey.ca/product-detail/en/adam-tech/PH2-10-UA/2057-PH2-10-UA-ND/9830654" H 2750 5750 50  0001 C CNN
+	1    2750 5750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2500 5550 2550 5550
+Wire Wire Line
+	2500 5650 2550 5650
+Wire Wire Line
+	2500 5750 2550 5750
+Wire Wire Line
+	2500 5950 2550 5950
+Wire Wire Line
+	3050 5950 3150 5950
+Wire Wire Line
+	3150 5950 3150 6000
+Wire Wire Line
+	3050 5550 3150 5550
+Wire Wire Line
+	3150 5550 3150 5950
+Connection ~ 3150 5950
+Wire Wire Line
+	3050 5650 3250 5650
+NoConn ~ 3050 5750
+NoConn ~ 3050 5850
+NoConn ~ 2550 5850
+$Comp
+L Connector:Conn_01x04_Male J14
+U 1 1 5E5FD68B
+P 9050 6000
+F 0 "J14" H 9022 5882 50  0000 R CNN
+F 1 "DNP" H 9022 5973 50  0000 R CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x04_Pitch2.54mm" H 9050 6000 50  0001 C CNN
+F 3 "~" H 9050 6000 50  0001 C CNN
+	1    9050 6000
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector:Conn_01x05_Male J10
+U 1 1 5E600171
+P 9050 5400
+F 0 "J10" H 9022 5332 50  0000 R CNN
+F 1 "DNP" H 9022 5423 50  0000 R CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x05_Pitch2.54mm" H 9050 5400 50  0001 C CNN
+F 3 "~" H 9050 5400 50  0001 C CNN
+	1    9050 5400
+	-1   0    0    1   
 $EndComp
 $EndSCHEMATC

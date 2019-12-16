@@ -64,10 +64,10 @@ F 3 "" H 2150 4450 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C_Small C94
+L Device:C_Small C95
 U 1 1 5DE7BD62
 P 1800 3750
-F 0 "C94" V 1571 3750 50  0000 C CNN
+F 0 "C95" V 1571 3750 50  0000 C CNN
 F 1 "100nF" V 1662 3750 50  0000 C CNN
 F 2 "Capacitors_SMD:C_1206_HandSoldering" H 1800 3750 50  0001 C CNN
 F 3 "https://www.digikey.ca/product-detail/en/murata-electronics/GRM31C5C2A104JA01L/490-16315-1-ND/7363297" H 1800 3750 50  0001 C CNN
@@ -125,10 +125,10 @@ Connection ~ 2150 4400
 Wire Wire Line
 	2150 4400 2300 4400
 $Comp
-L Device:C_Small C93
+L Device:C_Small C94
 U 1 1 5E3D409D
 P 10400 2900
-F 0 "C93" H 10492 2946 50  0000 L CNN
+F 0 "C94" H 10492 2946 50  0000 L CNN
 F 1 "10uF" H 10492 2855 50  0000 L CNN
 F 2 "Capacitors_SMD:C_0805_HandSoldering" H 10400 2900 50  0001 C CNN
 F 3 "https://www.digikey.ca/product-detail/en/kemet/C0805C106K8PACTU/399-4925-1-ND/1090920" H 10400 2900 50  0001 C CNN
@@ -147,10 +147,10 @@ F 3 "" H 9850 3100 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C_Small C92
+L Device:C_Small C93
 U 1 1 5E3D52F8
 P 9850 2900
-F 0 "C92" H 9942 2946 50  0000 L CNN
+F 0 "C93" H 9942 2946 50  0000 L CNN
 F 1 "100nF" H 9942 2855 50  0000 L CNN
 F 2 "Capacitors_SMD:C_0603_HandSoldering" H 9850 2900 50  0001 C CNN
 F 3 "https://www.digikey.ca/product-detail/en/w-rth-elektronik/885012206020/732-7939-1-ND/5454566" H 9850 2900 50  0001 C CNN
@@ -176,10 +176,10 @@ Wire Wire Line
 	9850 3050 9850 3100
 Connection ~ 9850 3050
 $Comp
-L Device:C_Small C99
+L Device:C_Small C100
 U 1 1 5E132FDE
 P 4450 5300
-F 0 "C99" H 4542 5346 50  0000 L CNN
+F 0 "C100" H 4542 5346 50  0000 L CNN
 F 1 "100nF" H 4542 5255 50  0000 L CNN
 F 2 "Capacitors_SMD:C_0603_HandSoldering" H 4450 5300 50  0001 C CNN
 F 3 "https://www.digikey.ca/product-detail/en/w-rth-elektronik/885012206020/732-7939-1-ND/5454566" H 4450 5300 50  0001 C CNN
@@ -187,10 +187,10 @@ F 3 "https://www.digikey.ca/product-detail/en/w-rth-elektronik/885012206020/732-
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C_Small C101
+L Device:C_Small C102
 U 1 1 5E133797
 P 6050 5400
-F 0 "C101" H 6142 5446 50  0000 L CNN
+F 0 "C102" H 6142 5446 50  0000 L CNN
 F 1 "100nF" H 6142 5355 50  0000 L CNN
 F 2 "Capacitors_SMD:C_0603_HandSoldering" H 6050 5400 50  0001 C CNN
 F 3 "https://www.digikey.ca/product-detail/en/w-rth-elektronik/885012206020/732-7939-1-ND/5454566" H 6050 5400 50  0001 C CNN
@@ -198,10 +198,10 @@ F 3 "https://www.digikey.ca/product-detail/en/w-rth-elektronik/885012206020/732-
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C_Small C100
+L Device:C_Small C101
 U 1 1 5E133C95
 P 4950 5300
-F 0 "C100" H 5042 5346 50  0000 L CNN
+F 0 "C101" H 5042 5346 50  0000 L CNN
 F 1 "10uF" H 5042 5255 50  0000 L CNN
 F 2 "Capacitors_SMD:C_0805_HandSoldering" H 4950 5300 50  0001 C CNN
 F 3 "https://www.digikey.ca/product-detail/en/kemet/C0805C106K8PACTU/399-4925-1-ND/1090920" H 4950 5300 50  0001 C CNN
@@ -337,10 +337,10 @@ Wire Wire Line
 Wire Wire Line
 	3700 5050 3700 5100
 $Comp
-L Device:C_Small C95
+L Device:C_Small C96
 U 1 1 5DF5C548
 P 2900 3750
-F 0 "C95" V 3125 3700 50  0000 L CNN
+F 0 "C96" V 3125 3700 50  0000 L CNN
 F 1 "150nF" V 3025 3625 50  0000 L CNN
 F 2 "Capacitors_SMD:C_0603_HandSoldering" H 2900 3750 50  0001 C CNN
 F 3 "https://www.digikey.ca/product-detail/en/samsung-electro-mechanics/CL10B154KO8NNNC/1276-1972-1-ND/3890058" H 2900 3750 50  0001 C CNN
@@ -420,10 +420,10 @@ Wire Wire Line
 Wire Wire Line
 	4150 3350 4150 3750
 $Comp
-L Device:C_Small C96
+L Device:C_Small C97
 U 1 1 5DF78526
 P 4300 3750
-F 0 "C96" V 4525 3700 50  0000 L CNN
+F 0 "C97" V 4525 3700 50  0000 L CNN
 F 1 "150nF" V 4425 3625 50  0000 L CNN
 F 2 "Capacitors_SMD:C_0603_HandSoldering" H 4300 3750 50  0001 C CNN
 F 3 "https://www.digikey.ca/product-detail/en/samsung-electro-mechanics/CL10B154KO8NNNC/1276-1972-1-ND/3890058" H 4300 3750 50  0001 C CNN
@@ -458,10 +458,10 @@ Connection ~ 5550 3750
 Wire Wire Line
 	5550 3750 5550 3850
 $Comp
-L Device:C_Small C97
+L Device:C_Small C98
 U 1 1 5DF8BDC4
 P 5700 3750
-F 0 "C97" V 5925 3700 50  0000 L CNN
+F 0 "C98" V 5925 3700 50  0000 L CNN
 F 1 "150nF" V 5825 3625 50  0000 L CNN
 F 2 "Capacitors_SMD:C_0603_HandSoldering" H 5700 3750 50  0001 C CNN
 F 3 "https://www.digikey.ca/product-detail/en/samsung-electro-mechanics/CL10B154KO8NNNC/1276-1972-1-ND/3890058" H 5700 3750 50  0001 C CNN
@@ -550,10 +550,10 @@ Wire Wire Line
 Wire Wire Line
 	6250 3750 6200 3750
 $Comp
-L Device:C_Small C98
+L Device:C_Small C99
 U 1 1 5DFF8C03
 P 7150 3750
-F 0 "C98" V 7375 3700 50  0000 L CNN
+F 0 "C99" V 7375 3700 50  0000 L CNN
 F 1 "150nF" V 7275 3625 50  0000 L CNN
 F 2 "Capacitors_SMD:C_0603_HandSoldering" H 7150 3750 50  0001 C CNN
 F 3 "https://www.digikey.ca/product-detail/en/samsung-electro-mechanics/CL10B154KO8NNNC/1276-1972-1-ND/3890058" H 7150 3750 50  0001 C CNN
@@ -786,10 +786,10 @@ F 3 "https://www.digikey.ca/product-detail/en/stackpole-electronics-inc/RMCF0603
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C_Small C103
+L Device:C_Small C104
 U 1 1 5E0D9D1C
 P 6900 5650
-F 0 "C103" H 6992 5696 50  0000 L CNN
+F 0 "C104" H 6992 5696 50  0000 L CNN
 F 1 "2.2nF" H 6992 5605 50  0000 L CNN
 F 2 "Capacitors_SMD:C_0603_HandSoldering" H 6900 5650 50  0001 C CNN
 F 3 "https://www.digikey.ca/product-detail/en/w-rth-elektronik/885012206085/732-8003-1-ND/5454630" H 6900 5650 50  0001 C CNN
@@ -809,10 +809,10 @@ Connection ~ 6550 5850
 Wire Wire Line
 	6550 5850 6550 5900
 $Comp
-L Device:C_Small C102
+L Device:C_Small C103
 U 1 1 5E0E564B
 P 8500 5500
-F 0 "C102" H 8592 5546 50  0000 L CNN
+F 0 "C103" H 8592 5546 50  0000 L CNN
 F 1 "4.7uF" H 8592 5455 50  0000 L CNN
 F 2 "Capacitors_SMD:C_0603_HandSoldering" H 8500 5500 50  0001 C CNN
 F 3 "https://www.digikey.ca/product-detail/en/samsung-electro-mechanics/CL10A475KQ8NNNC/1276-1045-1-ND/3889131" H 8500 5500 50  0001 C CNN
@@ -870,10 +870,10 @@ F 3 "" H 4900 2250 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C_Small C91
+L Device:C_Small C92
 U 1 1 5E150785
 P 4900 2100
-F 0 "C91" H 4992 2146 50  0000 L CNN
+F 0 "C92" H 4992 2146 50  0000 L CNN
 F 1 "100nF" H 4992 2055 50  0000 L CNN
 F 2 "Capacitors_SMD:C_0603_HandSoldering" H 4900 2100 50  0001 C CNN
 F 3 "https://www.digikey.ca/product-detail/en/w-rth-elektronik/885012206020/732-7939-1-ND/5454566" H 4900 2100 50  0001 C CNN
@@ -896,10 +896,10 @@ F 3 "" H 6350 1650 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C_Small C90
+L Device:C_Small C91
 U 1 1 5E168AEB
 P 6350 1500
-F 0 "C90" H 6442 1546 50  0000 L CNN
+F 0 "C91" H 6442 1546 50  0000 L CNN
 F 1 "100nF" H 6442 1455 50  0000 L CNN
 F 2 "Capacitors_SMD:C_0603_HandSoldering" H 6350 1500 50  0001 C CNN
 F 3 "https://www.digikey.ca/product-detail/en/w-rth-elektronik/885012206020/732-7939-1-ND/5454566" H 6350 1500 50  0001 C CNN

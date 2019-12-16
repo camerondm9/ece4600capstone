@@ -1,9 +1,9 @@
-(module ECS-5032MV (layer F.Cu) (tedit 5DEDB2FA)
+(module ECS-5032MV (layer F.Cu) (tedit 5DF7286E)
   (attr smd)
   (fp_text reference REF** (at 0 -2.6) (layer F.SilkS)
     (effects (font (size 0.8 0.8) (thickness 0.05)))
   )
-  (fp_text value ECS-5032MV (at 0 2.7) (layer F.SilkS) hide
+  (fp_text value ECS-5032MV (at 0 2.7) (layer F.Fab) hide
     (effects (font (size 0.8 0.8) (thickness 0.05)))
   )
   (fp_line (start -2.28 -0.246) (end -2.28 0.246) (layer F.SilkS) (width 0.12))
