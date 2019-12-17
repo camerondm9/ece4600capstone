@@ -115,17 +115,6 @@ F 3 "" H 2700 3900 50  0001 C CNN
 	1    2700 3900
 	1    0    0    -1  
 $EndComp
-$Comp
-L Connector:Conn_01x08_Male J4
-U 1 1 5DD08B5F
-P 3000 4200
-F 0 "J4" H 2972 4174 50  0000 R CNN
-F 1 "PH1-08-UA" H 2972 4083 50  0000 R CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x08_Pitch2.54mm" H 3000 4200 50  0001 C CNN
-F 3 "https://www.digikey.ca/product-detail/en/adam-tech/PH1-08-UA/2057-PH1-08-UA-ND/9830442" H 3000 4200 50  0001 C CNN
-	1    3000 4200
-	-1   0    0    -1  
-$EndComp
 Text GLabel 2750 4000 0    50   Input ~ 0
 MICRO-SWCLK
 Text GLabel 2750 4200 0    50   Input ~ 0
@@ -310,10 +299,10 @@ F 3 "" H 6200 5200 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector:Conn_01x02_Male J12
+L Connector:Conn_01x02_Male J11
 U 1 1 5DED5F02
 P 6500 5950
-F 0 "J12" H 6472 5832 50  0000 R CNN
+F 0 "J11" H 6472 5832 50  0000 R CNN
 F 1 "DNP" H 6472 5923 50  0000 R CNN
 F 2 "Pin_Headers:Pin_Header_Straight_1x02_Pitch2.54mm" H 6500 5950 50  0001 C CNN
 F 3 "https://www.digikey.ca/product-detail/en/adam-tech/PH1-02-UA/2057-PH1-02-UA-ND/9830266" H 6500 5950 50  0001 C CNN
@@ -408,15 +397,15 @@ Text GLabel 8800 5000 0    50   Input ~ 0
 ADC-SCK
 Text GLabel 8800 4900 0    50   Input ~ 0
 ADC-SDO
-Text GLabel 8800 5600 0    50   Input ~ 0
-VGA-~CS0
 Text GLabel 8800 5500 0    50   Input ~ 0
-VGA-D0
+VGA-~CS0
 Text GLabel 8800 5400 0    50   Input ~ 0
-VGA-SCK
-Text GLabel 8800 5200 0    50   Input ~ 0
-VGA-D1
+VGA-D0
 Text GLabel 8800 5300 0    50   Input ~ 0
+VGA-SCK
+Text GLabel 8800 5100 0    50   Input ~ 0
+VGA-D1
+Text GLabel 8800 5200 0    50   Input ~ 0
 VGA-~CS1
 Text GLabel 8800 6100 0    50   Input ~ 0
 DAC-~CS
@@ -441,17 +430,6 @@ Wire Wire Line
 	8850 4500 8800 4500
 Wire Wire Line
 	8800 4600 8850 4600
-$Comp
-L Connector:Conn_01x03_Male J8
-U 1 1 5E22DC4D
-P 9050 4900
-F 0 "J8" H 9022 4832 50  0000 R CNN
-F 1 "DNP" H 9022 4923 50  0000 R CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x03_Pitch2.54mm" H 9050 4900 50  0001 C CNN
-F 3 "~" H 9050 4900 50  0001 C CNN
-	1    9050 4900
-	-1   0    0    1   
-$EndComp
 Wire Wire Line
 	8800 4800 8850 4800
 Wire Wire Line
@@ -459,15 +437,15 @@ Wire Wire Line
 Wire Wire Line
 	8800 5000 8850 5000
 Wire Wire Line
+	8800 5100 8850 5100
+Wire Wire Line
 	8800 5200 8850 5200
 Wire Wire Line
 	8800 5300 8850 5300
 Wire Wire Line
 	8800 5400 8850 5400
 Wire Wire Line
-	8800 5500 8850 5500
-Wire Wire Line
-	8850 5600 8800 5600
+	8850 5500 8800 5500
 Wire Wire Line
 	8800 5800 8850 5800
 Wire Wire Line
@@ -536,10 +514,10 @@ F 3 "" H 6200 4550 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector_Generic:Conn_02x05_Odd_Even J11
+L Connector_Generic:Conn_02x05_Odd_Even J10
 U 1 1 5E09FA0E
 P 2750 5750
-F 0 "J11" H 2800 6167 50  0000 C CNN
+F 0 "J10" H 2800 6167 50  0000 C CNN
 F 1 "DNP" H 2800 6076 50  0000 C CNN
 F 2 "Pin_Headers:Pin_Header_Straight_2x05_Pitch2.54mm" H 2750 5750 50  0001 C CNN
 F 3 "https://www.digikey.ca/product-detail/en/adam-tech/PH2-10-UA/2057-PH2-10-UA-ND/9830654" H 2750 5750 50  0001 C CNN
@@ -569,25 +547,14 @@ NoConn ~ 3050 5750
 NoConn ~ 3050 5850
 NoConn ~ 2550 5850
 $Comp
-L Connector:Conn_01x04_Male J13
+L Connector:Conn_01x04_Male J12
 U 1 1 5E5FD68B
 P 9050 6000
-F 0 "J13" H 9022 5882 50  0000 R CNN
+F 0 "J12" H 9022 5882 50  0000 R CNN
 F 1 "DNP" H 9022 5973 50  0000 R CNN
 F 2 "Pin_Headers:Pin_Header_Straight_1x04_Pitch2.54mm" H 9050 6000 50  0001 C CNN
 F 3 "~" H 9050 6000 50  0001 C CNN
 	1    9050 6000
-	-1   0    0    1   
-$EndComp
-$Comp
-L Connector:Conn_01x05_Male J10
-U 1 1 5E600171
-P 9050 5400
-F 0 "J10" H 9022 5332 50  0000 R CNN
-F 1 "DNP" H 9022 5423 50  0000 R CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x05_Pitch2.54mm" H 9050 5400 50  0001 C CNN
-F 3 "~" H 9050 5400 50  0001 C CNN
-	1    9050 5400
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
@@ -602,5 +569,27 @@ F 2 "Pin_Headers:Pin_Header_Straight_1x15_Pitch2.54mm" H 5050 4600 50  0001 C CN
 F 3 "https://www.digikey.ca/product-detail/en/adam-tech/PH1-15-UA/2057-PH1-15-UA-ND/9830359" H 5050 4600 50  0001 C CNN
 	1    5050 4600
 	-1   0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x08_Male J4
+U 1 1 5DD08B5F
+P 3000 4200
+F 0 "J4" H 2972 4174 50  0000 R CNN
+F 1 "PH1-08-UA" H 2972 4083 50  0000 R CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x08_Pitch2.54mm" H 3000 4200 50  0001 C CNN
+F 3 "https://www.digikey.ca/product-detail/en/adam-tech/PH1-08-UA/2057-PH1-08-UA-ND/9830442" H 3000 4200 50  0001 C CNN
+	1    3000 4200
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x08_Male J8
+U 1 1 5E2E1494
+P 9050 5200
+F 0 "J8" H 9022 5174 50  0000 R CNN
+F 1 "PH1-08-UA" H 9022 5083 50  0000 R CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x08_Pitch2.54mm" H 9050 5200 50  0001 C CNN
+F 3 "https://www.digikey.ca/product-detail/en/adam-tech/PH1-08-UA/2057-PH1-08-UA-ND/9830442" H 9050 5200 50  0001 C CNN
+	1    9050 5200
+	-1   0    0    1   
 $EndComp
 $EndSCHEMATC

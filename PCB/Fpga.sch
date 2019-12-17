@@ -1681,15 +1681,15 @@ Wire Wire Line
 	9700 900  9750 900 
 Text GLabel 4450 3400 0    50   Input ~ 0
 TRANSMIT-ENABLE
-Text GLabel 4450 2700 0    50   Input ~ 0
+Text GLabel 4450 2900 0    50   Input ~ 0
 VGA-~CS0
-Text GLabel 4450 2200 0    50   Input ~ 0
-VGA-~CS1
-Text GLabel 4450 2300 0    50   Input ~ 0
-VGA-SCK
-Text GLabel 4450 2600 0    50   Input ~ 0
-VGA-D0
 Text GLabel 4450 2100 0    50   Input ~ 0
+VGA-~CS1
+Text GLabel 4450 2200 0    50   Input ~ 0
+VGA-SCK
+Text GLabel 4450 2800 0    50   Input ~ 0
+VGA-D0
+Text GLabel 4450 2000 0    50   Input ~ 0
 VGA-D1
 $Comp
 L Parts:GNDA-FPGA #PWR0106
@@ -1777,15 +1777,15 @@ Wire Wire Line
 Wire Wire Line
 	4450 3400 4500 3400
 Wire Wire Line
-	4450 2700 4500 2700
+	4450 2900 4500 2900
 Wire Wire Line
-	4500 2600 4450 2600
-Wire Wire Line
-	4450 2300 4500 2300
+	4500 2800 4450 2800
 Wire Wire Line
 	4450 2200 4500 2200
 Wire Wire Line
 	4450 2100 4500 2100
+Wire Wire Line
+	4450 2000 4500 2000
 Wire Wire Line
 	4450 1600 4500 1600
 Wire Wire Line
