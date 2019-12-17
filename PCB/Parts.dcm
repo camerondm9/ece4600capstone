@@ -77,11 +77,6 @@ D Power symbol creates a global label with name "GND" , ground
 K power-flag
 $ENDCMP
 #
-$CMP GNDA-FPGA
-D Power symbol creates a global label with name "GND" , ground
-K power-flag
-$ENDCMP
-#
 $CMP LED_ABGR
 D RGB LED, anode/red/green/blue
 K LED RGB diode
