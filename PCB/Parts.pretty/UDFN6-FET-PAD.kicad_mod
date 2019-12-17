@@ -1,8 +1,8 @@
-(module UDFN6-FET-PAD (layer F.Cu) (tedit 5DE56686)
+(module UDFN6-FET-PAD (layer F.Cu) (tedit 5DF82F01)
   (fp_text reference REF** (at 0 -1.9) (layer F.SilkS)
     (effects (font (size 0.8 0.8) (thickness 0.05)))
   )
-  (fp_text value UDFN6-FET-PAD (at 0 2) (layer F.SilkS) hide
+  (fp_text value UDFN6-FET-PAD (at 0 2) (layer F.Fab)
     (effects (font (size 0.8 0.8) (thickness 0.05)))
   )
   (fp_line (start 1.2573 1.2573) (end -1.2573 1.2573) (layer F.CrtYd) (width 0.1524))

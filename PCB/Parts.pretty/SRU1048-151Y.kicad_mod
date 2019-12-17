@@ -1,8 +1,8 @@
-(module SRU1048-151Y (layer F.Cu) (tedit 5DE56655)
+(module SRU1048-151Y (layer F.Cu) (tedit 5DF82EE2)
   (fp_text reference REF** (at 0 -6) (layer F.SilkS)
     (effects (font (size 0.8 0.8) (thickness 0.05)))
   )
-  (fp_text value SRU1048-151Y (at 0 6.1) (layer F.SilkS) hide
+  (fp_text value SRU1048-151Y (at 0 6.1) (layer F.Fab)
     (effects (font (size 0.8 0.8) (thickness 0.05)))
   )
   (fp_line (start 5.6515 5.4102) (end -5.6515 5.4102) (layer F.CrtYd) (width 0.1524))

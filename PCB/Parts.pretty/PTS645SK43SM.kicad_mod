@@ -1,9 +1,9 @@
-(module PTS645SK43SM (layer F.Cu) (tedit 5DCE1B9A)
+(module PTS645SK43SM (layer F.Cu) (tedit 5DF82EC2)
   (attr smd)
   (fp_text reference REF** (at 0 -4.3 180) (layer F.SilkS)
     (effects (font (size 0.8 0.8) (thickness 0.05)))
   )
-  (fp_text value PTS645SK43SM (at 0 4.4) (layer F.SilkS) hide
+  (fp_text value PTS645SK43SM (at 0 4.4) (layer F.Fab)
     (effects (font (size 0.8 0.8) (thickness 0.05)))
   )
   (fp_line (start -2.85 -3.65) (end -3.65 -2.85) (layer F.SilkS) (width 0.12))

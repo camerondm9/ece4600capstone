@@ -1,9 +1,9 @@
-(module EQFP144-PAD (layer F.Cu) (tedit 5DEDB2EA)
+(module EQFP144-PAD (layer F.Cu) (tedit 5DF82EA3)
   (attr smd)
   (fp_text reference REF** (at 0 -12.3) (layer F.SilkS)
     (effects (font (size 0.8 0.8) (thickness 0.05)))
   )
-  (fp_text value EQFP144-PAD (at 0.1 12.4) (layer F.SilkS) hide
+  (fp_text value EQFP144-PAD (at 0.1 12.4) (layer F.Fab)
     (effects (font (size 0.8 0.8) (thickness 0.05)))
   )
   (fp_poly (pts (xy -2.82273 -2.75) (xy 2.82 -2.75) (xy 2.82 2.75267) (xy -2.82273 2.75267)) (layer F.Paste) (width 0))

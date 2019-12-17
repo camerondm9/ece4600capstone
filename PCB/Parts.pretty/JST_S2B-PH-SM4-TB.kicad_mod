@@ -1,9 +1,9 @@
-(module JST_S2B-PH-SM4-TB (layer F.Cu) (tedit 5DEDB2D2)
+(module JST_S2B-PH-SM4-TB (layer F.Cu) (tedit 5DF82EAB)
   (attr smd)
   (fp_text reference REF** (at 0 -2.7) (layer F.SilkS)
     (effects (font (size 0.8 0.8) (thickness 0.05)))
   )
-  (fp_text value JST_S2B-PH-SM4-TB (at 0 8.5) (layer F.SilkS) hide
+  (fp_text value JST_S2B-PH-SM4-TB (at 0 8.5) (layer F.Fab)
     (effects (font (size 0.8 0.8) (thickness 0.05)))
   )
   (fp_line (start 3.95 -0.35) (end 1.9 -0.35) (layer F.SilkS) (width 0.127))

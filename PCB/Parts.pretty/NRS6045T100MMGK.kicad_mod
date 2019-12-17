@@ -1,9 +1,9 @@
-(module NRS6045T100MMGK (layer F.Cu) (tedit 5DE56610)
+(module NRS6045T100MMGK (layer F.Cu) (tedit 5DF82EB6)
   (attr smd)
   (fp_text reference L** (at 0.04 -4.6) (layer F.SilkS)
     (effects (font (size 0.8 0.8) (thickness 0.05)))
   )
-  (fp_text value NRS6045T100MMGK (at 0 4.7) (layer F.SilkS) hide
+  (fp_text value NRS6045T100MMGK (at 0 4.7) (layer F.Fab)
     (effects (font (size 0.8 0.8) (thickness 0.05)))
   )
   (fp_line (start -3 -3) (end 3 -3) (layer F.Fab) (width 0.2))
