@@ -1787,4 +1787,132 @@ Wire Wire Line
 	1200 4000 1200 4200
 Text Notes 550  4550 0    50   ~ 0
 Layout GNDA traces to minimize noise.
+$Comp
+L power:GND #PWR0195
+U 1 1 5E001EDB
+P 7050 1150
+F 0 "#PWR0195" H 7050 900 50  0001 C CNN
+F 1 "GND" V 7050 975 50  0000 C CNN
+F 2 "" H 7050 1150 50  0001 C CNN
+F 3 "" H 7050 1150 50  0001 C CNN
+	1    7050 1150
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7150 850  7100 850 
+Wire Wire Line
+	7100 850  7100 950 
+Wire Wire Line
+	7100 1150 7050 1150
+Wire Wire Line
+	7150 950  7100 950 
+Connection ~ 7100 950 
+Wire Wire Line
+	7100 950  7100 1050
+Wire Wire Line
+	7100 1050 7150 1050
+Connection ~ 7100 1050
+Wire Wire Line
+	7100 1050 7100 1150
+Wire Wire Line
+	7100 1150 7150 1150
+Connection ~ 7100 1150
+Wire Wire Line
+	7100 1150 7100 1250
+Wire Wire Line
+	7100 1250 7150 1250
+Wire Wire Line
+	7100 1250 7100 1350
+Wire Wire Line
+	7100 1350 7150 1350
+Connection ~ 7100 1250
+Wire Wire Line
+	7100 1350 7100 1450
+Wire Wire Line
+	7100 1450 7150 1450
+Connection ~ 7100 1350
+$Comp
+L power:GND #PWR0196
+U 1 1 5E097F21
+P 2550 6300
+F 0 "#PWR0196" H 2550 6050 50  0001 C CNN
+F 1 "GND" V 2550 6125 50  0000 C CNN
+F 2 "" H 2550 6300 50  0001 C CNN
+F 3 "" H 2550 6300 50  0001 C CNN
+	1    2550 6300
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2550 6300 2600 6300
+Wire Wire Line
+	2600 6300 2600 6250
+Wire Wire Line
+	2600 6250 2650 6250
+Wire Wire Line
+	2600 6300 2600 6350
+Wire Wire Line
+	2600 6350 2650 6350
+Connection ~ 2600 6300
+$Comp
+L power:GND #PWR0197
+U 1 1 5E0C8A61
+P 2550 7150
+F 0 "#PWR0197" H 2550 6900 50  0001 C CNN
+F 1 "GND" V 2550 6975 50  0000 C CNN
+F 2 "" H 2550 7150 50  0001 C CNN
+F 3 "" H 2550 7150 50  0001 C CNN
+	1    2550 7150
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2550 7150 2650 7150
+$Comp
+L power:GND #PWR?
+U 1 1 5E0F1093
+P 7050 2150
+F 0 "#PWR?" H 7050 1900 50  0001 C CNN
+F 1 "GND" V 7050 1975 50  0000 C CNN
+F 2 "" H 7050 2150 50  0001 C CNN
+F 3 "" H 7050 2150 50  0001 C CNN
+	1    7050 2150
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7150 1750 7100 1750
+Wire Wire Line
+	7100 1750 7100 1850
+Wire Wire Line
+	7100 2150 7050 2150
+Wire Wire Line
+	7100 2150 7150 2150
+Connection ~ 7100 2150
+Wire Wire Line
+	7150 2050 7100 2050
+Connection ~ 7100 2050
+Wire Wire Line
+	7100 2050 7100 2150
+Wire Wire Line
+	7100 1950 7150 1950
+Connection ~ 7100 1950
+Wire Wire Line
+	7100 1950 7100 2050
+Wire Wire Line
+	7150 1850 7100 1850
+Connection ~ 7100 1850
+Wire Wire Line
+	7100 1850 7100 1950
+Wire Wire Line
+	7100 2150 7100 2250
+Wire Wire Line
+	7100 2250 7150 2250
+Wire Wire Line
+	7100 2250 7100 2350
+Wire Wire Line
+	7100 2350 7150 2350
+Connection ~ 7100 2250
+Wire Wire Line
+	7100 2350 7100 2450
+Wire Wire Line
+	7100 2450 7150 2450
+Connection ~ 7100 2350
 $EndSCHEMATC
