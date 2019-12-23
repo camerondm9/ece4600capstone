@@ -194,7 +194,7 @@ F 3 "" H 3250 5650 50  0001 C CNN
 $EndComp
 Text GLabel 4800 5000 0    50   Input ~ 0
 FPGA-DOUT
-Text GLabel 4800 4800 0    50   Input ~ 0
+Text GLabel 4800 4900 0    50   Input ~ 0
 FPGA-nSTATUS
 Text GLabel 4800 5100 0    50   Input ~ 0
 FPGA-DCLK
@@ -385,7 +385,7 @@ Wire Wire Line
 	6200 4650 6300 4650
 Wire Wire Line
 	6300 4550 6200 4550
-Text GLabel 4800 4900 0    50   Input ~ 0
+Text GLabel 4800 4800 0    50   Input ~ 0
 FPGA-CS
 Text GLabel 8800 4600 0    50   Input ~ 0
 MICRO-SCL

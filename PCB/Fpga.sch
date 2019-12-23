@@ -649,7 +649,7 @@ Wire Wire Line
 	1950 5450 2000 5450
 Wire Wire Line
 	950  5550 900  5550
-Text Label 4200 1100 0    50   ~ 0
+Text Label 4200 1000 0    50   ~ 0
 DOUT
 Text Label 5800 6350 0    50   ~ 0
 DOUT
@@ -1502,7 +1502,7 @@ F 3 "https://www.digikey.ca/product-detail/en/w-rth-elektronik/885012206085/732-
 $EndComp
 Text GLabel 5750 6250 0    50   Input ~ 0
 FPGA-CS
-Text Label 4200 1000 0    50   ~ 0
+Text Label 2300 5250 0    50   ~ 0
 CS
 Text Label 5800 6250 0    50   ~ 0
 CS
@@ -1763,9 +1763,7 @@ F 3 "https://www.intel.com/content/www/us/en/programmable/products/fpga/cyclone-
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4200 1100 4500 1100
-Wire Wire Line
-	4500 1000 4200 1000
+	4200 1000 4500 1000
 $Comp
 L power:GND #PWR0108
 U 1 1 5E42C3C3
@@ -1915,4 +1913,6 @@ Wire Wire Line
 Wire Wire Line
 	7100 2450 7150 2450
 Connection ~ 7100 2350
+Wire Wire Line
+	2300 5250 2650 5250
 $EndSCHEMATC
