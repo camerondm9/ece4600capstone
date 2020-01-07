@@ -586,7 +586,7 @@ L Connector:Conn_01x08_Male J8
 U 1 1 5E2E1494
 P 9050 5200
 F 0 "J8" H 9022 5174 50  0000 R CNN
-F 1 "PH1-08-UA" H 9022 5083 50  0000 R CNN
+F 1 "DNP" H 9022 5083 50  0000 R CNN
 F 2 "Pin_Headers:Pin_Header_Straight_1x08_Pitch2.54mm" H 9050 5200 50  0001 C CNN
 F 3 "https://www.digikey.ca/product-detail/en/adam-tech/PH1-08-UA/2057-PH1-08-UA-ND/9830442" H 9050 5200 50  0001 C CNN
 	1    9050 5200

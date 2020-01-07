@@ -21,7 +21,7 @@ C19,10uF,C_0805_HandSoldering,10uF,Capacitors_SMD:C_0805_HandSoldering,https://w
 C20,100nF,C_0603_HandSoldering,100nF,Capacitors_SMD:C_0603_HandSoldering,https://www.digikey.ca/product-detail/en/w-rth-elektronik/885012206020/732-7939-1-ND/5454566
 C21,10uF,C_0805_HandSoldering,10uF,Capacitors_SMD:C_0805_HandSoldering,https://www.digikey.ca/product-detail/en/kemet/C0805C106K8PACTU/399-4925-1-ND/1090920
 C22,10uF,C_0805_HandSoldering,10uF,Capacitors_SMD:C_0805_HandSoldering,https://www.digikey.ca/product-detail/en/kemet/C0805C106K8PACTU/399-4925-1-ND/1090920
-C23,10nF,C_0603_HandSoldering,10nF,Capacitors_SMD:C_0603_HandSoldering,https://www.digikey.ca/product-detail/en/w-rth-elektronik/885012206014/732-7933-1-ND/5454560
+C23,10nF,C_0603_HandSoldering,10nF,Capacitors_SMD:C_0603_HandSoldering,https://www.digikey.ca/product-detail/en/w-rth-elektronik/885012206089/732-8007-1-ND/5454634
 C24,100nF,C_0603_HandSoldering,100nF,Capacitors_SMD:C_0603_HandSoldering,https://www.digikey.ca/product-detail/en/w-rth-elektronik/885012206020/732-7939-1-ND/5454566
 C25,100nF,C_0603_HandSoldering,100nF,Capacitors_SMD:C_0603_HandSoldering,https://www.digikey.ca/product-detail/en/w-rth-elektronik/885012206020/732-7939-1-ND/5454566
 C26,100nF,C_0603_HandSoldering,100nF,Capacitors_SMD:C_0603_HandSoldering,https://www.digikey.ca/product-detail/en/w-rth-elektronik/885012206020/732-7939-1-ND/5454566
@@ -122,7 +122,7 @@ J4,PH1-08-UA,Pin_Header_Straight_1x08_Pitch2.54mm,PH1-08-UA,Pin_Headers:Pin_Head
 J5,DNP,Pin_Header_Straight_1x15_Pitch2.54mm,DNP,Pin_Headers:Pin_Header_Straight_1x15_Pitch2.54mm,https://www.digikey.ca/product-detail/en/adam-tech/PH1-15-UA/2057-PH1-15-UA-ND/9830359
 J6,DNP,Pin_Header_Straight_1x02_Pitch2.54mm,DNP,Pin_Headers:Pin_Header_Straight_1x02_Pitch2.54mm,https://www.digikey.ca/product-detail/en/adam-tech/PH1-02-UA/2057-PH1-02-UA-ND/9830266
 J7,DNP,Pin_Header_Straight_1x02_Pitch2.54mm,DNP,Pin_Headers:Pin_Header_Straight_1x02_Pitch2.54mm,https://www.digikey.ca/product-detail/en/adam-tech/PH1-02-UA/2057-PH1-02-UA-ND/9830266
-J8,PH1-08-UA,Pin_Header_Straight_1x08_Pitch2.54mm,PH1-08-UA,Pin_Headers:Pin_Header_Straight_1x08_Pitch2.54mm,https://www.digikey.ca/product-detail/en/adam-tech/PH1-08-UA/2057-PH1-08-UA-ND/9830442
+J8,DNP,Pin_Header_Straight_1x08_Pitch2.54mm,DNP,Pin_Headers:Pin_Header_Straight_1x08_Pitch2.54mm,https://www.digikey.ca/product-detail/en/adam-tech/PH1-08-UA/2057-PH1-08-UA-ND/9830442
 J9,DNP,Pin_Header_Straight_1x02_Pitch2.54mm,DNP,Pin_Headers:Pin_Header_Straight_1x02_Pitch2.54mm,https://www.digikey.ca/product-detail/en/adam-tech/PH1-02-UA/2057-PH1-02-UA-ND/9830266
 J10,DNP,Pin_Header_Straight_2x05_Pitch2.54mm,DNP,Pin_Headers:Pin_Header_Straight_2x05_Pitch2.54mm,https://www.digikey.ca/product-detail/en/adam-tech/PH2-10-UA/2057-PH2-10-UA-ND/9830654
 J11,DNP,Pin_Header_Straight_1x02_Pitch2.54mm,DNP,Pin_Headers:Pin_Header_Straight_1x02_Pitch2.54mm,https://www.digikey.ca/product-detail/en/adam-tech/PH1-02-UA/2057-PH1-02-UA-ND/9830266

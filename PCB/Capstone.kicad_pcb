@@ -2966,7 +2966,7 @@
     (fp_text reference J8 (at 1.778 0.254) (layer F.SilkS)
       (effects (font (size 0.8 0.8) (thickness 0.05)))
     )
-    (fp_text value PH1-08-UA (at 0 20.11) (layer F.Fab)
+    (fp_text value DNP (at 0 20.11) (layer F.Fab)
       (effects (font (size 0.8 0.8) (thickness 0.05)))
     )
     (fp_line (start -0.635 -1.27) (end 1.27 -1.27) (layer F.Fab) (width 0.1))

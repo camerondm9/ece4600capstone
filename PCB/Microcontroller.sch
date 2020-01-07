@@ -512,7 +512,7 @@ P 1350 2200
 F 0 "C23" H 1442 2246 50  0000 L CNN
 F 1 "10nF" H 1442 2155 50  0000 L CNN
 F 2 "Capacitors_SMD:C_0603_HandSoldering" H 1350 2200 50  0001 C CNN
-F 3 "https://www.digikey.ca/product-detail/en/w-rth-elektronik/885012206014/732-7933-1-ND/5454560" H 1350 2200 50  0001 C CNN
+F 3 "https://www.digikey.ca/product-detail/en/w-rth-elektronik/885012206089/732-8007-1-ND/5454634" H 1350 2200 50  0001 C CNN
 	1    1350 2200
 	1    0    0    -1  
 $EndComp
