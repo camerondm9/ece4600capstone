@@ -369,7 +369,7 @@ U 1 1 5DF222FC
 P 7700 5900
 F 0 "C89" H 7792 5946 50  0000 L CNN
 F 1 "2.2uF" H 7792 5855 50  0000 L CNN
-F 2 "Capacitors_SMD:C_1210_HandSoldering" H 7700 5900 50  0001 C CNN
+F 2 "Capacitors_SMD:C_1206_HandSoldering" H 7700 5900 50  0001 C CNN
 F 3 "https://www.digikey.ca/product-detail/en/samsung-electro-mechanics/CL31A225KBHNNNE/1276-2878-1-ND/3890964" H 7700 5900 50  0001 C CNN
 	1    7700 5900
 	1    0    0    -1  
