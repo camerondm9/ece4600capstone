@@ -104,8 +104,8 @@ C102,100nF,C_0603_HandSoldering,100nF,Capacitors_SMD:C_0603_HandSoldering,https:
 C103,10uF,C_0805_HandSoldering,10uF,Capacitors_SMD:C_0805_HandSoldering,https://www.digikey.ca/product-detail/en/kemet/C0805C106K8PACTU/399-4925-1-ND/1090920
 C104,2.2nF,C_0603_HandSoldering,2.2nF,Capacitors_SMD:C_0603_HandSoldering,https://www.digikey.ca/product-detail/en/w-rth-elektronik/885012206085/732-8003-1-ND/5454630
 D1,LED_ABGR,CLMVC-FKA,LED_ABGR,Parts:CLMVC-FKA,https://www.cree.com/led-components/media/documents/1273-CLMVC-FKA.pdf
-D2,560mV 2.1A,D_SOD-123F,560mV 2.1A,Diodes_SMD:D_SOD-123F,https://www.digikey.ca/product-detail/en/vishay-semiconductor-diodes-division/V3PM10-M3-H/112-V3PM10-M3-HCT-ND/10638970
-D3,560mV 2.1A,D_SOD-123F,560mV 2.1A,Diodes_SMD:D_SOD-123F,https://www.digikey.ca/product-detail/en/vishay-semiconductor-diodes-division/V3PM10-M3-H/112-V3PM10-M3-HCT-ND/10638970
+D2,560mV 2.1A,DO-220AA,560mV 2.1A,Parts:DO-220AA,https://www.digikey.ca/product-detail/en/vishay-semiconductor-diodes-division/V3PM10-M3-H/112-V3PM10-M3-HCT-ND/10638970
+D3,560mV 2.1A,DO-220AA,560mV 2.1A,Parts:DO-220AA,https://www.digikey.ca/product-detail/en/vishay-semiconductor-diodes-division/V3PM10-M3-H/112-V3PM10-M3-HCT-ND/10638970
 D4,600mV 200mA,D_SOD-523,600mV 200mA,Diodes_SMD:D_SOD-523,https://www.digikey.ca/product-detail/en/on-semiconductor/RB520S30T5G/RB520S30T5GOSCT-ND/5213385
 D5,600mV 200mA,D_SOD-523,600mV 200mA,Diodes_SMD:D_SOD-523,https://www.digikey.ca/product-detail/en/on-semiconductor/RB520S30T5G/RB520S30T5GOSCT-ND/5213385
 D6,2.7V,D_SOD-123,2.7V,Diodes_SMD:D_SOD-123,https://www.digikey.ca/product-detail/en/micro-commercial-co/MMSZ4682-TP/MMSZ4682-TPMSCT-ND/9992158

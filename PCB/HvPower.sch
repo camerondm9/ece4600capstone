@@ -419,7 +419,7 @@ U 1 1 5DE5C973
 P 5100 4750
 F 0 "D3" H 5100 4545 50  0000 C CNN
 F 1 "560mV 2.1A" H 5100 4636 50  0000 C CNN
-F 2 "Diodes_SMD:D_SOD-123F" V 5100 4750 50  0001 C CNN
+F 2 "Parts:DO-220AA" V 5100 4750 50  0001 C CNN
 F 3 "https://www.digikey.ca/product-detail/en/vishay-semiconductor-diodes-division/V3PM10-M3-H/112-V3PM10-M3-HCT-ND/10638970" V 5100 4750 50  0001 C CNN
 	1    5100 4750
 	-1   0    0    1   
@@ -697,7 +697,7 @@ U 1 1 5DEDF47D
 P 4500 2400
 F 0 "D2" H 4500 2195 50  0000 C CNN
 F 1 "560mV 2.1A" H 4500 2286 50  0000 C CNN
-F 2 "Diodes_SMD:D_SOD-123F" V 4500 2400 50  0001 C CNN
+F 2 "Parts:DO-220AA" V 4500 2400 50  0001 C CNN
 F 3 "https://www.digikey.ca/product-detail/en/vishay-semiconductor-diodes-division/V3PM10-M3-H/112-V3PM10-M3-HCT-ND/10638970" V 4500 2400 50  0001 C CNN
 	1    4500 2400
 	-1   0    0    1   
