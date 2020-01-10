@@ -139,7 +139,7 @@ U 1 1 5DE0A120
 P 4700 2650
 F 0 "R18" H 4770 2696 50  0000 L CNN
 F 1 "86.6k" H 4770 2605 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0603_HandSoldering" V 4630 2650 50  0001 C CNN
+F 2 "Resistors_SMD:R_0603_HandSoldering" V 4630 2650 50  0001 C CNN
 F 3 "https://www.digikey.ca/product-detail/en/stackpole-electronics-inc/RMCF0603FT86K6/RMCF0603FT86K6CT-ND/1943115" H 4700 2650 50  0001 C CNN
 	1    4700 2650
 	1    0    0    -1  
@@ -150,7 +150,7 @@ U 1 1 5DE0BC20
 P 4700 3050
 F 0 "R20" H 4770 3096 50  0000 L CNN
 F 1 "10k" H 4770 3005 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0603_HandSoldering" V 4630 3050 50  0001 C CNN
+F 2 "Resistors_SMD:R_0603_HandSoldering" V 4630 3050 50  0001 C CNN
 F 3 "https://www.digikey.ca/product-detail/en/stackpole-electronics-inc/RMCF0603FT10K0/RMCF0603FT10K0CT-ND/1943057" H 4700 3050 50  0001 C CNN
 	1    4700 3050
 	1    0    0    -1  
@@ -354,7 +354,7 @@ U 1 1 5DE108CD
 P 3050 3050
 F 0 "R19" H 3120 3096 50  0000 L CNN
 F 1 "10k" H 3120 3005 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0603_HandSoldering" V 2980 3050 50  0001 C CNN
+F 2 "Resistors_SMD:R_0603_HandSoldering" V 2980 3050 50  0001 C CNN
 F 3 "https://www.digikey.ca/product-detail/en/stackpole-electronics-inc/RMCF0603FT10K0/RMCF0603FT10K0CT-ND/1943057" H 3050 3050 50  0001 C CNN
 	1    3050 3050
 	1    0    0    -1  
@@ -430,7 +430,7 @@ U 1 1 5DE5F8A5
 P 5550 5350
 F 0 "R24" H 5620 5396 50  0000 L CNN
 F 1 "10k" H 5620 5305 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0603_HandSoldering" V 5480 5350 50  0001 C CNN
+F 2 "Resistors_SMD:R_0603_HandSoldering" V 5480 5350 50  0001 C CNN
 F 3 "https://www.digikey.ca/product-detail/en/stackpole-electronics-inc/RMCF0603FT10K0/RMCF0603FT10K0CT-ND/1943057" H 5550 5350 50  0001 C CNN
 	1    5550 5350
 	1    0    0    -1  
@@ -443,7 +443,7 @@ U 1 1 5DE602EE
 P 5550 4950
 F 0 "R23" H 5620 4996 50  0000 L CNN
 F 1 "392k" H 5620 4905 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0603_HandSoldering" V 5480 4950 50  0001 C CNN
+F 2 "Resistors_SMD:R_0603_HandSoldering" V 5480 4950 50  0001 C CNN
 F 3 "https://www.digikey.ca/product-detail/en/stackpole-electronics-inc/RMCF0603FT392K/RMCF0603FT392KCT-ND/1943135" H 5550 4950 50  0001 C CNN
 	1    5550 4950
 	1    0    0    -1  
@@ -525,7 +525,7 @@ U 1 1 5DE83FB9
 P 4850 5950
 F 0 "R27" H 4920 5996 50  0000 L CNN
 F 1 "100m" H 4920 5905 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0603_HandSoldering" V 4780 5950 50  0001 C CNN
+F 2 "Resistors_SMD:R_0603_HandSoldering" V 4780 5950 50  0001 C CNN
 F 3 "https://www.digikey.ca/product-detail/en/panasonic-electronic-components/ERJ-3RSFR10V/P.10AJCT-ND/308098" H 4850 5950 50  0001 C CNN
 	1    4850 5950
 	1    0    0    -1  
@@ -538,7 +538,7 @@ U 1 1 5DE8B420
 P 4650 5750
 F 0 "R25" V 4443 5750 50  0000 C CNN
 F 1 "100" V 4534 5750 50  0000 C CNN
-F 2 "Capacitors_SMD:C_0603_HandSoldering" V 4580 5750 50  0001 C CNN
+F 2 "Resistors_SMD:R_0603_HandSoldering" V 4580 5750 50  0001 C CNN
 F 3 "https://www.digikey.ca/product-detail/en/stackpole-electronics-inc/RMCF0603FT100R/RMCF0603FT100RCT-ND/1942965" H 4650 5750 50  0001 C CNN
 	1    4650 5750
 	0    1    1    0   
@@ -613,7 +613,7 @@ U 1 1 5DEAF609
 P 4300 6350
 F 0 "R28" H 4370 6396 50  0000 L CNN
 F 1 "20k" H 4370 6305 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0603_HandSoldering" V 4230 6350 50  0001 C CNN
+F 2 "Resistors_SMD:R_0603_HandSoldering" V 4230 6350 50  0001 C CNN
 F 3 "https://www.digikey.ca/product-detail/en/stackpole-electronics-inc/RMCF0603FT20K0/RMCF0603FT20K0CT-ND/1943075" H 4300 6350 50  0001 C CNN
 	1    4300 6350
 	1    0    0    -1  
@@ -751,7 +751,7 @@ U 1 1 5DEED067
 P 2300 5900
 F 0 "R26" H 2370 5946 50  0000 L CNN
 F 1 "220k" H 2370 5855 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0603_HandSoldering" V 2230 5900 50  0001 C CNN
+F 2 "Resistors_SMD:R_0603_HandSoldering" V 2230 5900 50  0001 C CNN
 F 3 "https://www.digikey.ca/product-detail/en/stackpole-electronics-inc/RMCF0603FT220K/RMCF0603FT220KCT-ND/2417988" H 2300 5900 50  0001 C CNN
 	1    2300 5900
 	1    0    0    -1  
@@ -972,7 +972,7 @@ U 1 1 5E0E52C3
 P 9600 3400
 F 0 "R21" H 9670 3446 50  0000 L CNN
 F 1 "220k" H 9670 3355 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0603_HandSoldering" V 9530 3400 50  0001 C CNN
+F 2 "Resistors_SMD:R_0603_HandSoldering" V 9530 3400 50  0001 C CNN
 F 3 "https://www.digikey.ca/product-detail/en/stackpole-electronics-inc/RMCF0603FT220K/RMCF0603FT220KCT-ND/2417988" H 9600 3400 50  0001 C CNN
 	1    9600 3400
 	1    0    0    -1  
@@ -983,7 +983,7 @@ U 1 1 5E0E587B
 P 9600 3800
 F 0 "R22" H 9670 3846 50  0000 L CNN
 F 1 "30k" H 9670 3755 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0603_HandSoldering" V 9530 3800 50  0001 C CNN
+F 2 "Resistors_SMD:R_0603_HandSoldering" V 9530 3800 50  0001 C CNN
 F 3 "https://www.digikey.ca/product-detail/en/stackpole-electronics-inc/RMCF0603FT30K0/RMCF0603FT30K0CT-ND/1943086" H 9600 3800 50  0001 C CNN
 	1    9600 3800
 	1    0    0    -1  
