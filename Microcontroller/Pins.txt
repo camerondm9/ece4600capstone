@@ -1,0 +1,37 @@
+Module	Pin			Net
+--------------------------------
+GPIO:
+		P0.01		ACC-INT2
+		P0.03		ACC-INT1
+		P0.22		HV-EN
+		P0.23		HV-OK
+		P0.25		SW1
+		P0.26		SW2
+		P0.27		FPGA-nCONFIG
+		P0.28		FPGA-nSTATUS
+		P0.29		FPGA-CONF_DONE
+		P0.30		FPGA-INIT_DONE
+		P0.31		FPGA-CRC_ERROR
+		(Chip selects for SPI might also be controlled as GPIO)
+
+PWM:
+		P0.16		LED-B
+		P0.17		LED-G
+		P0.18		LED-R
+
+UART:
+		P0.19		MICRO-TX
+		P0.20		MICRO-RX
+
+SPI:
+		P0.05		FPGA-DIN
+		P0.06		FPGA-CLK
+		P0.07		FPGA-DOUT
+		P0.08		FPGA-CS	(might be controlled as GPIO)
+
+I2C:
+		P0.00		SCL
+		P0.02		SDA
+
+ADC:
+		P0.04/AIN2	BATT
