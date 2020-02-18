@@ -85,7 +85,7 @@ static const uint8_t crc8_table[256] = {
 	0xF6U, 0x8FU, 0x04U, 0x7DU, 0xC5U, 0xBCU, 0x37U, 0x4EU,
 	0x90U, 0xE9U, 0x62U, 0x1BU, 0xA3U, 0xDAU, 0x51U, 0x28U,
 };
-uint8_t crc8(uint8_t *data, int len, uint8_t crc)
+/*uint8_t crc8(uint8_t *data, int len, uint8_t crc)
 {
 	while (len > 0)
 	{
@@ -94,7 +94,7 @@ uint8_t crc8(uint8_t *data, int len, uint8_t crc)
 		len--;
 	}
 	return crc;
-}
+}*/
 uint8_t crc8_single(uint8_t data, uint8_t crc)
 {
 	return crc8_table[data ^ crc];
@@ -136,21 +136,6 @@ static const uint8_t length_correction_crc8_table[256] = {
 	0xFFU, 0xFFU, 0x00U, 0xFFU, 0xFFU, 0xFFU, 0xFFU, 0xFFU,
 	0xFFU, 0xFFU, 0xFFU, 0xFFU, 0xFFU, 0xFFU, 0xFFU, 0xFFU,
 };
-int16_t decode_length(uint8_t length, uint8_t lengthCrc)
-{
-	uint8_t error = crc8_single(lengthCrc, crc8_single(length, 0xFF));
-	if (error == 0)
-	{
-		return length;
-	}
-	error = length_correction_crc8_table[error];
-	if (error != 0xFF)
-	{
-		return length ^ error;
-	}
-	return -1;
-}
-
 uint8_t* detect_packet(uint8_t* buffer, int buffer_count)
 {
 	buffer_count -= 2;
@@ -179,81 +164,4 @@ uint8_t* detect_packet(uint8_t* buffer, int buffer_count)
 		buffer_count--;
 	}
 	return NULL;
-}
-
-const uint64_t m1  = 0x5555555555555555; //binary: 0101...
-const uint64_t m2  = 0x3333333333333333; //binary: 00110011..
-const uint64_t m4  = 0x0f0f0f0f0f0f0f0f; //binary:  4 zeros,  4 ones ...
-const uint64_t h01 = 0x0101010101010101; //the sum of 256 to the power of 0,1,2,3...
-static int popcount64c(uint64_t x)
-{
-	x -= (x >> 1) & m1;             //put count of each 2 bits into those 2 bits
-	x = (x & m2) + ((x >> 2) & m2); //put count of each 4 bits into those 4 bits 
-	x = (x + (x >> 4)) & m4;        //put count of each 8 bits into those 8 bits 
-	return (x * h01) >> 56;  //returns left 8 bits of x + (x<<8) + (x<<16) + (x<<24) + ... 
-}
-
-int main()
-{
-	uint8_t packet[4][5] = {
-		{0xFF, 0xCA, 0x01, crc8_single(0x01, 0xFF), 0x00},
-		{0xCB, 0x00, crc8_single(0x00, 0xFE), 0x00, 0x01},
-		{0xFF, 0xFF, 0xDA, 0x03, crc8_single(0x02, 0xFF)},
-		{0xFF, 0xFF, 0xFF, 0xFF, 0xFF},
-	};
-
-	for (int i = 0; i < 4; i++)
-	{
-		uint8_t* detected = detect_packet(packet[i], 5);
-		if (detected == NULL)
-		{
-			printf("Packet %d not detected!\n", i);
-		}
-		else
-		{
-			printf("Packet %d detected at offset %d!\n", i, (int)(detected - packet[i]));
-		}
-	}
-
-	for (int i = 0; i < 256; i++)
-	{
-		uint8_t length = (uint8_t)i;
-		uint8_t crc = crc8_single(length, 0xFF);
-
-		//Test uncorrupted...
-		if (decode_length(length, crc) != i)
-		{
-			printf("Failed to decode pristine %d\n", i);
-		}
-		//Test corrupted...
-		uint16_t pair = ((uint16_t)length << 8) | crc;
-		for (int j = 1; j < 65536; j++)
-		{
-			uint16_t flip = pair ^ j;
-			length = flip >> 8;
-			crc = (uint8_t)flip;
-			int pop = popcount64c(j);
-			if (pop == 1)
-			{
-				if (decode_length(length, crc) != i)
-				{
-					printf("Failed to decode corrupted %d, %d\n", i, j);
-				}
-			}
-			else if (pop <= 3)
-			{
-				if (decode_length(length, crc) != -1)
-				{
-					printf("Failed to reject corrupted %d, %d\n", i, j);
-				}
-			}
-			else
-			{
-				if (decode_length(length, crc) == i)
-				{
-					printf("Unexpected correction %d, %d\n", i, j);
-				}
-			}
-		}
-	}
 }
