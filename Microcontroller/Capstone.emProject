@@ -19,11 +19,13 @@
       arm_target_debug_interface_type="ADIv5"
       arm_target_device_name="nRF52811_xxAA"
       arm_target_interface_type="SWD"
+      build_treat_warnings_as_errors="Yes"
       c_preprocessor_definitions="NRF52811_XXAA;__nRF_FAMILY;ARM_MATH_CM4;FLASH_PLACEMENT=1"
       c_user_include_directories="$(ProjectDir)/nRF/Device/Include"
       debug_register_definition_file="$(ProjectDir)/nrf52811.svd"
       debug_start_from_entry_point_symbol="No"
       debug_target_connection="J-Link"
+      gcc_c_language_standard="gnu11"
       gcc_entry_point="Reset_Handler"
       linker_memory_map_file="$(ProjectDir)/nRF52811_xxAA_MemoryMap.xml"
       linker_section_placement_file="$(ProjectDir)/flash_placement.xml"
@@ -59,6 +61,11 @@
       <file file_name="main.c" />
       <file file_name="crc.c" />
       <file file_name="crc.h" />
+      <file file_name="queue.h" />
+      <file file_name="queue.c" />
+      <file file_name="uart.c" />
+      <file file_name="uart.h" />
+      <file file_name="pins.h" />
     </folder>
     <folder Name="System Files">
       <file file_name="thumb_crt0.s" />
@@ -72,11 +79,16 @@
     Name="Debug"
     c_preprocessor_definitions="DEBUG"
     gcc_debugging_level="Level 3"
-    gcc_optimization_level="None" />
+    gcc_optimization_level="Debug" />
   <configuration
     Name="Release"
     c_preprocessor_definitions="NDEBUG"
     gcc_debugging_level="None"
     gcc_omit_frame_pointer="Yes"
-    gcc_optimization_level="Level 1" />
+    gcc_optimization_level="Level 2" />
+  <configuration
+    Name="DevKit"
+    c_preprocessor_definitions="DEBUG;DEVKIT"
+    gcc_debugging_level="Level 3"
+    gcc_optimization_level="Debug" />
 </solution>
