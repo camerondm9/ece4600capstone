@@ -66,8 +66,10 @@
       <file file_name="uart.c" />
       <file file_name="uart.h" />
       <file file_name="pins.h" />
-      <file file_name="xoroshiro.c" />
-      <file file_name="xoroshiro.h" />
+      <file file_name="xoshiro.c" />
+      <file file_name="xoshiro.h" />
+      <file file_name="radio_freq.c" />
+      <file file_name="radio_freq.h" />
     </folder>
     <folder Name="System Files">
       <file file_name="thumb_crt0.s" />
