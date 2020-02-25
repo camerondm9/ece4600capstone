@@ -13,7 +13,7 @@ void main(void)
 	uart_init();
 
 	__enable_irq();
-	
+
 	int i;
 
 	for (i = 0; i < 100; i++)
