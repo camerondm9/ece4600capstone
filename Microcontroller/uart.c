@@ -119,7 +119,7 @@ void uart_init()
 	NVIC_EnableIRQ(UARTE0_UART0_IRQn);
 
 	NRF_UARTE0->ENABLE = 8;
-	NRF_UARTE0->TASKS_STARTRX = 1;
+	NRF_UARTE0->TASKS_STARTRX = 1; //TODO: Setup packet buffers
 }
 
 static void uart_transmit_next()
