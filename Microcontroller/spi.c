@@ -2,6 +2,8 @@
 #include "pins.h"
 #include <nrf.h>
 
+uint8_t spi_sector_buffer[4096];
+
 void spi_init()
 {
 	//Configure SPI...
@@ -36,22 +38,57 @@ void spi_init_fpga()
 
 }
 
-void spi_select_slave()
-{
-
-}
-
-void spi_transfer_fpga_configuration()
-{
-
-}
-
 void spi_transfer()
 {
 
 }
 
+void spi_write_sector()
+{
+	//TODO: Write-enable
+	//Transmit: [0x06]
+	//TODO: Erase sector
+	//Transmit: [0x20, A2, A1, A0] (24-bit address)
+	//TODO: Loop through all 16 pages within sector:
+		//TODO: Write-enable
+		//Transmit: [0x06]
+		//TODO: Program page
+		//Transmit: [0x02, A2, A1, A0] (24-bit address)
+		//Transmit: [256 bytes]
+}
+
+void spi_read_control_sector()
+{
+	//Transmit: [0x03, A2, A1, A0]
+	//Receive: [...as many bytes as you want...]
+}
+
+void spi_transfer_fpga_configuration()
+{
+	//TODO: Increment FPGA-init counter
+	//TODO: Ensure FPGA is in reset
+	//TODO: Read control block
+	//TODO: Begin read transaction (FPGA bitstream)
+	//TODO: Wake FPGA
+	//TODO: Read all bytes (fixed start address (after control block), length is in control block)
+	//TODO: Complete transaction (release chip select)
+	//TODO: Wait for FPGA to be ready (timeout is needed)
+	//TODO: If timeout: Reset FPGA, start from the beginning
+
+	//TODO: Once FPGA is ready:
+	//TODO: Begin read transaction (waveforms)
+	//TODO: Signal FPGA (chip select)
+	//TODO: Read all bytes (memory address and length from control block)
+	//TODO: Complete transaction (release chip selects)
+
+	//TODO: Power-down flash memory?
+}
+
 void SPIM0_SPIS0_SPI0_IRQHandler(void)
 {
+	if (NRF_SPIM0->EVENTS_END)
+	{
+		NRF_SPIM0->EVENTS_END = 0;
 
+	}
 }
