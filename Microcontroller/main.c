@@ -3,6 +3,19 @@
 #include "uart.h"
 #include <nrf.h>
 
+typedef enum STATES
+{
+	STATE_STARTUP = 0,
+	STATE_READY,
+	STATE_ADVERTISING,
+	STATE_SLAVE,
+	STATE_SEARCHING,
+	STATE_MASTER,
+	STATE_DOWNLOAD,
+} STATES;
+
+volatile STATES main_state = STATE_STARTUP;
+
 void main(void)
 {
 	//TODO: Make sure interrupts are disabled here, if they could cause a problem.
@@ -14,19 +27,41 @@ void main(void)
 
 	__enable_irq();
 
-	int i;
 
-	for (i = 0; i < 100; i++)
+	printf("Initialization complete. Entering pairing mode\n");
+	while (1)
 	{
-		printf("Hello World %d!\n", i);
-	}
-	do
-	{
-		i++;
-		if (NRF_UARTE0->EVENTS_RXDRDY)
+		switch (main_state)
 		{
-			NRF_UARTE0->EVENTS_RXDRDY = 0;
-			printf("RXDRDY %d\n", i);
+		case STATE_STARTUP:
+
+			break;
+		case STATE_ADVERTISING:
+
+			break;
+		case STATE_SLAVE:
+
+			break;
+		case STATE_SEARCHING:
+
+			break;
+		case STATE_MASTER:
+
+			break;
+		case STATE_DOWNLOAD:
+
+			break;
+		default:
+
+			break;
 		}
-	} while (1);
+	}
 }
+
+//TODO: Setup state machine:
+// - Pairing mode (default, at startup)
+// - Slave mode (after master-initiated pairing)
+// - Master mode (activated by "master mode" UART packet from computer)
+//There will be many sub-states...
+
+//TODO: State machine will control FPGA configuration, HV power status

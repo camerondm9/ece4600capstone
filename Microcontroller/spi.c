@@ -2,8 +2,6 @@
 #include "pins.h"
 #include <nrf.h>
 
-uint8_t spi_sector_buffer[4096];
-
 void spi_init()
 {
 	//Configure SPI...
@@ -32,18 +30,14 @@ void spi_transfer()
 	//When operating in FLASH->FPGA transfer mode, the FPGA will remap its' input to receive from the flash memory.
 }
 
-void spi_write_sector()
+void spi_erase_sector()
 {
-	//TODO: Write-enable
-	//Transmit: [0x06]
-	//TODO: Erase sector
-	//Transmit: [0x20, A2, A1, A0] (24-bit address)
-	//TODO: Loop through all 16 pages within sector:
-		//TODO: Write-enable
-		//Transmit: [0x06]
-		//TODO: Program page
-		//Transmit: [0x02, A2, A1, A0] (24-bit address)
-		//Transmit: [256 bytes]
+
+}
+
+void spi_program_page()
+{
+	//TODO: We should be able to transfer the bytes directly from the UART packet
 }
 
 void spi_read_control_sector()
