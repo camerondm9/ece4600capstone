@@ -1,4 +1,11 @@
 import crcmod
+import serial
+import serial.tools.list_ports
+
+
+for port in serial.tools.list_ports.comports():
+	print(port)
+
 
 crc16 = crcmod.mkCrcFun(0x1A2EB)
 print(f"0x{format(crc16(bytes()), '04X')}")

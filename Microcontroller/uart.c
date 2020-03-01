@@ -1,6 +1,7 @@
 #include "uart.h"
 #include "pins.h"
 #include "crc.h"
+#include <string.h>
 #include <stddef.h>
 #include <nrf.h>
 
@@ -67,7 +68,7 @@ static uint8_t* uart_detect_packet(uint8_t* buffer, int buffer_count)
 		buffer++;
 		buffer_count--;
 	}
-	return 0;
+	return NULL;
 }
 
 uint32_t uart_errors_framing = 0;
@@ -81,11 +82,11 @@ Queue uart_emq = QUEUE(32);
 
 static UartPacket uart_packets[18]; //TODO: Can we shrink the size of the queues? That would allow us to reserve less space for packets, and use less of our (precious) RAM...
 
-static UartPacket* volatile uart_tx_packet;
-static UartPacket* volatile uart_rx_packet;
+static UartPacket* volatile uart_tx_packet = NULL;
+static UartPacket* volatile uart_rx_packet = NULL;
+static volatile uint32_t uart_rx_state = 0;
 
-uint8_t echo_buffer1[4];
-uint8_t echo_buffer2[4];
+#define UART_PACKET_HEADER_SIZE (8)
 
 void uart_init()
 {
@@ -94,15 +95,11 @@ void uart_init()
 	{
 		queue_enqueue(&uart_emq, &uart_packets[i]);
 	}
-	//Configure UART...
+	uart_rx_packet = queue_dequeue(&uart_emq);
+	//Configure pins...
 	NRF_P0->PIN_CNF[PIN_MICRO_TX] = 0x0030F; //sense disabled, high drive, pull-up, output
 	NRF_P0->PIN_CNF[PIN_MICRO_RX] = 0x0000C; //sense disabled, standard drive, pull-up, input
-
-	//TODO: If we want to conserve power by not enabling the UART unless needed, we could set the sense bit for the RX pin.
-	// When a signal was detected, disable the sense bit, enable the UART, and start a timer. If a valid packet is received,
-	// reset the timer. If the timer expires, disabled the UART (wait for a full shutdown), and re-enable the sense bit.
-	//NOTE: The amount of power saved is probably not worth doing this...
-
+	//Configure UART...
 	NRF_UARTE0->SHORTS = 0;
 	NRF_UARTE0->INTEN = 0x00000310; //ERROR, ENDTX, ENDRX
 	NRF_UARTE0->PSEL.CTS = 0x80000000; //not connected
@@ -110,16 +107,14 @@ void uart_init()
 	NRF_UARTE0->PSEL.RXD = PIN_MICRO_RX;
 	NRF_UARTE0->PSEL.TXD = PIN_MICRO_TX;
 	NRF_UARTE0->BAUDRATE = 0x03B00000; //230400 baud
-	NRF_UARTE0->RXD.PTR = (uint32_t)&echo_buffer1; //TODO: switch to actually receiving packets
-	NRF_UARTE0->RXD.MAXCNT = sizeof(echo_buffer1);
+	NRF_UARTE0->RXD.PTR = (uint32_t)uart_rx_packet;
+	NRF_UARTE0->RXD.MAXCNT = UART_PACKET_HEADER_SIZE;
 	NRF_UARTE0->TXD.PTR = NULL;
 	NRF_UARTE0->TXD.MAXCNT = 0;
 	NRF_UARTE0->CONFIG = 0; //1 stop-bit, parity disabled, flow-control disabled
-
 	NVIC_EnableIRQ(UARTE0_UART0_IRQn);
-
 	NRF_UARTE0->ENABLE = 8;
-	NRF_UARTE0->TASKS_STARTRX = 1; //TODO: Setup packet buffers
+	NRF_UARTE0->TASKS_STARTRX = 1;
 }
 
 static void uart_transmit_next()
@@ -192,22 +187,46 @@ void UARTE0_UART0_IRQHandler(void)
 	if (NRF_UARTE0->EVENTS_ENDRX)
 	{
 		NRF_UARTE0->EVENTS_ENDRX = 0;
-
-		//TODO: How do we determine whether we are starting a packet or completing it?
-
-		uart_detect_packet(uart_rx_packet->raw, 8);
-
-		//TODO: First receive DMA will get 8 bytes. detect_packet will try (up to) 6 offsets to find a packet start marker.
-		//TODO: If no marker is found, the last 2 bytes will be copied to the start of the buffer, and 6 more bytes will be read (using DMA).
-		//TODO: If a marker is found, the data will be copied into the packet struct so that the fields are aligned correctly.
-		//TODO: Then the total packet length will be computed, and the remaining bytes will be read directly into the packet struct (using DMA).
-		//TODO: After a complete packet has been received, this process starts over (with an 8-byte DMA read).
-
-		NRF_UARTE0->TXD.PTR = NRF_UARTE0->RXD.PTR;
-		NRF_UARTE0->TXD.MAXCNT = sizeof(echo_buffer1);
-		NRF_UARTE0->RXD.PTR ^= ((uint32_t)&echo_buffer1 ^ (uint32_t)&echo_buffer2);
-		NRF_UARTE0->TASKS_STARTTX = 1;
-
+		if (uart_rx_state)
+		{
+			//Packet is complete...
+			if (queue_enqueue(&uart_rxq, uart_rx_packet))
+			{
+				uart_rx_packet = queue_dequeue(&uart_emq);
+			}
+			//Receive next packet...
+			uart_rx_state = 0;
+			NRF_UARTE0->RXD.PTR = (uint32_t)uart_rx_packet;
+			NRF_UARTE0->RXD.MAXCNT = UART_PACKET_HEADER_SIZE;
+		}
+		else
+		{
+			//TODO: Test this whole block to see if it works... (below)
+			//Scan for header...
+			uint8_t* p = uart_rx_packet->raw;
+			uint8_t* h = uart_detect_packet(p, UART_PACKET_HEADER_SIZE);
+			if (h)
+			{
+				uint32_t offset = h - p;
+				uint32_t length = UART_PACKET_HEADER_SIZE - offset;
+				if (offset != 1)
+				{
+					memmove(p + 1, h, length);
+				}
+				//Receive rest of packet...
+				uart_rx_state = 1;
+				NRF_UARTE0->RXD.PTR = (uint32_t)(p + 1 + length);
+				NRF_UARTE0->RXD.MAXCNT = uart_rx_packet->length[0] + offset;
+			}
+			else
+			{
+				memmove(p, p + 6, 2);
+				//Continue search for header...
+				NRF_UARTE0->RXD.PTR = (uint32_t)(p + 2);
+				NRF_UARTE0->RXD.MAXCNT = UART_PACKET_HEADER_SIZE - 2;
+			}
+			//TODO: Test this whole block to see if it works... (above)
+		}
 		NRF_UARTE0->TASKS_STARTRX = 1;
 	}
 }

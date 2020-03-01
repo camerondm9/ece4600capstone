@@ -4,11 +4,11 @@
 
 void spi_init()
 {
-	//Configure SPI...
+	//Configure pins...
 	NRF_P0->PIN_CNF[PIN_FPGA_CLK] = 0x0030F; //sense disabled, high drive, pull-up, output
 	NRF_P0->PIN_CNF[PIN_FPGA_DOUT] = 0x0030F; //sense disabled, high drive, pull-up, output
 	NRF_P0->PIN_CNF[PIN_FPGA_DIN] = 0x0000C; //sense disabled, standard drive, pull-up, input
-
+	//Configure SPI...
 	NRF_SPIM0->SHORTS = 0;
 	NRF_SPIM0->INTENSET = 0x40; //END
 	NRF_SPIM0->PSEL.SCK = PIN_FPGA_CLK;
