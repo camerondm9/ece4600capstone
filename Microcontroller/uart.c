@@ -201,31 +201,31 @@ void UARTE0_UART0_IRQHandler(void)
 		}
 		else
 		{
-			//TODO: Test this whole block to see if it works... (below)
 			//Scan for header...
-			uint8_t* p = uart_rx_packet->raw;
-			uint8_t* h = uart_detect_packet(p, UART_PACKET_HEADER_SIZE);
+			UartPacket* p = uart_rx_packet;
+			uint8_t* h = uart_detect_packet(p->raw, UART_PACKET_HEADER_SIZE);
 			if (h)
 			{
-				uint32_t offset = h - p;
+				uint32_t offset = h - p->raw;
 				uint32_t length = UART_PACKET_HEADER_SIZE - offset;
 				if (offset != 1)
 				{
-					memmove(p + 1, h, length);
+                    uart_errors_sync++;
+					memmove(p->raw + 1, h, length);
 				}
 				//Receive rest of packet...
 				uart_rx_state = 1;
-				NRF_UARTE0->RXD.PTR = (uint32_t)(p + 1 + length);
-				NRF_UARTE0->RXD.MAXCNT = uart_rx_packet->length[0] + offset;
+				NRF_UARTE0->RXD.PTR = (uint32_t)(p->raw + 1 + length);
+				NRF_UARTE0->RXD.MAXCNT = p->length[0] + offset;
 			}
 			else
 			{
-				memmove(p, p + 6, 2);
+                uart_errors_sync++
+				memmove(p->raw, p->raw + 6, 2);
 				//Continue search for header...
-				NRF_UARTE0->RXD.PTR = (uint32_t)(p + 2);
+				NRF_UARTE0->RXD.PTR = (uint32_t)(p->raw + 2);
 				NRF_UARTE0->RXD.MAXCNT = UART_PACKET_HEADER_SIZE - 2;
 			}
-			//TODO: Test this whole block to see if it works... (above)
 		}
 		NRF_UARTE0->TASKS_STARTRX = 1;
 	}

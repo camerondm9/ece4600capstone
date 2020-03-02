@@ -86,6 +86,8 @@
 #else
 //		Pin			Net
 //--------------------------------
+#define PIN_nRESET (21)
+
 //GPIO:
 //		P0.13		SW1
 //		P0.14		SW2
@@ -107,5 +109,11 @@
 //		P0.08		RXD
 #define PIN_MICRO_TX (6)
 #define PIN_MICRO_RX (8)
+
+//SPI: (not connected)
+#define PIN_FPGA_DIN (22)
+#define PIN_FPGA_CLK (23)
+#define PIN_FPGA_DOUT (24)
+#define PIN_FPGA_CS (25)
 
 #endif

@@ -3,6 +3,11 @@
 #include <stdint.h>
 #include "queue.h"
 
+extern uint32_t uart_errors_framing;
+extern uint32_t uart_errors_overrun;
+extern uint32_t uart_errors_sync;
+extern uint32_t uart_errors_crc;
+
 extern Queue uart_txq;
 extern Queue uart_rxq;
 extern Queue uart_emq;
@@ -22,3 +27,4 @@ typedef struct UartPacket
 } UartPacket;
 
 void uart_init();
+int uart_transmit(UartPacket* packet);
