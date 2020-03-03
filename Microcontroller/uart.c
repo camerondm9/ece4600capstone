@@ -190,7 +190,7 @@ void UARTE0_UART0_IRQHandler(void)
 		if (uart_rx_state)
 		{
 			//Packet is complete...
-			if (queue_enqueue(&uart_rxq, uart_rx_packet))
+complete:	if (queue_enqueue(&uart_rxq, uart_rx_packet))
 			{
 				uart_rx_packet = queue_dequeue(&uart_emq);
 			}
@@ -213,14 +213,20 @@ void UARTE0_UART0_IRQHandler(void)
                     uart_errors_sync++;
 					memmove(p->raw + 1, h, length);
 				}
+				//Check for full packet...
+				uint32_t remaining = p->length[0] + offset;
+				if (remaining == 0)
+				{
+					goto complete;
+				}
 				//Receive rest of packet...
 				uart_rx_state = 1;
 				NRF_UARTE0->RXD.PTR = (uint32_t)(p->raw + 1 + length);
-				NRF_UARTE0->RXD.MAXCNT = p->length[0] + offset;
+				NRF_UARTE0->RXD.MAXCNT = remaining;
 			}
 			else
 			{
-                uart_errors_sync++
+                uart_errors_sync++;
 				memmove(p->raw, p->raw + 6, 2);
 				//Continue search for header...
 				NRF_UARTE0->RXD.PTR = (uint32_t)(p->raw + 2);
