@@ -31,6 +31,19 @@ void main(void)
 	printf("Initialization complete. Entering pairing mode\n");
 	while (1)
 	{
+		UartPacket* packet = queue_dequeue(&uart_rxq);
+		if (packet)
+		{
+			if (uart_check_crc(packet))
+			{
+				//Echo...
+				uart_transmit(packet);
+			}
+			else
+			{
+				queue_enqueue(&uart_emq, packet);
+			}
+		}
 		switch (main_state)
 		{
 		case STATE_STARTUP:

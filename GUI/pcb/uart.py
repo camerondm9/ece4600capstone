@@ -57,10 +57,9 @@ def crc_test():
 	print(f"0x{format(crc8(bytes([0xFF])), '02X')}")
 
 
-# TODO: Translate C code for packet reception to Python
-
 # TODO: FPGA expects configuration data LSB-first, but our SPI bus is running MSB-first.
 # When loading configuration files onto the flash memory, flip the order of the bits.
+
 
 def detect_packet(buffer):
 	count = len(buffer) - 2
@@ -80,15 +79,18 @@ def detect_packet(buffer):
 				return i
 	return -1
 
+PACKET_HEADER_SIZE = 8
+
 class PacketStream:
 	def __init__(self, port):
 		self.tx_lock = asyncio.Lock()
 		self.rx_lock = asyncio.Lock()
+		self.rx_buffer = bytearray(264)
 		if not isinstance(port, str):
 			port = port.device
 		self.port = aioserial.AioSerial(port, 230400)
 
-	async def write_packet(self, payload, byte_sync_count=1):
+	async def write_packet(self, payload):
 		#Build packet
 		length = len(payload) - 3
 		extra = 0
@@ -96,31 +98,46 @@ class PacketStream:
 			extra = -length
 			length = 0
 		packet = bytearray()
-		while byte_sync_count > 0:
-			packet.append(0xFF)
-			byte_sync_count -= 1
+		packet.append(0xFF)
 		packet.append(0xCA)
 		packet.append(length)
 		packet.append(crc8(bytes([length])))
 		packet.extend(payload)
-		#Zero-padding to minimum length (CRC ignores trailing zeros anyway)
+		#Zero-padding to minimum length
 		while extra > 0:
 			packet.append(0)
-		packet.extend(crc16(payload).to_bytes(2, 'little'))
+			extra -= 1
+		#Compute CRC
+		packet.append(0)
+		packet.append(0)
+		view = memoryview(packet)
+		packet[7+length:9+length] = crc16(view[4:7+length]).to_bytes(2, 'little')
 		#Write packet to UART
-		print(' '.join('{:02x}'.format(b) for b in packet))
+		print('Write: ' + ' '.join('{:02x}'.format(b) for b in packet))
 		async with self.tx_lock:
 			await self.port.write_async(packet)
 
 	async def read_packet(self):
 		async with self.rx_lock:
-			buffer = bytes(8)
-			#TODO: Loop until header detected
-			await self.port.readinto_async(buffer)
-			offset = detect_packet(buffer)
-			if offset >= 0:
-				length = 8 - offset
-				#TODO: Receive rest of packet
+			view = memoryview(self.rx_buffer)
+			start = 0
+			while True:
+				await self.port.readinto_async(view[start:PACKET_HEADER_SIZE])
+				offset = detect_packet(view)
+				if offset >= 0:
+					length = PACKET_HEADER_SIZE - offset
+					#Shift header
+					if offset != 1:
+						view[1:1+length] = view[offset:offset+length]
+					#Receive rest of packet
+					packet_length = view[2]
+					remaining = packet_length + offset
+					if remaining > 0:
+						await self.port.readinto_async(view[length+1:length+1+remaining])
+					print('Read:  ' + ' '.join('{:02x}'.format(b) for b in view[0:9+packet_length]))
+					#Extract CRC
+					if int.from_bytes(view[7+packet_length:9+packet_length], 'little') == crc16(view[4:7+packet_length]):
+						return bytes(view[4:7+packet_length])
 		return None
 
 async def send_test_packets():
@@ -130,10 +147,12 @@ async def send_test_packets():
 	port = PacketStream(input("Port: "))
 	i = 0
 	while True:
-		await port.write_packet(i.to_bytes(4, 'little') + secrets.token_bytes(secrets.randbelow(40)), i % 8)
+		await port.write_packet(i.to_bytes(2, 'little') + secrets.token_bytes(secrets.randbelow(40)))
+		response = await port.read_packet()
 		i += 1
 		await aioconsole.ainput("Send packet?")
 		await asyncio.sleep(0.1)
 
 if __name__ == "__main__":
 	asyncio.run(send_test_packets())
+

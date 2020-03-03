@@ -129,6 +129,12 @@ static void uart_transmit_next()
 	}
 }
 
+int uart_check_crc(UartPacket* packet)
+{
+	uint8_t length = packet->length[0];
+	return crc16(packet->payload, 3 + length, 0xFFFF) == *(uint16_t*)(&packet->payload[3 + length]);
+}
+
 int uart_transmit(UartPacket* packet)
 {
 	//Prepare packet for transmission...

@@ -27,4 +27,5 @@ typedef struct UartPacket
 } UartPacket;
 
 void uart_init();
+int uart_check_crc(UartPacket* packet);
 int uart_transmit(UartPacket* packet);
