@@ -1,10 +1,10 @@
-module CapstoneFpga(spi_cs_p, spi_clk, spi_din, spi_dout_tri, link0, link1, link2, link3, link4, link5, clk12, adc_cs, adc_clk, adc_sdo, transmit_enable, dac_cs, dac_clk, dac_sdi, vga_cs0, vga_cs1, vga_clk, vga_d0, vga_d1);
-	input spi_cs_p;
+module CapstoneFpga(spi_flash_cs, spi_clk, spi_din, spi_dout_tri, link0, link1, link2, link3, link4, link5, clk12, adc_cs, adc_clk, adc_sdo, transmit_enable, dac_cs, dac_clk, dac_sdi, vga_cs0, vga_cs1, vga_clk, vga_d0, vga_d1);
+	input spi_flash_cs;
 	input spi_clk;
 	input spi_din;
 	inout wire spi_dout_tri;
 	wire spi_dout;
-	assign spi_dout_tri = spi_cs_p ? spi_dout : 'bZ;
+	assign spi_dout_tri = spi_flash_cs ? spi_dout : 'bZ;
 	
 	input link0;
 	input link1;

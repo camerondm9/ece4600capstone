@@ -116,4 +116,12 @@
 #define PIN_FPGA_DOUT (24)
 #define PIN_FPGA_CS (25)
 
+//LINK:
+#define PIN_LINK5 (31)
+#define PIN_LINK4 (30)
+#define PIN_LINK3 (29)
+#define PIN_LINK2 (28)
+#define PIN_LINK1 (4)
+#define PIN_LINK0 (3)
+
 #endif
