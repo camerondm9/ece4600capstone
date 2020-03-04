@@ -138,6 +138,13 @@ class PacketStream:
 					#Extract CRC
 					if int.from_bytes(view[7+packet_length:9+packet_length], 'little') == crc16(view[4:7+packet_length]):
 						return bytes(view[4:7+packet_length])
+					else:
+						#Restart search for packet header
+						start = 0
+				else:
+					#Continue search for header
+					view[0:2] = view[PACKET_HEADER_SIZE-2:PACKET_HEADER_SIZE]
+					start = 2
 		return None
 
 async def send_test_packets():
