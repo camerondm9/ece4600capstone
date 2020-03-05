@@ -17,6 +17,13 @@ typedef enum STATES
 
 volatile STATES main_state = STATE_STARTUP;
 
+
+
+//TODO: fpga_test_bitstream
+void fpga_test_transfer();
+//TODO: fpga_test_bitstream
+
+
 void main(void)
 {
 	//TODO: Make sure interrupts are disabled here, if they could cause a problem.
@@ -50,6 +57,9 @@ void main(void)
 	tx2->buffer[1] = 0x8F;
 	spi_transfer(tx2);
 
+	//TODO: Begin FPGA test code
+	fpga_test_transfer();
+	//TODO: End FPGA test code
 
 	while (1)
 	{

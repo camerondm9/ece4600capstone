@@ -72,6 +72,8 @@
       <file file_name="radio_freq.h" />
       <file file_name="spi.c" />
       <file file_name="spi.h" />
+      <file file_name="fpga_test_bitstream.s" />
+      <file file_name="fpga_test_transfer.c" />
     </folder>
     <folder Name="System Files">
       <file file_name="thumb_crt0.s" />
