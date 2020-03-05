@@ -46,6 +46,7 @@ module CapstoneFpga(spi_flash_cs, spi_clk, spi_din, spi_dout_tri, link0, link1, 
 	//Hold logic in reset until PLL is locked
 	reset_controller reset0(clk48, reset_req, pll_locked, reset);
 	
+	//TODO: Clock passthrough (this might change, depending on if we need the clocks to be synced to something)
 	assign adc_clk = clk48;
 	assign dac_clk = clk48;
 	assign vga_clk = clk48;
