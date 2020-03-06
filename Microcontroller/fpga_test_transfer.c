@@ -9,7 +9,7 @@ extern uint32_t fpga_test_bitstream_size;
 
 void fpga_test_transfer()
 {
-	printf("Begin FPGA config transfer...");
+	printf("Begin FPGA config transfer...\n");
 
 	//Setup GPIO pins...
 	NRF_P0->PIN_CNF[PIN_FPGA_nCONFIG] = 0x0030F; //sense disabled, high drive, pull-up, output
@@ -27,6 +27,7 @@ void fpga_test_transfer()
 
 	//Wait for nSTATUS high...
 	while ((NRF_GPIO->IN & (1 << PIN_FPGA_nSTATUS)) == 0) {}
+	for (volatile int i = 0; i < 10; i++) {}
 
 	//Transfer entire bitstream in 256-byte blocks...
 	for (uint32_t i = 0; i < fpga_test_bitstream_size; i += 256)
@@ -41,16 +42,16 @@ void fpga_test_transfer()
 		tx->length = len - 1;
 		tx->pointer = &fpga_test_bitstream[i];
 		tx->next = NULL;
-		spi_transfer(tx);
+		while (!spi_transfer(tx)) {}
 	}
 
 	//Check nSTATUS...
 	if ((NRF_GPIO->IN & (1 << PIN_FPGA_nSTATUS)) == 0)
 	{
-		printf("FPGA signals failure: nSTATUS is low.");
+		printf("FPGA signals failure: nSTATUS is low.\n");
 	}
 
-	printf("FPGA config transfer complete, waiting for initialization...");
+	printf("FPGA config transfer complete, waiting for initialization...\n");
 
 	//Wait for CONF_DONE high and INIT_DONE high...
 	while ((NRF_GPIO->IN & (1 << PIN_FPGA_CONF_DONE)) == 0) {}
@@ -59,5 +60,5 @@ void fpga_test_transfer()
 	//Switch back to MSB-first SPI...
 	NRF_SPIM0->CONFIG &= ~1;
 
-	printf("FPGA config transfer successful.");
+	printf("FPGA config transfer successful.\n");
 }

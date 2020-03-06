@@ -38,7 +38,7 @@ void main(void)
 
 
 	printf("Initialization complete. Entering pairing mode\n");
-
+/*
 	SpiTransfer* tx1 = queue_dequeue(&spi_emq);
 	tx1->flags = SPI_FLAG_FPGA | SPI_FLAG_INLINE | SPI_FLAG_WRITE;
 	tx1->length = 2;
@@ -56,6 +56,7 @@ void main(void)
 	tx2->buffer[0] = 0xF1;
 	tx2->buffer[1] = 0x8F;
 	spi_transfer(tx2);
+*/
 
 	//TODO: Begin FPGA test code
 	fpga_test_transfer();

@@ -20,6 +20,8 @@ void spi_init()
 		queue_enqueue(&spi_emq, &spi_transfers[i]);
 	}
 	//Configure pins...
+	NRF_P0->PIN_CNF[PIN_LINK5] = 0x0030F; //sense disabled, high drive, pull-up, output
+	NRF_P0->PIN_CNF[PIN_FPGA_CS] = 0x0030F; //sense disabled, high drive, pull-up, output
 	NRF_P0->PIN_CNF[PIN_FPGA_CLK] = 0x0030F; //sense disabled, high drive, pull-up, output
 	NRF_P0->PIN_CNF[PIN_FPGA_DOUT] = 0x0000C; //sense disabled, standard drive, pull-up, input
 	NRF_P0->PIN_CNF[PIN_FPGA_DIN] = 0x0000C; //sense disabled, standard drive, pull-up, input
@@ -124,6 +126,7 @@ static void spi_transfer_next()
 	{
 		//Save power when not in use...
 		NRF_SPIM0->ENABLE = 0;
+		NRF_GPIO->OUTSET = (1 << PIN_FPGA_CLK);
 	}
 }
 
