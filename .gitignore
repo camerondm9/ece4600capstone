@@ -22,6 +22,7 @@ FPGA/incremental_db/
 FPGA/output/
 FPGA/simulation/
 FPGA/*.bak
+FPGA/.qsys_edit/
 
 #Segger Embedded Studio
 Microcontroller/Output/
