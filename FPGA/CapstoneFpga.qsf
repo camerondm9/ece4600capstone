@@ -55,7 +55,6 @@ set_global_assignment -name EDA_BOARD_DESIGN_SIGNAL_INTEGRITY_TOOL "IBIS (Signal
 set_global_assignment -name EDA_OUTPUT_DATA_FORMAT IBIS -section_id eda_board_design_signal_integrity
 set_global_assignment -name EDA_BOARD_DESIGN_BOUNDARY_SCAN_TOOL "<None>"
 set_global_assignment -name EDA_OUTPUT_DATA_FORMAT NONE -section_id eda_board_design_boundary_scan
-set_global_assignment -name VERILOG_FILE CapstoneFpga.v
 set_global_assignment -name DEVICE_FILTER_PACKAGE TQFP
 set_global_assignment -name DEVICE_FILTER_SPEED_GRADE 8
 set_global_assignment -name ENABLE_INIT_DONE_OUTPUT ON
@@ -82,9 +81,7 @@ set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
 set_global_assignment -name EDA_RUN_TOOL_AUTOMATICALLY OFF -section_id eda_simulation
 set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST ON -section_id eda_simulation
 set_instance_assignment -name DCLK_PIN ON -to spi_clk
-set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to spi_cs_p
 set_instance_assignment -name DATA0_PIN ON -to spi_din
-set_location_assignment PIN_8 -to spi_cs_p
 set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to adc_clk
 set_instance_assignment -name FAST_OUTPUT_REGISTER ON -to adc_clk
 set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to adc_cs
@@ -126,7 +123,6 @@ set_instance_assignment -name FAST_INPUT_REGISTER ON -to link3
 set_instance_assignment -name FAST_INPUT_REGISTER ON -to link4
 set_instance_assignment -name FAST_INPUT_REGISTER ON -to link5
 set_instance_assignment -name FAST_INPUT_REGISTER ON -to spi_clk
-set_instance_assignment -name FAST_INPUT_REGISTER ON -to spi_cs_p
 set_instance_assignment -name FAST_INPUT_REGISTER ON -to spi_din
 set_location_assignment PIN_50 -to vga_d1
 set_location_assignment PIN_58 -to vga_d0
@@ -153,12 +149,8 @@ set_location_assignment PIN_71 -to dac_sdi
 set_location_assignment PIN_91 -to clk12
 
 set_global_assignment -name RESERVE_FLASH_NCE_AFTER_CONFIGURATION "USE AS REGULAR IO"
-set_global_assignment -name QIP_FILE pll12_192_48.qip
-set_global_assignment -name SDC_FILE CapstoneFpga.sdc
 set_location_assignment PIN_13 -to spi_din
 set_location_assignment PIN_12 -to spi_clk
-set_global_assignment -name VERILOG_FILE corr_block.v
-set_global_assignment -name QIP_FILE corr_ram_shift.qip
 set_instance_assignment -name CURRENT_STRENGTH_NEW 2MA -to adc_clk
 set_instance_assignment -name CURRENT_STRENGTH_NEW 2MA -to adc_cs
 set_instance_assignment -name CURRENT_STRENGTH_NEW 2MA -to dac_clk
@@ -172,9 +164,18 @@ set_instance_assignment -name CURRENT_STRENGTH_NEW 2MA -to vga_cs1
 set_instance_assignment -name CURRENT_STRENGTH_NEW 2MA -to vga_d0
 set_instance_assignment -name CURRENT_STRENGTH_NEW 2MA -to vga_d1
 set_global_assignment -name DEVICE_MIGRATION_LIST 10CL010YE144C8G
+set_global_assignment -name ON_CHIP_BITSTREAM_DECOMPRESSION ON
+set_global_assignment -name GENERATE_RBF_FILE ON
+set_global_assignment -name QIP_FILE internal_osc.qip
+set_global_assignment -name VERILOG_FILE CapstoneFpga.v
+set_global_assignment -name QIP_FILE pll12_192_48.qip
+set_global_assignment -name SDC_FILE CapstoneFpga.sdc
+set_global_assignment -name VERILOG_FILE corr_block.v
+set_global_assignment -name QIP_FILE corr_ram_shift.qip
 set_global_assignment -name VERILOG_FILE corr_full.v
 set_global_assignment -name QIP_FILE corr_ram_coeff.qip
 set_global_assignment -name VERILOG_FILE reset_controller.v
-set_global_assignment -name ON_CHIP_BITSTREAM_DECOMPRESSION ON
-set_global_assignment -name GENERATE_RBF_FILE ON
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to spi_flash_cs
+set_location_assignment PIN_8 -to spi_flash_cs
+set_instance_assignment -name FAST_INPUT_REGISTER ON -to spi_flash_cs
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

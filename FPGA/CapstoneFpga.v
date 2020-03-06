@@ -1,4 +1,4 @@
-module CapstoneFpga(spi_flash_cs, spi_clk, spi_din, spi_dout_tri, link0, link1, link2, link3, link4, link5, clk12, adc_cs, adc_clk, adc_sdo, transmit_enable, dac_cs, dac_clk, dac_sdi, vga_cs0, vga_cs1, vga_clk, vga_d0, vga_d1);
+module CapstoneFpga(spi_flash_cs, spi_clk, spi_din, spi_dout_tri, link0, link1, link2, link3, link4, link5, clk12, adc_cs, adc_clk, adc_sdo, transmit_enable, dac_cs, dac_clk, dac_sdi, vga_cs0, vga_cs1, vga_clk, vga_d0, vga_d1, int_osc);
 	input spi_flash_cs;
 	input spi_clk;
 	input spi_din;
@@ -33,6 +33,8 @@ module CapstoneFpga(spi_flash_cs, spi_clk, spi_din, spi_dout_tri, link0, link1, 
 	output wire vga_clk;
 	output reg vga_d0;
 	output reg vga_d1;
+	
+	output wire int_osc;
 
 	//PLL to generate faster clocks
 	pll12_192_48 pll0(
@@ -54,5 +56,20 @@ module CapstoneFpga(spi_flash_cs, spi_clk, spi_din, spi_dout_tri, link0, link1, 
 	//Correllator...
 	wire[8:0] shift_out_discard;
 	corr_full corr0(reset, clk192, 0, shift_out_discard, 0, 0, 0, 0);
+	
+	
+	
+	//Test code
+	internal_osc osc0(int_osc, 1);
+
+	reg[2:0] test_counter;
+	
+	always @(posedge int_osc)
+	begin
+		dac_sdi <= test_counter[0];
+		vga_d0 <= test_counter[1];
+		vga_d1 <= test_counter[2];
+		test_counter <= test_counter + 1;
+	end
 	
 endmodule
