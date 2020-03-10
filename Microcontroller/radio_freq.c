@@ -9,3 +9,12 @@ static const uint8_t RADIO_CHANNEL_FREQ[40] = {
 	0x36, 0x38, 0x3A, 0x3C, 0x3E, 0x40, 0x42, 0x44,
 	0x46, 0x48, 0x4A, 0x4C, 0x4E, 0x02, 0x1A, 0x50,
 };
+
+uint8_t channel_probability[10] = {0};
+
+uint8_t get_channel_probability_mask(uint32_t channel)
+{
+	uint32_t index = channel >> 2;
+	uint32_t offset = (channel & 3) << 1;
+	return (1 << ((channel_probability[index] >> offset) & 3)) - 1;
+}
