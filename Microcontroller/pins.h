@@ -116,6 +116,11 @@
 #define PIN_FPGA_DOUT (24)
 #define PIN_FPGA_CS (25)
 
+#define PIN_FPGA_nCONFIG (27)
+#define PIN_FPGA_nSTATUS (26)
+#define PIN_FPGA_CONF_DONE (2)
+#define PIN_FPGA_INIT_DONE (12)
+
 //LINK:
 #define PIN_LINK5 (31)
 #define PIN_LINK4 (30)

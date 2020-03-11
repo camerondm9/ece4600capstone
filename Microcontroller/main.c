@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include "uart.h"
 #include "spi.h"
+#include "radio.h"
 #include <nrf.h>
 
 typedef enum STATES
@@ -57,6 +58,8 @@ void main(void)
 	tx2->buffer[1] = 0x8F;
 	spi_transfer(tx2);
 */
+
+	radio_run_test();
 
 	//TODO: Begin FPGA test code
 	fpga_test_transfer();
