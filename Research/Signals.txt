@@ -3,3 +3,6 @@ https://prod-ng.sandia.gov/techlib-noauth/access-control.cgi/2006/065856.pdf
 
 http://www.math.u-szeged.hu/tagok/mmaroti/okt/2010t/ftsp.pdf
 	- Example of high-precision timing using radio communications
+
+https://www.mdpi.com/search?q=Ultrasound+Positioning&authors=&journal=sensors&article_type=&search=Search&section=&special_issue=&volume=&issue=&number=&page=
+	- Multiple articles about systems similar to what we are building
