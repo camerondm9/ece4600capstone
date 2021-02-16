@@ -90,6 +90,24 @@ class PacketStream:
 			port = port.device
 		self.port = aioserial.AioSerial(port, 230400)
 
+	async def write_all(self, buffer):
+		written = 0
+		while written < len(buffer):
+			w = await self.port.write_async(buffer[written:])
+			if w <= 0:
+				raise BrokenPipeError()
+			written += w
+		return written
+
+	async def read_all(self, buffer):
+		read = 0
+		while read < len(buffer):
+			r = await self.port.readinto_async(buffer[read:])
+			if r <= 0:
+				raise EOFError()
+			read += r
+		return read
+
 	async def write_packet(self, payload):
 		#Build packet
 		length = len(payload) - 3
@@ -115,14 +133,14 @@ class PacketStream:
 		#Write packet to UART
 		print('Write: ' + ' '.join('{:02x}'.format(b) for b in packet))
 		async with self.tx_lock:
-			await self.port.write_async(packet)
+			await self.write_all(packet)
 
 	async def read_packet(self):
 		async with self.rx_lock:
 			view = memoryview(self.rx_buffer)
 			start = 0
 			while True:
-				await self.port.readinto_async(view[start:PACKET_HEADER_SIZE])
+				await self.read_all(view[start:PACKET_HEADER_SIZE])
 				offset = detect_packet(view)
 				if offset >= 0:
 					length = PACKET_HEADER_SIZE - offset
@@ -133,7 +151,7 @@ class PacketStream:
 					packet_length = view[2]
 					remaining = packet_length + offset
 					if remaining > 0:
-						await self.port.readinto_async(view[length+1:length+1+remaining])
+						await self.read_all(view[length+1:length+1+remaining])
 					print('Read:  ' + ' '.join('{:02x}'.format(b) for b in view[0:9+packet_length]))
 					#Extract CRC
 					if int.from_bytes(view[7+packet_length:9+packet_length], 'little') == crc16(view[4:7+packet_length]):
