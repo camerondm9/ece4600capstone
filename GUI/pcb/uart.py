@@ -141,7 +141,7 @@ class PacketStream:
 			start = 0
 			while True:
 				await self.read_all(view[start:PACKET_HEADER_SIZE])
-				offset = detect_packet(view[start:PACKET_HEADER_SIZE])
+				offset = detect_packet(view[0:PACKET_HEADER_SIZE])
 				if offset >= 0:
 					length = PACKET_HEADER_SIZE - offset
 					#Shift header
