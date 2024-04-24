@@ -76,11 +76,11 @@ void main(void)
 
 	while (1)
 	{
-		bool idle = true;
+		int idle = 1;
 		UartPacket* packet = queue_dequeue(&uart_rxq);
 		if (packet)
 		{
-			idle = false;
+			idle = 0;
 			if (uart_check_crc(packet))
 			{
 				//Echo...

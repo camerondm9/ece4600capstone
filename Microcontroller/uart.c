@@ -81,6 +81,7 @@ Queue uart_rxq = QUEUE(8);
 Queue uart_emq = QUEUE(32);
 
 static UartPacket uart_packets[18]; //TODO: Can we shrink the size of the queues? That would allow us to reserve less space for packets, and use less of our (precious) RAM...
+                                    //TODO: Alternate option: receive UART into a large buffer, slicing it into packets as we go... (more complex, but would allow lots of small packets without using as much RAM)
 
 static UartPacket* volatile uart_tx_packet = NULL;
 static UartPacket* volatile uart_rx_packet = NULL;
