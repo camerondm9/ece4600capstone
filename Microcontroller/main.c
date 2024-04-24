@@ -19,6 +19,14 @@ typedef enum STATES
 volatile STATES main_state = STATE_STARTUP;
 
 
+void clock_init(void) {
+	//Start HFCLK... (required to use radio)
+	NRF_CLOCK->EVENTS_HFCLKSTARTED = 0;
+	NRF_CLOCK->TASKS_HFCLKSTART = 1;
+	while (NRF_CLOCK->EVENTS_HFCLKSTARTED == 0) {}
+	NRF_CLOCK->EVENTS_HFCLKSTARTED = 0;
+}
+
 
 //TODO: fpga_test_bitstream
 void fpga_test_transfer();
@@ -32,6 +40,7 @@ void main(void)
 
 	__disable_irq();
 	//Initialize peripherals...
+	clock_init();
 	uart_init();
 	spi_init();
 
@@ -67,9 +76,11 @@ void main(void)
 
 	while (1)
 	{
+		bool idle = true;
 		UartPacket* packet = queue_dequeue(&uart_rxq);
 		if (packet)
 		{
+			idle = false;
 			if (uart_check_crc(packet))
 			{
 				//Echo...
@@ -103,6 +114,11 @@ void main(void)
 		default:
 
 			break;
+		}
+		if (idle)
+		{
+			//Wait for an interrupt/event...
+			__WFE();
 		}
 	}
 }
